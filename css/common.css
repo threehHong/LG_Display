@@ -6,9 +6,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css");
 
 /* 
-
-font-weight: 400 설정과 없는거 차이 없음.
-
+메모
+1. font-weight: 400 설정 한거랑 안한거 차이 없음.
+2. 부트스트랩 로드하면 reset.css에 따로 설정한 a {text-decoration: none;} 안됨 그래서 common.css에 설정.
 */
 
 /* COLOR */
@@ -28,7 +28,7 @@ body {
     font-family: 'Gothic A1';
 }
 
-/* Button */
+/* BUTTON */
 .btn_more {
     display: flex;
     justify-content: center;
@@ -53,7 +53,14 @@ body {
     background-color: var(--font_W);
 }
 
-/* 탑버튼(만드는중) */
+/* 기타 */
+a {
+    text-decoration: none;
+}
+
+
+
+/********** 탑버튼(만드는중) **********/
 /* .btn_scroll_top {
     display: inline-block;
     width: 80px;
@@ -69,11 +76,3 @@ body {
     transform: translate(-50%, -50%);
     transform: rotate(-45deg);
 } */
-
-
-
-/* 부트스트랩으로 text-decoration: none이 안되어 따로 지정 */
-a {
-    text-decoration: none;
-}
-

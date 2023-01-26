@@ -1,2 +1,0 @@
-1. 부트스트랩 있으면 text_decoration: none 안됨.
-
