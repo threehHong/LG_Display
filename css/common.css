@@ -1,0 +1,89 @@
+@charset "utf-8";
+@import url('normalize.css');
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"); */
+
+
+/* 
+
+var(--point_R)
+var(--point_Y)
+
+var(--font_B)
+var(--font_G)
+var(--font_W)
+
+*/
+
+
+/* 
+물어보기
+1.
+reset css에 이미 font-weight: 500;이 걸려 있음 물어보기
+--font_weight: 400;
+2. 
+G가 그레이를 말하는건지
+
+*/
+
+/* COLOR */
+:root {
+    --point_R: #810606;
+    --point_Y: #EAB413;
+
+    --font_B: #101211;
+    --font_G: #00ff00;
+    --font_W: #ffffff;
+
+
+    /* --font_G: #00ff00; */
+}
+
+
+/* FONT */
+body {
+    font-family: 'Gothic A1';
+}
+
+/* Button */
+.btn_more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 203px;
+    height: 54px;
+    border: 1px solid #810606;
+    border-radius: 50px;
+    background: var(--point_R);
+    color: var(--font_W);
+}
+
+
+.btn_top {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    display: flex;
+    width: 80px;
+    line-height: 80px;
+    border-radius: 10px;
+    border: 1px solid #810606;
+    /* transform: rotate(45deg); */
+}
+
+.btn_top i {
+    /* transform: rotate(-45deg); */
+    font-size: 40px;
+}
+
+
+/* COMMON CSS TEST */
+/* h1 {
+    color: var(--font_R);
+    font-size: 50px;
+    font-weight: var(--font_weight);
+} */
+
