@@ -2,14 +2,19 @@
 @import url('normalize.css');
 @import url('reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css");
+
+/* 순욱 -- fontawesome, bootstrap css 등의 css는 필요 페이지에서 link로 직접 로드*/
 
 /* 
 메모
 1. font-weight: 400 설정 한거랑 안한거 차이 없음.
 2. 부트스트랩 로드하면 reset.css에 따로 설정한 a {text-decoration: none;} 안됨 그래서 common.css에 설정.
 */
+
+
+
+
+
 
 /* COLOR */
 :root {
@@ -20,16 +25,26 @@
     --font_G: #1D1D1B;
     --font_W: #ffffff;
 
+/* 순욱 -- 회색 변수명을 숫자로 명명법 확장 */
+    --font_G2 : #999;
     --font_weight_R: 400;
 }
+
+
+
 
 /* FONT */
 body {
     font-family: 'Gothic A1';
 }
 
+
+
+
 /* BUTTON */
-.btn_more {
+
+/* 순욱 -- 더보기 버튼은 미디어센터에만 사용하므로 공통서식에서 제외 */
+/* .btn_more {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,17 +66,24 @@ body {
     border: 3px solid #810606;
     color: var(--point_R);
     background-color: var(--font_W);
-}
+} */
 
 /* 기타 */
-a {
-    text-decoration: none;
+
+
+/* 순욱 -- 공통클래스명 __으로 시작, __dis_link 클래스명 추가 */
+.__hidden{
+    display: hidden;
+}
+
+.__dis_link{
+    color: var(--font_G2);
 }
 
 
 
 /********** 탑버튼(만드는중) **********/
-/* .btn_scroll_top {
+/* .$btn_scroll_top {
     display: inline-block;
     width: 80px;
     height: 80px;
