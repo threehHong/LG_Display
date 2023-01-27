@@ -1,7 +1,7 @@
 @charset "utf-8";
-@import url('normalize.css');
-@import url('reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+@import url("normalize.css");
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
 
 /* 순욱 -- fontawesome, bootstrap css 등의 css는 필요 페이지에서 link로 직접 로드*/
 
@@ -11,30 +11,24 @@
 2. 부트스트랩 로드하면 reset.css에 따로 설정한 a {text-decoration: none;} 안됨 그래서 common.css에 설정.
 */
 
-
 /* COLOR */
 :root {
-    --point_R: #810606;
-    --point_Y: #EAB413;
+  --point_R: #810606;
+  --point_Y: #eab413;
 
-    --font_B: #101211;
-    --font_G: #1D1D1B;
-    --font_W: #ffffff;
+  --font_B: #101211;
+  --font_G: #1d1d1b;
+  --font_W: #ffffff;
 
-/* 순욱 -- 회색 변수명을 숫자로 명명법 확장 */
-    --font_G2 : #999;
-    --font_weight_R: 400;
+  /* 순욱 -- 회색 변수명을 숫자로 명명법 확장 */
+  --font_G2: #999;
+  --font_weight_R: 400;
 }
-
-
 
 /* FONT */
 body {
-    font-family: 'Gothic A1';
+  font-family: "Gothic A1";
 }
-
-
-
 
 /* BUTTON */
 
@@ -65,17 +59,14 @@ body {
 
 /* 기타 */
 
-
 /* 순욱 -- 공통클래스명 __으로 시작, __dis_link 클래스명 추가 */
-.__hidden{
-    display: hidden;
+.__hidden {
+  display: none;
 }
 
-.__dis_link{
-    color: var(--font_G2);
+.__dis_link {
+  color: var(--font_G2);
 }
-
-
 
 /********** 탑버튼(만드는중) **********/
 /* .$btn_scroll_top {
