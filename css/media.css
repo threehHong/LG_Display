@@ -1,0 +1,14 @@
+.media_newstab {
+	position: relative;
+	padding: 160px 140px;
+}
+.tab_btn {
+	border: 1px solid var(--point_R);
+	border-radius: 25px;
+	position: absolute;
+	width: 800px;
+	height: 50px;
+}
+.tab_btn button {
+	text-transform: uppercase;
+}
