@@ -29,6 +29,9 @@ footer {
 .f_link_list li a {
 	color: var(--font_W);
 }
+.f_link_list li a:hover {
+	text-decoration: underline;
+}
 .f_copyright {
 	grid-column: 4 / span 1;
 	grid-row: 4 / span 1;
