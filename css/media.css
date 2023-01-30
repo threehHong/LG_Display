@@ -1,14 +1,72 @@
 .media_newstab {
-	position: relative;
-	padding: 160px 140px;
+  margin: 0 auto;
+  max-width: 1650px;
 }
 .tab_btn {
-	border: 1px solid var(--point_R);
-	border-radius: 25px;
-	position: absolute;
-	width: 800px;
-	height: 50px;
+  border: 1px solid var(--point_R);
+  border-radius: 25px;
+  width: 800px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 .tab_btn button {
-	text-transform: uppercase;
+  height: 50px;
+  margin: 0 30px;
+  border-radius: 25px;
+  border: 1px solid var(--point_R);
+  text-transform: uppercase;
+  background: var(--font_R);
+  color: var(--font_B);
+  padding: 0 20px;
+}
+.tab_btn button.active {
+  background: var(--point_R);
+  color: var(--font_W);
+}
+.news_contents img {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+.news_contents .news_article li {
+  max-width: 498px;
+}
+.news_contents .news_article .txt_box {
+  border: 1px solid var(--point_R);
+  border-radius: 0 0 25px 25px;
+  height: 120px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 40px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.news_contents .news_article .txt_box .news_date {
+  font-size: 14px;
+  text-align: right;
+}
+
+/* 반응형 */
+@media screen and (max-width: 880px) {
+  .media_newstab {
+    font-size: 14px;
+  }
+  .tab_btn {
+    width: 500px;
+  }
+  .tab_btn button {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tab_btn {
+    width: 300px;
+    border: none;
+  }
+  .tab_btn button {
+    margin: 0 10px;
+  }
 }
