@@ -1,0 +1,1048 @@
+/* COMMON */
+img {
+    width: 100%;
+    height: 756px;
+}
+
+/* ESG MAIN */
+.esg_main {
+    position: relative;
+}
+
+.esg_main h2 {
+    position: absolute;
+    top: 514px;
+    right: 183px;
+    font-size: 55px;
+    color: var(--font_W);
+    font-weight: 700;
+}
+.esg_main h2:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 42px;
+    margin-right: 4px;
+    background: var(--point_R); 
+}
+.esg_main img {
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/******* SECTION NATURAL*******/
+.natural h1, .natural h2, .natural p {
+    text-align: center;
+    color: #1D1D1B;
+    opacity: .8;
+}
+
+main .natural h2 {
+    font-weight: 400;
+    font-size: 44px;
+}
+
+main .natural .title {
+    text-align: center;
+}
+
+main .natural .title h1 {
+    display: inline-block;
+    font-size: 45px;
+    font-weight: 600;
+    width: 603px;
+    height: 112px;
+    margin: 165px auto 155px;
+}
+main .natural .svg_effect_circle h2 {
+    margin-bottom: 53px;
+}
+
+main .natural .gas h2, .energy h2 {
+    margin: 54px auto 23px;
+}
+
+main .natural .gas p:nth-child(2), .energy p:nth-child(2) {
+    font-size: 28px;
+}
+main .natural .gas p:nth-child(3), .energy p:nth-child(3) {
+    font-size: 14px;
+    margin: 22px auto 54px;
+}
+
+main .natural .desc {
+    width: 100%;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+main .natural .desc p {
+    opacity: 1;
+}
+
+main .natural .desc p:nth-child(1) {
+    margin: 60px auto 17px;
+    width: 738px;
+    height: 89px;
+}
+main .natural .desc p:nth-child(2) {
+    margin: 17px auto;
+    width: 699px;
+    height: 89px;
+}
+main .natural .desc p:nth-child(3) {
+    margin: 0 auto 158px;
+    width: 454px;
+    height: 58px;
+}
+
+/* SECTION NATURAL - SVG EFFECT */
+.natural .svg_effect_circle,
+.natural .svg_effect_line {
+    text-align: center;
+}
+
+.svg_effect_circle h2 {
+    opacity: 0;
+} 
+@keyframes para {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+.svg_effect_circle h2.active_para {
+    animation: para 1s 0.1s forwards; /* active */
+}
+
+.resources_e svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.line_circle line:nth-child(1) {
+    opacity: 0;
+}
+.line_circle line:nth-child(1).active_lf {
+    animation: line_f 1s 1s linear forwards; /* active */
+}
+
+.circle_right { /* .line_circle */
+    transform-origin: 243px 378px;
+    transform: rotate(-90deg);
+    opacity: 0;
+}
+.circle_right.active_cr { /* .line_circle */
+    animation: circleR 1.5s 2s ease-out forwards; /* active */
+}
+
+.circle_left { /* .line_circle */
+    transform-origin: 243px 378px;
+    transform: rotate(-90deg);
+    opacity: 0;
+}
+.circle_left.active_cl { /* .line_circle */
+    animation: circleL 1.5s 2s ease-out forwards; /* active */
+}
+
+.line_circle line:nth-child(5) {
+    opacity: 0;
+}
+.line_circle line:nth-child(5).active_ls {
+    animation: line_s 1s 5.5s forwards; /* active */
+}
+
+@keyframes line_f {
+    0% {
+        stroke-dashoffset: 243;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: .8;
+    }
+}
+
+@keyframes circleR {
+    0% {
+        stroke-dashoffset: 1550;
+    }
+    100% {
+        stroke-dashoffset: 759.88;
+        opacity: .8;
+    }
+
+}
+@keyframes circleL {
+    0% {
+        stroke-dashoffset: -1550;
+    }
+    100% {
+        stroke-dashoffset: -759.88;
+        opacity: .8;
+    }
+}
+
+@keyframes line_s {
+    0% {
+        stroke-dashoffset: 756;
+    }
+    100% {
+        stroke-dashoffset: 621;
+        opacity: .8;
+    }
+}
+
+.water_path {
+    transform: translateX(-65%) translateY(882%);
+}
+.water_path.active_w {
+    animation: circle_water 1.5s 3.5s forwards;
+}
+@keyframes circle_water {
+    0% {
+        color:red;
+        
+        transform: translateX(-65px) translateY(82%);
+    }
+    100% {
+        transform: translateX(-65px) translateY(5%);
+    }
+}
+
+/* .water_path {
+     opacity: 0;
+} */
+
+
+.water_path_font {
+    opacity: 0;
+}
+.water_path_font.active_wf {
+    animation: textColor 2s 4.5s forwards; /* active */
+}
+
+@keyframes textColor {
+    0% {
+        fill: #6B6B6B;
+        opacity: 0;
+    }
+    100% {
+        fill: #ffffff;
+        opacity: 1;
+    }
+}
+
+.natural .gas {
+    animation: gas 1s 6.5s forwards;
+    opacity: 0;
+}
+@keyframes gas {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+.svg_effect_line:nth-child(4) line {
+    animation: line_tf 1s 7s forwards;
+    opacity: 0;
+}
+.svg_effect_line:nth-child(6) line {
+    animation: line_tf 1s 8.5s forwards;
+    opacity: 0;
+}
+
+@keyframes line_tf {
+    0% {
+        stroke-dashoffset: 135;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: .8;
+    }
+}
+
+.natural .energy {
+    animation: energy 1s 8s forwards;
+    opacity: 0;
+}
+@keyframes energy {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+.natural .desc {
+    animation: desc .7s 10s linear forwards;
+    opacity: 0;
+}
+@keyframes desc {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+/* SUB IMG */
+.sub_img img {
+    opacity: 0.3;
+    transition: opacity 2s;
+}
+.sub_img img.active_sbimg {
+    opacity: 1;
+}
+
+/******* SECTION ECO *******/
+/* .eco_index_value {
+    height: 300px;
+}
+
+.resources_e {
+    height: 300px;
+}
+
+.follow {
+    height: 300px;
+} */
+
+
+
+/*** ECO INDEX ***/
+/* eco_index_op */
+.eco_index_op h2 {
+    font-size: 36px;
+    font-weight: 600px;
+}
+.eco_index_op h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 157px
+}
+
+.eco_index_op h2:before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 33px;
+    margin-right: 12px;
+    background: #810606;
+}
+.eco_index_op p {
+    font-style: 16px;
+    line-height: 30px;
+    margin: 47px auto;
+    text-align: center;
+}
+
+/* eco_index_left_right */
+.eco_index_left_right {
+    display: flex;
+    justify-content: center;
+    gap: 105px;
+    margin-top: 210px;
+}
+
+/* eco_index_left */
+.eco_index_val h2 {
+    font-size: 24px;
+    margin: 104px 0px 85px;
+}
+
+/* eco_index_indi, eco_index_com */
+.eco_index_indi h2,
+.eco_index_com h2 {
+    font-size: 24px;
+}
+.eco_index_val h2:before,
+.eco_index_indi h2:before,
+.eco_index_com h2:before {
+    content: ""; 
+    display: inline-block;
+    width: 3px;
+    height: 24px;
+    margin-right: 10px;
+    background: #A50034;
+    transform: translateY(4px);
+}
+.eco_index_indi p,
+.eco_index_com p {
+    line-height: 30px;
+}
+
+.eco_index_indi p,
+.eco_index_com p {
+    margin: 75px 0 81px;
+}
+
+/* eco_index_left */
+.eco_index_left {
+    display: inline-block;
+}
+
+
+/* eco_index_com */
+
+.cartegory {
+    display: grid; /* 30 343 30 267 30   700 */
+    grid-template-columns: 4.28fr 48fr 4.28fr 38.14fr 4.28fr; /* 27 98 31 167 28   351 */
+    /* grid-template-rows: 7.69fr 27.92fr 8.83fr 47.57fr 7.97fr; */
+    grid-template-rows: 7.69fr 84.33fr 7.97fr;
+    width: 700px;
+    height: 351px;
+    border-radius: 25px;
+    border: 1px solid rgba(29,29,27,.8);
+}
+
+.cartegory span {
+    display: inline-block;
+    background: #A50034;
+    width: 2px;
+    text-indent: -999em;
+}
+.cartegory li {
+    color: #1D1D1B;
+    font-size: 14px;
+}
+
+.cartegory_s {
+    display: flex;
+    align-items: center;
+    width: 343px;
+    height: 296px;
+    border-radius: 6px;
+    border: 1px solid rgba(29,29,27,.4);
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.cartegory_s h3 {
+    width: 78px;
+    height: 38px; 
+    font-size: 15px;
+    color: rgba(29,29,27,.8);
+    line-height: 18px;
+    text-align: center;
+}
+.cartegory_s span {
+    height: 217.2px;
+    left: 20px;
+}
+.cartegory_s ul {
+    margin-left: 20px;
+    padding-top: 32px;
+}
+.cartegory_s ul li {
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.cartegory_e, .cartegory_h {
+    display: inline-block; 
+    width: 267px;
+    border-radius: 6px;
+    border: 1px solid rgba(29,29,27,.4);
+}
+.cartegory_e {
+    display: flex;
+    align-items: center;
+    height: 87px;
+    grid-column: 4/5;
+    grid-row: 2/3;
+    
+}
+.cartegory_e h3 {
+    display: inline-block;
+    width: 95px;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(29,29,27,.8);
+    text-align: center;
+}
+.cartegory_e span {
+    height: 35.93px;
+    left: 20px;
+    margin-right: 19px;
+}
+.cartegory_e p {
+    display: inline-block;
+    width: 100px;
+    color: #1D1D1B;
+    font-size: 14px;
+}
+
+.cartegory_h {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    height: 167px;
+    margin-top: 129px;
+    display: flex;
+    align-items: center;
+}
+
+.cartegory_h h3 {
+    display: inline-block;
+    width: 103px;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(29,29,27,.8);
+    text-align: center;
+}
+.cartegory_h span {
+    height: 66px;
+    margin-right: 19px;
+}
+
+.cartegory_h ul {
+    padding-top: 35px;
+}
+.cartegory_h li{
+    line-height: 15px;
+    margin-bottom: 28px;
+}
+
+
+/*** GRAPH TREND ***/
+.graph_trend {
+    width: 700px;
+    height: 460px;
+    border-radius: 25px;
+    border: 1px solid rgba(29,29,27,.8);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+.graph_trend h3, .graph_trend span {
+    color: #000000;
+    font-size: 11px;
+    margin: 0 auto;
+}
+
+.graph_trend h3 {
+    margin: 54px 0px 0px 94px; /* postion으로 구현해보기 */
+    display: flex;
+    align-items: center;
+}
+
+.graph_trend p {
+    text-align: right;
+    margin: 17px 78px 63px 0;
+}
+
+.graph_trend .graph {
+    text-align: center;
+}
+
+.graph_trend ul {
+    text-align: center;
+    margin: 0 auto;
+}
+.graph_trend ul li {
+    display: inline-block;
+    font-size: 12px;
+    color: #1D1D1B;
+    margin-right: 86px;
+}
+.graph_trend ul li:nth-child(5) {
+    margin-right: 0;
+}
+.graph_trend h3:after {
+    display: inline-block; 
+    content: "";
+    background: rgba(165,0,52,.6);
+    border-radius: 50%;
+    width: 8px; 
+    height: 8px;
+    margin-left: 17px;
+}
+
+.graph_trend svg path:nth-child(2) {
+    /* animation: line 4s 1s ease forwards; */
+    opacity: 0;
+}
+.graph_trend svg path:nth-child(2).active_trend {
+    animation: line 4s .5s ease forwards;
+}
+@keyframes line {
+    0% {
+        stroke-dashoffset: 510;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+.graph_trend svg ellipse, .graph_trend svg path:nth-child(5) {
+    /* animation: ellipse 2s ease forwards; */
+    opacity: 0;
+}
+
+.graph_trend svg ellipse.active_trend , .graph_trend svg path:nth-child(5).active_trend {
+    animation: ellipse 2s ease forwards;
+}
+.graph_trend svg text {
+    opacity: 0;
+}
+.graph_trend svg text.active_trend {
+    animation: ellipse 2s ease forwards;
+}
+@keyframes ellipse {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*** 자원효율 ***/
+/* .resources_e {
+    display: flex;
+    justify-content: center;
+} */
+
+
+.resources_waste {
+    margin-top: 130px;
+}
+
+.resources_water, .resources_waste {
+    display: flex;
+    justify-content: center;
+}
+.resources_water {
+    gap: 75px;
+}
+.water_maintain {
+    width: 667px;
+}
+.resources_waste {
+    gap: 70px;
+}
+
+
+.resources_e > h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 300px 0 130px;
+
+}
+.resources_e > h2:before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 33px;
+    margin-right: 12px;
+    background: #810606;
+    transform: translateY(4px);
+}
+
+.water_maintain h2,
+.waste_recycle_desc h2 {
+    font-size: 24px;
+}
+
+
+.water_maintain h2:before,
+.waste_recycle_desc h2:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 24px;
+    margin-right: 10px;
+    background: #A50034;
+    transform: translateY(4px);
+}
+
+.water_maintain p,
+.waste_recycle_desc p {
+    font-size: 16px;
+    line-height: 30px;
+}
+.resources_water .water_maintain p:nth-child(2),
+.resources_waste .waste_recycle_desc p:nth-child(2) {
+    margin-top: 50px;
+}
+
+.resources_water .water_maintain p:nth-child(2) {
+    margin-bottom: 15px;
+} 
+.resources_waste .waste_recycle_desc p:nth-child(2) {
+    margin-bottom: 45px;
+}
+
+/* 자원효율(수자원 관리) 그래프 애니메이션 */
+.resources_water .graph path:nth-child(10),
+.resources_water .graph text:nth-child(11) {
+    transform: translateY(81%);
+}
+.resources_water .graph path:nth-child(10).active_water_r,
+.resources_water .graph text:nth-child(11).active_water_r {
+    animation: graph_water_r 2s forwards;
+}
+@keyframes graph_water_r {
+    0% {
+        transform: translateY(81%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+.resources_water .graph path:nth-child(12),
+.resources_water .graph text:nth-child(13) {
+    transform: translateY(46%);
+}
+.resources_water .graph path:nth-child(12).active_water_y,
+.resources_water .graph text:nth-child(13).active_water_y {
+    animation: graph_water_y 2s forwards;
+}
+@keyframes graph_water_y {
+    0% {
+        transform: translateY(46%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/* 자원효율(폐기물 재활용) 그래프 애니메이션 */
+.waste_recycle .graph path:nth-child(9),
+.waste_recycle .graph text:nth-child(10) {
+    transform: translateY(90%);
+}
+.waste_recycle .graph path:nth-child(9).active_waste_r,
+.waste_recycle .graph text:nth-child(10).active_waste_r {
+    animation: graph_waste_r 2s forwards;
+}
+@keyframes graph_waste_r {
+    0% {
+        transform: translateY(90%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.waste_recycle .graph path:nth-child(12),
+.waste_recycle .graph text:nth-child(13) {
+    transform: translateY(131%);
+}
+.waste_recycle .graph path:nth-child(12).active_waste_y,
+.waste_recycle .graph text:nth-child(13).active_waste_y {
+    animation: graph_waste_y 2s forwards;
+}
+@keyframes graph_waste_y {
+    0% {
+        transform: translateY(131%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+/* WATER RE
+   WASTE RE */
+.water_re, 
+.waste_re {
+    width: 759px;
+    height: 459px;
+    border-radius: 25px;
+    border: 1px solid rgba(29,29,27,.8);
+    position: relative;;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+.water_re h3, 
+.waste_re h3 {
+    font-size: 16px;
+    margin: 56px 2px 15px 162px;
+}
+
+
+.water_re .line, 
+.waste_re .line{
+    text-indent: -999em;
+    display: inline-block;
+    width: 605px;
+    height: 1px;
+    margin: 15px 20px 11px 20px;
+    background:rgba(29,29,27);;
+}
+
+.water_re .container span:before, 
+.waste_re .container span:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    margin-right: 10px;
+}
+
+.water_re .container span:nth-child(1):before, 
+.waste_re .container span:nth-child(1):before {
+    background: #810606;
+    margin-left: 164px;
+} 
+.water_re .container span:nth-child(2):before, 
+.waste_re .container span:nth-child(2):before {
+    background: #EAB413;
+    margin-left: 10px;
+}
+.water_re .container span:nth-child(3), 
+.waste_re .container span:nth-child(3) {
+    position: absolute;
+    right: 142px;
+}
+
+.water_re .graph, 
+.waste_re .graph {
+    text-align: center;
+}
+
+.water_re ul li, 
+.waste_re ul li {
+    display: inline-block;
+    margin-right: 120px;
+}
+.water_re ul, 
+.waste_re ul {
+    margin-left: 120px;
+}
+
+
+
+
+/*** 환경법 준수 ***/
+.eco_follow_titl {
+    text-align: center;
+}
+.eco_follow_title h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 300px 0 51px;
+}
+.eco_follow_title h2:before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 33px;
+    margin-right: 12px;
+    background: #810606;
+    transform: translateY(4px);
+}
+.eco_follow_title p {
+    line-height: 30px;
+    text-align: center;
+}
+.eco_follow_title p:nth-child(3) {
+    margin: 40px 0 132px;
+}
+
+.pollution_substance ,
+.pollution_chemical { 
+    width: 730px;
+}
+
+.pollution_substance h3,
+.pollution_chemical h3 {
+    font-size: 24px;
+    margin: 153px 0 43px;
+}
+
+.pollution_substance h3:before,
+.pollution_chemical h3:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 24px;
+    margin-right: 10px;
+    background: #A50034;
+    transform: translateY(4px);
+}
+
+.pollution_substance span {
+    color: #A50034;
+}
+
+.pollution_substance, .pollution_chemical p {
+    line-height: 30px;
+}
+
+.pollution_substance p:nth-child(3),
+.pollution_chemical p:nth-child(3) {
+    margin: 35px 0;
+}
+
+.substance_chemical {
+    display: flex;
+    gap: 46px;
+    justify-content: center;
+}
+
+
+.eco_follow .eco_follow_graph {
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+}
+
+/* AIR POLLUTION
+   WATER POLLUTION */
+.air_pollution, 
+.water_pollution {
+    width: 730px;
+    height: 550px;
+    border-radius: 25px;
+    border: 1px solid rgba(29,29,27,.8);
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+.air_pollution h3,
+.water_pollution h3 {
+    font-size: 16px;
+    margin: 25px 2px 15px 106px;
+}
+
+
+.air_pollution .line,
+.water_pollution .line {
+    position: absolute;
+    left: 135px;
+    top: 136px;
+    text-indent: -999em;
+    display: inline-block;
+    width: 1px;
+    height: 400px;
+    /* margin: 15px 20px 11px 20px; */
+    background:rgba(29,29,27);;
+}
+
+.air_pollution .container,
+.water_pollution .container {
+    margin-top: 31px;
+}
+
+.air_pollution .container span:before,
+.water_pollution .container span:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    margin-right: 10px;
+}
+
+.air_pollution .container span, 
+.water_pollution .container span {
+    font-size: 12px;
+}
+
+.air_pollution .container span:nth-child(1):before,
+.water_pollution .container span:nth-child(1):before {
+    background: #810606;
+    margin-left: 106px;
+} 
+.air_pollution .container span:nth-child(2):before {
+    background: #EAB413;
+    margin-left: 40px;
+}
+.water_pollution .container span:nth-child(2):before {
+    background: #EAB413;
+    margin-left: 20px;
+}
+
+.air_pollution .container span:nth-child(3):before {
+    background: #D9DADB;
+    margin-left: 40px;
+}
+.water_pollution .container span:nth-child(3):before {
+    background: #D9DADB;
+    margin-left: 20px;
+}
+.air_pollution .container span:nth-child(4),
+.water_pollution .container span:nth-child(4) {
+    position: absolute;
+    right: 36px;
+}
+
+.air_pollution .graph, 
+.water_pollution .graph {
+    margin: 108px 0px 0px 135px;
+}
+
+.air_pollution ul,
+.water_pollution ul {
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    top: 242px;
+}
+.air_pollution ul li,
+.water_pollution ul li {
+    font-size: 12px;
+    margin-bottom: 152px;
+}
+
+/* 환경법규 준수 그래프 애니메이션 */
+.eco_follow_graph .graph path:nth-child(3),
+.eco_follow_graph .graph text:nth-child(9) {
+    transform: translateX(-97%);
+}
+.eco_follow_graph .graph path:nth-child(3).active_follow_r,
+.eco_follow_graph .graph text:nth-child(9).active_follow_r {
+    animation: graph_follow_r 2s forwards;
+}
+@keyframes graph_follow_r {
+    0% {
+        transform: translateX(-97%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.eco_follow_graph .graph path:nth-child(1),
+.eco_follow_graph .graph text:nth-child(11) {
+    transform: translateX(-80%);
+}
+.eco_follow_graph .graph path:nth-child(1).active_follow_y,
+.eco_follow_graph .graph text:nth-child(11).active_follow_y {
+    animation: graph_follow_y 2s forwards;
+}
+@keyframes graph_follow_y {
+    0% {
+        transform: translateX(-97%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.eco_follow_graph .graph path:nth-child(8),
+.eco_follow_graph .graph text:nth-child(13) {
+    transform: translateX(-66%);
+}
+.eco_follow_graph .graph path:nth-child(8).active_follow_g,
+.eco_follow_graph .graph text:nth-child(13).active_follow_g {
+    animation: graph_follow_g 2s forwards;
+}
+@keyframes graph_follow_g {
+    0% {
+        transform: translateX(-66%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+} 
