@@ -1,17 +1,20 @@
-// header_JA_230130 
+// header_JA_230130
 
-let gnb = $('.gnb_box > li'),
-lnbBG = $('.wrapper'),
-lnb = $('#header .lnb_box');
+let gnb = $(".gnb_box"),
+    gnbList = $(".gnb_box > li"),
+    lnbBG = $(".wrapper"),
+    lnb = $(".lnb_box ");
 
-    $('.gnb_box').mouseenter(function(){
-        $('header').addClass('h_color'); //addremove로 수정
-    });
-    gnb.click(function(){
-        $(this).parent('ul').toggleClass('clicked');
-        lnbBG.toggleClass('active');
-        lnb.addClass('active');
-    });
+gnbList.click(function (e) {
+    e.preventDefault();
 
+    let $this = $(this);
+    lnbBG.toggleClass("active");
+    gnb.toggleClass("open");
 
-// /header_JA_230130 
+    $this.addClass("clicked");
+    $this.siblings().removeClass("clicked");
+    //추가 _ 다른 gnb 클릭 시(혹은 wrapper에 )
+});
+
+// /header_JA_230130
