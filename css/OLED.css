@@ -1,0 +1,179 @@
+html{
+    font-size: 16px;
+}
+.contain_margin{
+    margin: 162px 0;
+}
+/* OLED */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 756px;
+}
+.banner_BG {
+    position: absolute;
+    top: -54px;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+.banner_BG img{
+    width: 100%;
+}
+.banner h2::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 54px;
+    margin-right: 30px;
+    top: 10px;
+    background: var(--point_R);
+}
+.banner h2 {
+    position: absolute;
+    left: 343px;
+    top: 527px;
+    width: 336px;
+    height: 69px;
+    color: var(--font_W);
+    font-weight: 700;
+    font-size: 3.4rem;
+    line-height: 69px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+/* JA_230201_작업시작 */
+/* OLED Common */
+.OLED_sec2_h3{
+    font-size: 3.4rem;
+    font-weight: 600;
+}
+.OLED_sec2_h4{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+.OLED_sec02 p{
+    font-size: 1.12rem;
+    line-height: 27px;
+}
+.warning_txt{
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: var(--font_G);
+}
+.ACE_R{
+    color: var(--point_R);
+}
+.ACE_Y{
+    color: var(--point_Y);
+}
+
+/* ACE_tt */
+.OLED_ace{
+    display: flex;
+    align-items: center;
+}
+.OLEd_img{
+    width: 50%;
+}
+.OLEd_img img{width: 100%;}
+.img_txt{
+    width: 50%;
+    margin-left: 157px;
+}
+.OLED_sec02_title{
+    margin-bottom: 81px;
+}
+
+.ace_box{
+}
+.ace_box .sub_tt{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 54px;
+}
+.ace_box h2{
+    color: var(--point_Y);
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 81px;
+}
+.ace_box h2::before{
+    content: "";
+    display: inline-block;
+    width: 34px;
+    height: 30px;
+    background-image: url(../img/sp01.png);
+    background-position: 0px -340px;
+    margin-bottom: 17.5px;
+}
+.ACE_tt_box{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.ACE_tt_box li{
+    width: 470px;
+    height: 540px;
+    text-align: center;
+
+}
+.ACE_tt_box li:hover{
+    box-shadow: 0px 0px 10px rgba(129, 6, 6, 0.5);
+}
+.ACE_tt_box li a{
+    display:inline-block;
+    padding: 54px 0px;
+    box-sizing: border-box;
+}
+.ACE_tt_box .ace_tt{
+    font-size: 3.4rem;
+    font-weight: 600;
+    margin: 54px 0;
+}
+.ACE_tt_box .ace_tt b{
+    color: var(--point_R);
+}
+.A_txt_box p{
+    line-height: 27px;
+    font-size: 1.5rem;
+}
+/* A */
+
+.ACE_a2{
+background: var(--font_B);
+} 
+.a2_tt h3,
+.ACE_a2 p{
+    color: var(--font_W);
+}
+.ACE_a2 img,
+.ACE_a2 .a2_tt{
+    display: inline-block;
+    width: 30%;
+}
+.ACE_a2 p{
+    display: inline
+}
+/* C */
+.c1_imgs{
+    display: flex;
+}
+.c1_tt{
+    text-align: center;
+}
+
+.ACE_c2{
+    background: #000;
+    display: flex;
+    align-items: center;
+}
+.c2_tt,
+.ACE_c2 p{
+    color: var(--font_W);
+}
+/* E */
+
+/* // OLED */
