@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/place.css">
+    <title>사업장위치 - LG디스플레이</title>
+</head>
+<body class="place">
+    <header></header>
+    <div class="titleBg df">
+        <h2>국내 사업장 위치</h2>
+    </div>
+    <main class="__container">
+        <div class="section_mapWrap">
+            <section class="section_map pointerEvent" id="map">
+                <h3 class="__hidden">국내 사업장의 위치</h3>
+        <!-- 
+                <section class="mapOverlay">
+                    <div>
+                        <a href="#"><h4>LG디스플레이 본사</h4></a><a href="#" class="btn_more"><i class="fa-solid fa-arrow-right"></i></a>
+                        <p>
+                            <span class="score">0.0</span>
+                            <span class="starWrap">
+                                <span class="star starScore">
+                                    <span class="starframeWrap">
+                                        <span class="starframe">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </span>
+
+                                    <span class="starframeWrap">
+                                        <span class="starframe">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </span>
+
+                                    <span class="starframeWrap">
+                                        <span class="starframe">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </span>
+
+                                    <span class="starframeWrap">
+                                        <span class="starframe">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </span>
+
+                                    <span class="starframeWrap">
+                                        <span class="starframe">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span class="star starBg">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </span>
+                            
+                            <a href="#" class="count">(0 건)</a>
+                            <span class="verticalBar"></span>
+                            <a href="#" class="review">리뷰 3</a>
+                        </p>
+
+                        <address>
+                            <p>서울 영등포구 여의대로 128</p>
+                            <p><span>(우) 07336</span><span>(지번) 여의도동 20</span></p>
+                            <p>02-3777-5114</p>
+                            <p><a href="#">상세보기</a><a href="#">정보 수정 제안</a><a href="#">홈페이지</a></p>
+                        </address>
+                        <button class="btn_close"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div></div>
+                    <div class="ui">
+                        <ul>
+                            <li><a href="#"><span class="bookmark"></span></a></li>
+                            <li><a href="#"><span class="roadview"></span></a></li>
+                            <li><a href="#"><span class="urlcopy"></span></a></li>
+                        </ul>
+                        <button class="btn_pathfind">길찾기</button>
+
+                    </div>
+                    
+                </section>
+                    -->
+
+            </section>
+            <button class="btn_drag disabled">드래그 켜기</button>
+        </div>
+        <section class="section_list">
+            <h3 class="__hidden">국내 사업장 리스트</h3>
+            <ul class="df">
+                <li>
+                    <a href="#map">
+                        <div class="imgframe place_lg"></div>
+                        <address>
+                            <p class="place_title">LG Display 본사</p>
+                            <p class="place_address">서울특별시 영등포구 여의대로 128, LG트윈타워</p>
+                            <p class="place_telnum">02-3773-1114</p>
+                        </address>
+                    </a>
+                </li>
+                <li>
+                    <a href="#map">
+                        <div class="imgframe place_science"></div>
+                        <address>
+                            <p class="place_title">LG사이언스파크</p>
+                            <p class="place_address">서울특별시 강서구 마곡중앙10로 30 LG사이언스파크 E2동</p>
+                            <p class="place_telnum"></p>
+                        </address>
+                    </a>
+                </li>
+                <li>
+                    <a href="#map">
+                        <div class="imgframe place_paju"></div>
+                        <address>
+                            <p class="place_title">파주공장</p>
+                            <p class="place_address">경기도 파주시 월롱면 엘지로 245</p>
+                            <p class="place_telnum"></p>
+                        </address>
+                    </a>
+                </li>
+                <li>
+                    <a href="#map">
+                        <div class="imgframe place_gumi"></div>
+                        <address>
+                            <p class="place_title">구미공장</p>
+                            <p class="place_address">경상북도 구미시 3공단2로 235 </p>
+                            <p class="place_telnum"></p>
+                        </address>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=43cca6ea2cb111b799cf0c09b6587463"></script>
+    <script src="js/place.js"></script>
+</body>
+</html>

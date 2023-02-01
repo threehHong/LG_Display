@@ -1,0 +1,16 @@
+footer * {
+	background: #1d1b1b;
+	color: #fff;
+	text-decoration: none;
+}
+.footer_wrapper {
+	position: relative;
+	padding: 58px 187px;
+}
+footer .snslist .blog {
+	background: url(../images/blog.svg) no-repeat center;
+	width: 18px;
+	display: inline-block;
+	text-indent: 9999em;
+	overflow: hidden;
+}
