@@ -10,16 +10,15 @@
     font-size: 55px;
     line-height: 55px;
     font-weight: bold;
-
     margin-left: 147px;
 }
 
 .it .title_deco::before {
+    vertical-align: top;
     content: "";
     display: inline-block;
-    vertical-align: middle;
     width: 18px;
-    height: 54px;
+    height: 48px;
     background-color: var(--point_R);
     margin-right: 30px;
 }
