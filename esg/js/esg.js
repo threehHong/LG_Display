@@ -11,7 +11,8 @@ $(window).scroll(function() {
     /* 스크롤 동작 안해도 콘솔창에 나오게 하는 기능 - 알아보기 */
     $(window).trigger("scorll");
 
-    /******* SECTION NATURAL *******/
+
+    /* SECTION NATURAL(circle, line, font) */
     if(scroll_AMT > 300){
         $('.svg_effect_circle h2').addClass('active_para');
         $('.line_circle line:nth-child(1)').addClass('active_lf');
@@ -21,13 +22,13 @@ $(window).scroll(function() {
         $('.water_path').addClass('active_w');
         $('.water_path_font').addClass('active_wf');
     }  
-
+    
 
     /* SUB IMG */
     let img_AMT = $('.sub_img').offset().top - 500;
 
     if(scroll_AMT > img_AMT) {
-        $('.sub_img img').addClass('active_sbimg')
+        $('.sub_img .img').addClass('active_sbimg')
     }
 
 
@@ -73,20 +74,61 @@ $(window).scroll(function() {
 
 
     /* 환경법규 준수 */
-    let graph_follow_AMT = $('.eco_follow_graph .graph').offset().top - 600;
-    
+    let graph_follow_AMT = $('.air_pollution_container .graph').offset().top - 450;
+    let graph_follow_AMTb = $('.water_pollution_container .graph').offset().top - 450;
+    let window_width_resposive = 1580;
+
     console.log("graph_follow_AMT : ", graph_follow_AMT);
+    console.log("graph_follow_AMTb : ", graph_follow_AMTb);
 
-    if(scroll_AMT > graph_follow_AMT) {
-        $('.eco_follow_graph .graph path:nth-child(3)').addClass('active_follow_r');
-        $('.eco_follow_graph .graph text:nth-child(9)').addClass('active_follow_r');
-
-        $('.eco_follow_graph .graph path:nth-child(1)').addClass('active_follow_y');
-        $('.eco_follow_graph .graph text:nth-child(11)').addClass('active_follow_y');
-
-        $('.eco_follow_graph .graph path:nth-child(8)').addClass('active_follow_g');
-        $('.eco_follow_graph .graph text:nth-child(13)').addClass('active_follow_g');
+    if(window.innerWidth > window_width_resposive) {
+        if(scroll_AMT > graph_follow_AMT) {
+            /* .air_pollution_container */
+            $('.air_pollution_container .graph path:nth-child(3)').addClass('active_follow_r');
+            $('.air_pollution_container .graph text:nth-child(9)').addClass('active_follow_r');
+    
+            $('.air_pollution_container .graph path:nth-child(1)').addClass('active_follow_y');
+            $('.air_pollution_container .graph text:nth-child(11)').addClass('active_follow_y');
+    
+            $('.air_pollution_container .graph path:nth-child(8)').addClass('active_follow_g');
+            $('.air_pollution_container .graph text:nth-child(13)').addClass('active_follow_g');
+    
+            /* water_pollution_container */
+            $('.water_pollution_container .graph path:nth-child(3)').addClass('active_follow_r');
+            $('.water_pollution_container .graph text:nth-child(9)').addClass('active_follow_r');
+    
+            $('.water_pollution_container .graph path:nth-child(1)').addClass('active_follow_y');
+            $('.water_pollution_container .graph text:nth-child(11)').addClass('active_follow_y');
+    
+            $('.water_pollution_container .graph path:nth-child(8)').addClass('active_follow_g');
+            $('.water_pollution_container .graph text:nth-child(13)').addClass('active_follow_g');
+        } 
+    } else if(window.innerWidth <= window_width_resposive) { 
+        if(scroll_AMT > graph_follow_AMT) {
+            /* .air_pollution_container */
+            $('.air_pollution_container .graph path:nth-child(3)').addClass('active_follow_r');
+            $('.air_pollution_container .graph text:nth-child(9)').addClass('active_follow_r');
+    
+            $('.air_pollution_container .graph path:nth-child(1)').addClass('active_follow_y');
+            $('.air_pollution_container .graph text:nth-child(11)').addClass('active_follow_y');
+    
+            $('.air_pollution_container .graph path:nth-child(8)').addClass('active_follow_g');
+            $('.air_pollution_container .graph text:nth-child(13)').addClass('active_follow_g');
+        } 
+        if(scroll_AMT > graph_follow_AMTb)  {
+            /* water_pollution_container */
+            $('.water_pollution_container .graph path:nth-child(3)').addClass('active_follow_r');
+            $('.water_pollution_container .graph text:nth-child(9)').addClass('active_follow_r');
+    
+            $('.water_pollution_container .graph path:nth-child(1)').addClass('active_follow_y');
+            $('.water_pollution_container .graph text:nth-child(11)').addClass('active_follow_y');
+    
+            $('.water_pollution_container .graph path:nth-child(8)').addClass('active_follow_g');
+            $('.water_pollution_container .graph text:nth-child(13)').addClass('active_follow_g');
+        }
     }
+    
 })
+
 
 

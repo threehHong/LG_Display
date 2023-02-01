@@ -14,10 +14,8 @@
     </head>
 
     <body>
-        <div class="esg_main">
-            <img src="img/main_img.png" alt="">
+        <div class="esg_main"> 
             <h2> ESG </h2> 
-            <!-- h2 태그로 바꾸기, 백그라운드 url로 바꾸기 그리고 버티컬 얼라인이랑 등등으로 사용하기(찌그러지는거 수정할 수 있음). -->
         </div>
 
         <main>
@@ -105,7 +103,8 @@
 
                 <!-- fade-in 등장 -->
                 <div class="sub_img">
-                    <img src="img/child_img.jpg" alt="">
+                    <div class="img"> </div>
+                    <!-- <img src="img/child_img.jpg" alt=""> -->
                 </div>
             </section>
             <!-- SECTION NATURAL -->
@@ -199,7 +198,8 @@
                                 </p>
                     
                                 <div class="graph">
-                                    <svg width="512" height="190" viewBox="0 0 524 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- 512 -->
+                                    <svg width="73.14%" height="190" viewBox="0 0 524 172" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3 171.323H518" stroke="#D9DADB"/>
                             
                                         <path d="M5 61.4706L139.5 35.4139L264 17.8758L391.5 7.854H517.5" stroke="#6B6B6B"  stroke-dasharray='510'; stroke-dashoffset='0'; stroke-opacity="1"/>
@@ -411,155 +411,158 @@
                         </p>
                     </div>
 
-                    <div class="eco_follow_graph">
-                        <div class="air_pollution">
-                            <h3> 대기오염물질 배출량(국내외) </h3>
-                
-                            <div class="container">
-                                <span> 질소산화물(NOx) </span>
-                                <span> 황산화물(SOx) </span>
-                                <span> 먼지 </span>
-                                <span> (단위: kg/yr) </span>
-                            </div>
+                    <div class="eco_follow_desc">
+                        <!-- .eco_follow_graph -->
+                        <div class="air_pollution_container">
+                            <div class="air_pollution">
+                                <h3> 대기오염물질 배출량(국내외) </h3>
+                    
+                                <div class="container">
+                                    <span> 질소산화물(NOx) </span>
+                                    <span> 황산화물(SOx) </span>
+                                    <span> 먼지 </span>
+                                    <span> (단위: kg/yr) </span>
+                                </div>
+                                
+                                <div class="graph">
+                                    <svg width="481" height="272" viewBox="0 0 481 272" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M147.32 205.829C153.833 205.829 159.108 211.108 159.103 217.621C159.098 224.134 153.815 229.413 147.302 229.413L0.887951 229.413L0.905487 205.829L147.32 205.829Z" fill="#EAB413"/>
+                                        <text x="404" y="13" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            110,367
+                                        </text>    
                             
-                            <div class="graph">
-                                <svg width="481" height="272" viewBox="0 0 481 272" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M147.32 205.829C153.833 205.829 159.108 211.108 159.103 217.621C159.098 224.134 153.815 229.413 147.302 229.413L0.887951 229.413L0.905487 205.829L147.32 205.829Z" fill="#EAB413"/>
-                                    <text x="404" y="13" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        110,367
-                                    </text>    
-                        
-                                    <path d="M399.166 168.308C405.678 168.308 410.954 173.588 410.949 180.1C410.944 186.613 405.661 191.893 399.148 191.893L0.915966 191.893L0.933502 168.308L399.166 168.308Z" fill="#810606"/>
-                                    <text x="232" y="50" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        25,690
-                                    </text>
-                        
-                                    <path d="M389.102 79.7808C395.615 79.7808 400.89 85.0603 400.886 91.573C400.881 98.0857 395.597 103.365 389.085 103.365L1.01207 103.365L1.0296 79.7808L389.102 79.7808Z" fill="#D9DADB"/>
-                                    <text x="423" y="92" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        114,394
-                                    </text>
+                                        <path d="M399.166 168.308C405.678 168.308 410.954 173.588 410.949 180.1C410.944 186.613 405.661 191.893 399.148 191.893L0.915966 191.893L0.933502 168.308L399.166 168.308Z" fill="#810606"/>
+                                        <text x="232" y="50" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            25,690
+                                        </text>
+                            
+                                        <path d="M389.102 79.7808C395.615 79.7808 400.89 85.0603 400.886 91.573C400.881 98.0857 395.597 103.365 389.085 103.365L1.01207 103.365L1.0296 79.7808L389.102 79.7808Z" fill="#D9DADB"/>
+                                        <text x="423" y="92" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            114,394
+                                        </text>
+        
+                                        <path d="M480.119 149C480.396 149 480.619 149.224 480.619 149.5V149.5C480.619 149.776 480.395 150 480.119 150L0.999745 150L1.00049 149L480.119 149Z" fill="white"/>
+                                
+                            
+                                        <path d="M215.016 247.781C221.529 247.781 226.804 253.06 226.8 259.573V259.573C226.795 266.086 221.511 271.365 214.999 271.365L1.00987 271.365L1.0274 247.781L215.016 247.781Z" fill="#D9DADB"/>
+                                        <text x="435" y="180" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            121,333
+                                        </text>
+                            
+                                        <path d="M199.819 37.5205C206.332 37.5205 211.608 42.8001 211.603 49.3128C211.598 55.8255 206.314 61.1051 199.802 61.1051L1.01274 61.1051L1.03027 37.5205L199.819 37.5205Z"  fill="#EAB413"/>
+                                        <text x="180" y="218" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            24,993
+                                        </text>
+                            
+                                        <path d="M369.133 -2.69726e-10C375.646 -1.2076e-10 380.921 5.27958 380.917 11.7923C380.912 18.305 375.628 23.5846 369.116 23.5846L1.04054 23.5846L1.05807 -8.68883e-09L369.133 -2.69726e-10Z" fill="#810606"/>
+                                        <text x="248" y="259" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            56,246
+                                        </text>
+                                    </svg>
+                
+                                    <span class="line"> line </span>
+                                        
+                                    <ul>
+                                        <li> 2020 </li>
+                                        <li> 2021 </li>
+                                    </ul>
+                                </div>
+                            </div>
     
-                                    <path d="M480.119 149C480.396 149 480.619 149.224 480.619 149.5V149.5C480.619 149.776 480.395 150 480.119 150L0.999745 150L1.00049 149L480.119 149Z" fill="white"/>
-                            
-                        
-                                    <path d="M215.016 247.781C221.529 247.781 226.804 253.06 226.8 259.573V259.573C226.795 266.086 221.511 271.365 214.999 271.365L1.00987 271.365L1.0274 247.781L215.016 247.781Z" fill="#D9DADB"/>
-                                    <text x="435" y="180" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        121,333
-                                    </text>
-                        
-                                    <path d="M199.819 37.5205C206.332 37.5205 211.608 42.8001 211.603 49.3128C211.598 55.8255 206.314 61.1051 199.802 61.1051L1.01274 61.1051L1.03027 37.5205L199.819 37.5205Z"  fill="#EAB413"/>
-                                    <text x="180" y="218" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        24,993
-                                    </text>
-                        
-                                    <path d="M369.133 -2.69726e-10C375.646 -1.2076e-10 380.921 5.27958 380.917 11.7923C380.912 18.305 375.628 23.5846 369.116 23.5846L1.04054 23.5846L1.05807 -8.68883e-09L369.133 -2.69726e-10Z" fill="#810606"/>
-                                    <text x="248" y="259" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        56,246
-                                    </text>
-                                </svg>
-            
-                                <span class="line"> line </span>
-                                    
-                                <ul>
-                                    <li> 2020 </li>
-                                    <li> 2021 </li>
-                                </ul>
-                            </div>
-                
-                        </div>
-            
-                        <div class="water_pollution">
-                            <h3> 수질오염물질 배출량(국내외) </h3>
-                
-                            <div class="container">
-                                <span> 생물학적 산소요구량(BOD) </span>
-                                <span> 화학적 산소요구량(COD) </span>
-                                <span> 부유물질(SS) </span>
-                                <span> (단위: ton/d) </span>
-                            </div>
-                            
-                            <div class="graph">
-                                <svg width="522" height="272" viewBox="0 0 522 272" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M361.581 205.829C368.093 205.829 373.364 211.108 373.352 217.621C373.341 224.134 368.052 229.413 361.54 229.413L0.674444 229.413L0.715271 205.829L361.581 205.829Z" fill="#EAB413"/>
-                                    <text x="404" y="13" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        110,367
-                                    </text> 
-                        
-                                    <path d="M450.098 168.308C456.61 168.308 461.886 173.588 461.88 180.1V180.1C461.875 186.613 456.591 191.893 450.078 191.893L0.70185 191.893L0.721344 168.308L450.098 168.308Z" fill="#810606"/>
-                                    <text x="354" y="50" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        125,690
-                                    </text>
-                        
-                                    <path d="M520.636 127C520.912 127 521.136 127.224 521.136 127.5V127.5C521.135 127.776 520.911 128 520.635 128L1.01889 128L1.01971 127L520.636 127Z" fill="white"/>
-                        
-                                    <path d="M191.506 79.7808C198.018 79.7808 203.296 85.0603 203.293 91.573C203.291 98.0857 198.01 103.365 191.497 103.365L0.797619 103.365L0.806396 79.7808L191.506 79.7808Z" fill="#D9DADB"/>
-                                    <text x="225" y="92" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        114,394
-                                    </text>          
-                        
-                                    <path d="M290.871 247.781C297.384 247.781 302.658 253.06 302.652 259.573C302.645 266.086 297.361 271.365 290.848 271.365L0.796653 271.365L0.819824 247.781L290.871 247.781Z" fill="#D9DADB"/>
-                                    <text x="485" y="180" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        121,333
-                                    </text>           
-                        
-                                    <path d="M318.392 37.5205C324.905 37.5205 330.179 42.8001 330.171 49.3128C330.164 55.8255 324.878 61.1051 318.365 61.1051L0.797873 61.1051L0.824982 37.5205L318.392 37.5205Z" fill="#EAB413"/>
-                                    <text x="394" y="218" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        24,993
-                                    </text>        
-                        
-                                    <path d="M369.219 -2.69512e-10C375.732 -1.20665e-10 381.008 5.27959 381.003 11.7923C380.998 18.305 375.715 23.5846 369.202 23.5846L0.825214 23.5846L0.84256 -8.68883e-09L369.219 -2.69512e-10Z" fill="#810606"/>
-                                    <text x="322" y="259" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
-                                        56,246
-                                    </text>
-                                </svg>
-            
-                                <span class="line"> line </span>
-                                    
-                                <ul>
-                                    <li> 2020 </li>
-                                    <li> 2021 </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="substance_chemical">
-                        <div class="pollution_substance">
-                             <h3> 오염물질 배출 저감 </h3>
-                             <p> 
-                                <span> 엄격한 기준 </span> <br>
-                                지역사회 환경영향 최소화를 위해 대기 및 수질오염물질 배출을 <br>
-                                법적 기준 70% 수준으로 설정하여 관리
-                            </p>
-                             
-                            <p> 
-                                <span> 체계적인 관리시스템 </span> <br>
-                                방지시설의 갑작스러운 고장이나 화재폭발 등으로 인해 법적 기준을 초과한 오염 물질이 <br>
-                                배출하지 않도록 긴급 상황 발생 시 즉시 배출을 중단하고 법규에서 규정한 기관에 <br>
-                                보고하도록 관리
-                            </p>
-                             
-                            <p>
-                                <span> 최적의 환경오염 방지시설 </span> <br>
-                                오염물질을 적절하게 처리할 수 있도록 모든 방지시설에 <br>
-                                별도의 예비용 설비를 추가로 설치하여 운영
-                            </p>
+                            <div class="pollution_substance">
+                                <h3> 오염물질 배출 저감 </h3>
+                                <p> 
+                                   <span> 엄격한 기준 </span> <br>
+                                   지역사회 환경영향 최소화를 위해 대기 및 수질오염물질 배출을 <br>
+                                   법적 기준 70% 수준으로 설정하여 관리
+                               </p>
+                                
+                               <p> 
+                                   <span> 체계적인 관리시스템 </span> <br>
+                                   방지시설의 갑작스러운 고장이나 화재폭발 등으로 인해 법적 기준을 초과한 오염 물질이 <br>
+                                   배출하지 않도록 긴급 상황 발생 시 즉시 배출을 중단하고 법규에서 규정한 기관에 <br>
+                                   보고하도록 관리
+                               </p>
+                                
+                               <p>
+                                   <span> 최적의 환경오염 방지시설 </span> <br>
+                                   오염물질을 적절하게 처리할 수 있도록 모든 방지시설에 <br>
+                                   별도의 예비용 설비를 추가로 설치하여 운영
+                               </p>
+                           </div>
                         </div>
     
-                        <div class="pollution_chemical">
-                            <h3> 화학물질 관리 체계 </h3>
-                            <p> 
-                                LG디스플레이는 사내 및 해외법인으로 도입되는 모든 화학물질에 대해 사전심사제도를 <br>
-                                운영하여 관련법규 적법성 및 사내 기준 준수여부를 심사하고 있으며, <br> 
-                                심사 부적합 제품에 대해서는 구매를 금지하고 있습니다.  
-                            </p>
-                            <p> 
-                                또한 도입금지물질(739종)을 지정하고 대체물질개발 활동 및 대체물질 관리 원칙을 수립 <br>
-                                (사용현황 추적관리, 현장점검실시 등)하여 근로자의 건강 장해 예방을 하고 있습니다. 
-                            </p>
-                            <p> 
-                                화학물질 사고 예방/교육 강화 측면에서는 근로자들이 화학물질 최신 물질안전보건자료 <br> (MSDS)를 상시 열람할 수 있도록 하여 화학물질 정보를 공유하고, 사내 교육 시스템과 <br> 연계시켜 취급자 교육 관리를 하고 있습니다. 대외적으로는 화학사고 예방,  사고발생 시 <br> 대응계획 등을 유관기관, 인근 주민 및 사업장과 주기적으로 공유하여 화학사고 예방에 <br> 만전을 기하고 있습니다.
-                            </p>
+                        <!-- .substance_chemical -->
+                        <div class="water_pollution_container">
+                            <div class="water_pollution">
+                                <h3> 수질오염물질 배출량(국내외) </h3>
+                    
+                                <div class="container">
+                                    <span> 생물학적 산소요구량(BOD) </span>
+                                    <span> 화학적 산소요구량(COD) </span>
+                                    <span> 부유물질(SS) </span>
+                                    <span> (단위: ton/d) </span>
+                                </div>
+                                
+                                <div class="graph">
+                                    <svg width="522" height="272" viewBox="0 0 522 272" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M361.581 205.829C368.093 205.829 373.364 211.108 373.352 217.621C373.341 224.134 368.052 229.413 361.54 229.413L0.674444 229.413L0.715271 205.829L361.581 205.829Z" fill="#EAB413"/>
+                                        <text x="404" y="13" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            110,367
+                                        </text> 
+                            
+                                        <path d="M450.098 168.308C456.61 168.308 461.886 173.588 461.88 180.1V180.1C461.875 186.613 456.591 191.893 450.078 191.893L0.70185 191.893L0.721344 168.308L450.098 168.308Z" fill="#810606"/>
+                                        <text x="354" y="50" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            125,690
+                                        </text>
+                            
+                                        <path d="M520.636 127C520.912 127 521.136 127.224 521.136 127.5V127.5C521.135 127.776 520.911 128 520.635 128L1.01889 128L1.01971 127L520.636 127Z" fill="white"/>
+                            
+                                        <path d="M191.506 79.7808C198.018 79.7808 203.296 85.0603 203.293 91.573C203.291 98.0857 198.01 103.365 191.497 103.365L0.797619 103.365L0.806396 79.7808L191.506 79.7808Z" fill="#D9DADB"/>
+                                        <text x="225" y="92" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            114,394
+                                        </text>          
+                            
+                                        <path d="M290.871 247.781C297.384 247.781 302.658 253.06 302.652 259.573C302.645 266.086 297.361 271.365 290.848 271.365L0.796653 271.365L0.819824 247.781L290.871 247.781Z" fill="#D9DADB"/>
+                                        <text x="485" y="180" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            121,333
+                                        </text>           
+                            
+                                        <path d="M318.392 37.5205C324.905 37.5205 330.179 42.8001 330.171 49.3128C330.164 55.8255 324.878 61.1051 318.365 61.1051L0.797873 61.1051L0.824982 37.5205L318.392 37.5205Z" fill="#EAB413"/>
+                                        <text x="394" y="218" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            24,993
+                                        </text>        
+                            
+                                        <path d="M369.219 -2.69512e-10C375.732 -1.20665e-10 381.008 5.27959 381.003 11.7923C380.998 18.305 375.715 23.5846 369.202 23.5846L0.825214 23.5846L0.84256 -8.68883e-09L369.219 -2.69512e-10Z" fill="#810606"/>
+                                        <text x="322" y="259" fill="#6B6B6B" dominant-baseline="middle" text-anchor="middle" style="font-size: 12px;" class="waste_path_font">
+                                            56,246
+                                        </text>
+                                    </svg>
+                
+                                    <span class="line"> line </span>
+                                        
+                                    <ul>
+                                        <li> 2020 </li>
+                                        <li> 2021 </li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <div class="pollution_chemical">
+                                <h3> 화학물질 관리 체계 </h3>
+                                <p> 
+                                    LG디스플레이는 사내 및 해외법인으로 도입되는 모든 화학물질에 대해 사전심사제도를 <br>
+                                    운영하여 관련법규 적법성 및 사내 기준 준수여부를 심사하고 있으며, <br> 
+                                    심사 부적합 제품에 대해서는 구매를 금지하고 있습니다.  
+                                </p>
+                                <p> 
+                                    또한 도입금지물질(739종)을 지정하고 대체물질개발 활동 및 대체물질 관리 원칙을 수립 <br>
+                                    (사용현황 추적관리, 현장점검실시 등)하여 근로자의 건강 장해 예방을 하고 있습니다. 
+                                </p>
+                                <p> 
+                                    화학물질 사고 예방/교육 강화 측면에서는 근로자들이 화학물질 최신 물질안전보건자료 <br> (MSDS)를 상시 열람할 수 있도록 하여 화학물질 정보를 공유하고, 사내 교육 시스템과 <br> 연계시켜 취급자 교육 관리를 하고 있습니다. 대외적으로는 화학사고 예방,  사고발생 시 <br> 대응계획 등을 유관기관, 인근 주민 및 사업장과 주기적으로 공유하여 화학사고 예방에 <br> 만전을 기하고 있습니다.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
