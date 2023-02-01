@@ -1138,14 +1138,51 @@ main .natural .desc p:nth-child(3) {
     }
 }
 
+@media (max-width: 960px) {
+    /* SECTION ECO */
+    .eco_index_op .pagraph {
+        width: 650px;
+        margin: 0 auto;
+    }
+}
+
 
 @media (max-width: 820px) {
+    /* SECTION NATURAL */
+    .esg_main h2 {
+        font-size: 30px;
+    }
+    .esg_main h2:before {
+        width: 14px;
+        height: 28px;
+        transform: translateY(2px);
+    }
+
+    main .natural .title h1  {
+        font-size: 38px;
+        width: 530px;
+    }
+    main .natural h2 {
+        font-size: 37px;
+    }
+
+    main .natural .desc p:nth-child(1) {
+        width: 638px;
+    }
+    main .natural .desc p:nth-child(2) {
+        width: 599px;
+        height: 114px;
+        margin: 17px auto 17px;
+    }
+    main .natural .desc p:nth-child(3) {
+        width: 354px;
+    }
+
+
     /* 수자원 관리 */
     .water_re {
         width: 699px;
     }
-
-    
     .water_re h3, .waste_re h3 {
         font-size: 16px;
         margin: 56px 2px 15px 132px;
@@ -1218,8 +1255,9 @@ main .natural .desc p:nth-child(3) {
         margin-left: 112px;
     }
 
-    .water_re .container span:nth-child(3) {
-        right: 18.70%
+    .water_re .container span:nth-child(3),
+    .waste_re .container span:nth-child(3) {
+        right: 88px;
     }
 
 
@@ -1235,10 +1273,6 @@ main .natural .desc p:nth-child(3) {
 
     .waste_re .container span:nth-child(1):before {
         margin-left: 112px;
-    }
-
-    .waste_re .container span:nth-child(3) {
-        right: 18.70%
     }
 
 
