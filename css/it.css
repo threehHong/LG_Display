@@ -1,0 +1,25 @@
+.it .titleBg {
+    height: 756px;
+    background: url("../image/it_img_titleBg_pc.jpg") no-repeat center / cover;
+    padding-top: 104px;
+}
+
+.it .titleBg h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: bold;
+
+    margin-left: 147px;
+}
+
+.it .title_deco::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 54px;
+    background-color: var(--point_R);
+    margin-right: 30px;
+}
