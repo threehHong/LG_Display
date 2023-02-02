@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/media.css" />
-    <title>Media center</title>
-  </head>
-  <body>
-    <section class="media_newstab text-center container-xxl p-5">
-      <div class="tab_btn d-flex justify-content-center align-items-center">
-        <button type="button" data-filter="*" class="active">all</button>
-        <button type="button" data-filter=".latest_news">latest news</button>
-        <button type="button" data-filter=".newsroom">newsroom</button>
-        <button type="button" data-filter=".sns_live">sns live</button>
-      </div>
-      <div class="news_contents">
-        <ul class="news_article row" id="gallery">
-          <!-- <li class="latest_news g-5 col-xl-4 col-md-6">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/media.css" />
+		<title>Media center</title>
+	</head>
+	<body>
+		<section class="media_newstab text-center container-xxl p-5">
+			<div class="tab_btn d-flex justify-content-center align-items-center">
+				<button type="button" data-filter="*" class="active">all</button>
+				<button type="button" data-filter=".latest_news">latest news</button>
+				<button type="button" data-filter=".newsroom">newsroom</button>
+				<button type="button" data-filter=".sns_live">sns live</button>
+			</div>
+			<div class="news_contents">
+				<ul class="news_article row" id="gallery">
+					<!-- <li class="latest_news g-5 col-xl-4 col-md-6">
             <a href="#">
               <img src="img/media_newsimg1.png" alt="" />
               <div class="txt_box">
@@ -43,23 +43,23 @@
               </div>
             </a>
           </li> -->
-        </ul>
-      </div>
-      <button id="load_more">
-        더보기<i class="fa-solid fa-chevron-down"></i>
-      </button>
-    </section>
-    <script
-      src="https://code.jquery.com/jquery-3.6.3.min.js"
-      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/media.js"></script>
-  </body>
+				</ul>
+			</div>
+			<button id="load_more">
+				더보기<i class="fa-solid fa-chevron-down"></i>
+			</button>
+		</section>
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/media.js"></script>
+	</body>
 </html>
