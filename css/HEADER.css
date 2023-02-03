@@ -61,7 +61,7 @@ header a {
     top: 0;
     left: 0;
     height: 0px;
-    transition: height 0.5s;
+    transition: height 0.3s;
 }
 .wrapper.active {
     height: 297px;
@@ -107,7 +107,7 @@ nav {
     left: 0;
     height: 0px;
     opacity: 0;
-    transition: opacity 0.65s;
+    transition: opacity 0.5s;
 }
 .lnb_box li {
     line-height: 40.5px;
