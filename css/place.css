@@ -90,7 +90,7 @@ footer{
     border: 2px solid var(--point_R);
     color: var(--point_R);
     background-color: #fff;
-    transition: background-color 0.2s, color 0.2s;
+    transition: 0.2s;
     position: sticky;
     top: 10px;
     left: 100%;
@@ -118,8 +118,6 @@ footer{
     height: 100%;
 }
 
-/*임시*/
-
 .place .section_map .mapOverlay{
     pointer-events: auto;
     padding: 12px 20px;
@@ -130,7 +128,6 @@ footer{
     background-color: #fff;
     z-index: 100;
     transform: translate(-50%, calc(-100% - 80px));
-
 }
 .place .section_map .mapOverlay::after{
     content: "";
@@ -145,7 +142,6 @@ footer{
 .place .mapOverlay *{
     font-size: 12px;
     color: var(--font_B);
-    white-space:normal;
 }
 
 .place .mapOverlay h4{
@@ -153,7 +149,6 @@ footer{
     font-size: 17px;
     font-weight: bold;
     margin-bottom: 10px;
-    word-break: keep-all;
 }
 
 .place .mapOverlay .btn_more{
@@ -182,6 +177,7 @@ footer{
 .place .mapOverlay .starWrap .starScore{
     position: absolute;
     left: 0;
+    top: 0;
 }
 .place .mapOverlay .starWrap .starScore .starframeWrap{
     display: inline-block;
@@ -223,38 +219,17 @@ footer{
 
 .place .mapOverlay .btn_close{
     position: absolute;
-    display: block;
-    width: 12.5px;
-    height: 21px;
-    white-space: nowrap;
-    text-indent: 5em;
-    overflow: hidden;
+    
     background: none;
     border: none;
     padding: 0;
     top: 12px;
     right: 20px;
 }
-
-
-.place .mapOverlay .btn_close::after{
-    content: "\f00d";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
-    top: 0;
-    right: 0;
-    /* -webkit-font-smoothing: antialiased;
-    display: var(--fa-display,inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto; */
-    
+.place .mapOverlay .btn_close i{
     font-size: 20px;
     color: var(--font_G2);
     cursor: pointer;
-
 }
 
 .place .mapOverlay .ui{
@@ -408,7 +383,7 @@ footer{
         line-height: 27px;
         text-align: right;
     }
-    .place .section_mapWrap{height: 404px;}
+    .place .section_map{height: 404px;}
     .place .section_list ul{gap: 162px 0;}
     .place .section_list li{width: 100%;}
 
@@ -440,7 +415,6 @@ footer{
 }
 
 @media (max-width: 480px){
-    
     .__container{
         width: 100%;
     }
@@ -464,41 +438,7 @@ footer{
     .place main{
         margin: 42px auto;
     }
-
-
-    /* .place .section_mapWrap{height: 315px;} */
-    /* f8cc */
-
-    .place .section_map .mapOverlay{width: 250px;}
-    .place .mapOverlay *{font-size: 14px;}
-    .place .section_map .mapOverlay .mobile_hidden{display: none;}
-    .place .mapOverlay h4{width: 80%; font-size: 20px;}
-
-    .place .section_map .btn_pathfind{margin: 0;}
-
-    .place .section_mapWrap .btn_drag{
-        width: 27px;
-        height: 27px;
-        text-indent: 9em;
-        overflow: hidden;
-    }
-    .place .section_mapWrap .btn_drag::after{
-        content: "\f8cc";
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        position: absolute;
-        top: 0;
-        right: 5px;
-        font-size: 16px;
-        color: var(--point_R);
-    }
-    
-    .place .section_mapWrap .btn_drag.disabled{background-color: var(--point_R);}
-    .place .section_mapWrap .btn_drag.disabled::after{color: #fff;}
-
-
-
-
+    .place .section_map{height: 315px;}
     .place .section_list ul{gap: 126px;}
     .place .section_list li:hover{
         transform: none;

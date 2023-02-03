@@ -2,7 +2,6 @@ let btn_menu = $("header .menu");
 
 btn_menu.click(function(){
     $("header").toggleClass("active");
-    $container.removeClass("click");
 });
 
 let main = $(".section_main");
@@ -49,15 +48,3 @@ swiper.on("slideChangeTransitionStart", function(){
 //     timerSwitch = true;
 //     main.addClass("pagerTimer");
 // });
-
-
-$("main").mouseover(function(){
-    swiper.autoplay.pause();
-    timerSwitch = false;
-    main.removeClass("pagerTimer");
-});
-$("main").mouseout(function(){
-    swiper.autoplay.run();
-    timerSwitch = true;
-    main.addClass("pagerTimer");
-});
