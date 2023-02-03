@@ -3,7 +3,8 @@
 let gnb = $(".gnb_box"),
     gnbList = $(".gnb_box > li"),
     lnbBG = $(".wrapper"),
-    lnb = $(".lnb_box ");
+    lnb = $(".lnb_box "),
+    $btn_lang = $(".header_lang");
 
 gnbList.click(function (e) {
     e.preventDefault();
@@ -20,4 +21,7 @@ gnbList.click(function (e) {
     $this.siblings().removeClass("clicked");
 });
 
+$btn_lang.click(function () {
+    $(this).toggleClass("open");
+});
 // /header_JA_230130
