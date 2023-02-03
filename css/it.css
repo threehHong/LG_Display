@@ -1,3 +1,60 @@
+img {
+  width: 100%;
+}
+* {
+  color: var(--font_B);
+}
+/* a {
+  color: inherit;
+} */
+.notice {
+  position: relative;
+}
+.flex {
+  display: flex;
+}
+
+.notice::after {
+  content: "※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수 있습니다.";
+  position: absolute;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--font_G);
+  right: 0;
+  top: 100%;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+.mg6 {
+  margin-bottom: 162px;
+}
+/* ---------------------------------------------------------------------------- */
+h3 {
+  font-size: 55px;
+  /* line-height: 55px; */
+  font-weight: 700;
+  text-align: center;
+  /* color: var(--font_B); */
+}
+h4 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+p {
+  /* color: var(--font_B); */
+  font-size: 22px;
+  line-height: 35px;
+  text-align: center;
+  margin: 54px 0;
+}
+section {
+  padding: 81px 0;
+}
+figure {
+  margin-bottom: 162px;
+}
+/* ---------------------------------------------------------------------------- */
 .it .titleBg {
   height: 756px;
   background: url("../img/it_img_titleBg_pc.jpg") no-repeat center / cover;
@@ -22,5 +79,14 @@
   background-color: var(--point_R);
   margin-right: 30px;
 }
-.figcaption .detail_desc {
+
+#section2 {
+  transition: 0.5s;
+}
+#section2.focus {
+  background: #000;
+}
+
+#section2.focus h3 {
+  color: var(--font_W);
 }
