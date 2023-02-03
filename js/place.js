@@ -7,6 +7,8 @@ linkPrevent.click(e=>{
 let lg_list =[
     {
         latlng: new kakao.maps.LatLng(37.5279663, 126.9292856),
+        lat: 37.5279663,
+        lng: 126.9292856,
         content: {
             title: "LG디스플레이 본사",
             score: "3.7",
@@ -19,6 +21,8 @@ let lg_list =[
         },
     },{
         latlng: new kakao.maps.LatLng(37.5627462, 126.8312654),
+        lat: 37.5627462,
+        lng: 126.8312654,
         content: {
             title: "LG사이언스파크 마곡",
             score: "4.8",
@@ -31,6 +35,8 @@ let lg_list =[
         },
     },{
         latlng: new kakao.maps.LatLng(37.8133325, 126.7612555),
+        lat: 37.8133325,
+        lng: 126.7612555,
         content: {
             title: "LG디스플레이 파주공장",
             score: "2.5",
@@ -43,6 +49,8 @@ let lg_list =[
         },
     },{
         latlng: new kakao.maps.LatLng(36.1022627, 128.4038538),
+        lat: 36.1022627, 
+        lng: 128.4038538,
         content: {
             title: "LG디스플레이 구미공장",
             score: "0.0",
@@ -84,8 +92,8 @@ for(let i of lg_list){
     var content = `
         <section class="mapOverlay">
             <div>
-                <a href="#"><h4>${i.content.title}</h4></a><a href="#" class="btn_more"><i class="fa-solid fa-arrow-right"></i></a>
-                <p>
+                <a href="#" class="__dis_link" alt="${i.content.title}의 상세정보 보기"><h4>${i.content.title}</h4></a><a href="#" class="btn_more mobile_hidden"><i class="fa-solid fa-arrow-right"></i></a>
+                <p class="mobile_hidden">
                     <span class="score">${i.content.score}</span>
                     <span class="starWrap">
                     <span class="star starScore">
@@ -127,22 +135,22 @@ for(let i of lg_list){
                         <i class="fa-solid fa-star"></i>
                     </span>
                 </span>
-                    <a href="#" class="count">(${i.content.count} 건)</a>
+                    <a href="#" class="count __dis_link">(${i.content.count} 건)</a>
                     <span class="verticalBar"></span>
-                    <a href="#" class="review">리뷰 ${i.content.review}</a>
+                    <a href="#" class="review __dis_link">리뷰 ${i.content.review}</a>
                 </p>
 
                 <address>
                     <p>${i.content.address_road}</p>
                     <p><span>(우) ${i.content.address_post}</span><span>(지번) ${i.content.address_road}</span></p>
                     <p>${i.content.tel}</p>
-                    <p><a href="#">상세보기</a><a href="#">정보 수정 제안</a><a href="#">홈페이지</a></p>
+                    <p class="mobile_hidden"><a href="#" class="__dis_link">상세보기</a><a href="#" class="__dis_link">정보 수정 제안</a><a href="#" class="__dis_link">홈페이지</a></p>
                 </address>
-                <button class="btn_close"><i class="fa-solid fa-xmark"></i></button>
+                <button class="btn_close">닫기 버튼</button>
             </div>
             <div></div>
             <div class="ui">
-                <ul>
+                <ul class="mobile_hidden">
                     <li><a href="#"><span class="bookmark"></span></a></li>
                     <li><a href="#"><span class="roadview"></span></a></li>
                     <li><a href="#"><span class="urlcopy"></span></a></li>
@@ -155,10 +163,11 @@ for(let i of lg_list){
         map: map,
         content: content,
     });
-    overlay_list.push(overlay);
-    insertOverlay(0);
     marker.setMap(map);
     marker_list.push(marker);
+    overlay_list.push(overlay);
+    insertOverlay(0);
+    focusCenter(lg_list[0].lat, lg_list[0].lng);
 };
 
 
@@ -169,7 +178,8 @@ marker_list.forEach(function(marker, idx){
     });
 });
 
-function focusCenter(pos){
+function focusCenter(lat, lng){
+    let pos = new kakao.maps.LatLng(lat+0.001, lng);
     map.setCenter(pos);
 }
 function setMarkerZndex(idx){
@@ -178,25 +188,20 @@ function setMarkerZndex(idx){
     }
     marker_list[idx].setZIndex(1);
 }
-
-
 function insertOverlay(idx){
     closeOverlay();
     overlay_list[idx].setMap(map);
     scoreColor(idx);
-
     $(".place .mapOverlay .btn_close").click(function(){
         closeOverlay();
     })
 }
-
-
 function closeOverlay(){
     for(d of overlay_list){
         d.setMap(null);
     }
 }
-
+//별점
 function scoreColor(idx){
     let starFrame = $(".place .mapOverlay .starframe");
     let score = lg_list[idx].content.score,
@@ -205,22 +210,22 @@ function scoreColor(idx){
     for(let i = 0; i < array[0]; i++){starFrame.eq(i).css({width: "100%"});}
     if(array[1] > 0){starFrame.eq(array[0]).css({width:`${array[1]}0%`});}
 }
-
-// 지도 이동
-
-$btn_map.click(e=>{
-    let selectedIndex = $(e.currentTarget).parent().index();
-    map.setCenter(lg_list[selectedIndex].latlng);
-    setMarkerZndex(selectedIndex);
-    insertOverlay(selectedIndex);
-});
-
 // 맵 조작
-
 function mapHandler(bool){
     map.setZoomable(bool);
     map.setDraggable(bool);
 }
+// 지도 이동
+
+$btn_map.click(e=>{
+    let selectedIndex = $(e.currentTarget).parent().index();
+    // map.setCenter(lg_list[selectedIndex].latlng);
+    focusCenter(lg_list[selectedIndex].lat, lg_list[selectedIndex].lng)
+    setMarkerZndex(selectedIndex);
+    insertOverlay(selectedIndex);
+});
+
+
 
 $btn_drag.click((e)=>{
     $(e.currentTarget).toggleClass("disabled");
@@ -234,4 +239,4 @@ $btn_drag.click((e)=>{
     }
 })
 
-console.log("테스트용 콘솔2");
+console.log("테스트용 콘솔4");
