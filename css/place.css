@@ -39,7 +39,7 @@ footer{
 
 .place .titleBg{
     height: 756px;
-    background: url("../image/place_img_title.jpg") no-repeat center / cover;
+    background: url("../img/place_img_title.jpg") no-repeat center / cover;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
     align-items: end;
     justify-content: center;
@@ -132,7 +132,7 @@ footer{
 .place .section_map .mapOverlay::after{
     content: "";
     width: 42px; height: 39px;
-    background: url("../image/place_bg_tooltip.png") no-repeat;
+    background: url("../img/place_bg_tooltip.png") no-repeat;
     position: absolute;
     left: 50%;
     top: 100%;
@@ -142,6 +142,7 @@ footer{
 .place .mapOverlay *{
     font-size: 12px;
     color: var(--font_B);
+    white-space: normal;
 }
 
 .place .mapOverlay h4{
@@ -149,6 +150,7 @@ footer{
     font-size: 17px;
     font-weight: bold;
     margin-bottom: 10px;
+    word-break: keep-all;
 }
 
 .place .mapOverlay .btn_more{
@@ -177,7 +179,6 @@ footer{
 .place .mapOverlay .starWrap .starScore{
     position: absolute;
     left: 0;
-    top: 0;
 }
 .place .mapOverlay .starWrap .starScore .starframeWrap{
     display: inline-block;
@@ -217,7 +218,7 @@ footer{
 .place .mapOverlay address p:nth-of-type(4) a{color: #3D75CC; margin-right: 10px;}
 .place .mapOverlay address p:nth-of-type(4) a:hover{text-decoration: underline;}
 
-.place .mapOverlay .btn_close{
+/* .place .mapOverlay .btn_close{
     position: absolute;
     
     background: none;
@@ -225,12 +226,46 @@ footer{
     padding: 0;
     top: 12px;
     right: 20px;
+} */
+.place .mapOverlay .btn_close{
+    position: absolute;
+    display: block;
+    width: 12.5px;
+    height: 21px;
+    white-space: nowrap;
+    text-indent: 5em;
+    overflow: hidden;
+    background: none;
+    border: none;
+    padding: 0;
+    top: 12px;
+    right: 20px;
 }
-.place .mapOverlay .btn_close i{
+.place .mapOverlay .btn_close::after{
+    content: "\f00d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* -webkit-font-smoothing: antialiased;
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto; */
+    
     font-size: 20px;
     color: var(--font_G2);
     cursor: pointer;
+
 }
+
+/* .place .mapOverlay .btn_close i{
+    font-size: 20px;
+    color: var(--font_G2);
+    cursor: pointer;
+} */
 
 .place .mapOverlay .ui{
     display: flex;
@@ -255,7 +290,7 @@ footer{
 }
 .place .section_map ul li a span{
     display: block;
-    background: url("../image/sp_place.png") no-repeat;
+    background: url("../img/sp_place.png") no-repeat;
     margin: 0 auto;
 }
 .place .section_map ul li a .bookmark{
@@ -279,7 +314,7 @@ footer{
     padding-right: 8px;
     border: none;
     color: #fff;
-    background: url("../image/sp_place.png") no-repeat 0% 100%;
+    background: url("../img/sp_place.png") no-repeat 0% 100%;
     vertical-align: bottom;
     margin-left: 13px;
     cursor: pointer;
@@ -319,10 +354,10 @@ footer{
     background: no-repeat center / cover;
 }
 
-.place .section_list .place_lg{background-image: url("../image/place_img_place_lg.jpg");}
-.place .section_list .place_science{background-image: url("../image/place_img_place_science.jpg");}
-.place .section_list .place_paju{background-image: url("../image/place_img_place_paju.jpg");}
-.place .section_list .place_gumi{background-image: url("../image/place_img_place_gumi.png");}
+.place .section_list .place_lg{background-image: url("../img/place_img_place_lg.jpg");}
+.place .section_list .place_science{background-image: url("../img/place_img_place_science.jpg");}
+.place .section_list .place_paju{background-image: url("../img/place_img_place_paju.jpg");}
+.place .section_list .place_gumi{background-image: url("../img/place_img_place_gumi.png");}
 
 .place .section_list li address{
     display: grid;
@@ -438,7 +473,34 @@ footer{
     .place main{
         margin: 42px auto;
     }
-    .place .section_map{height: 315px;}
+    /* .place .section_map{height: 315px;} */
+
+    .place .section_map .mapOverlay{width: 250px;}
+    .place .mapOverlay *{font-size: 14px;}
+    .place .section_map .mapOverlay .mobile_hidden{display: none;}
+    .place .mapOverlay h4{width: 80%; font-size: 20px;}
+
+    .place .section_map .btn_pathfind{margin: 0;}
+
+    .place .section_mapWrap .btn_drag{
+        width: 27px;
+        height: 27px;
+        text-indent: 9em;
+        overflow: hidden;
+    }
+    .place .section_mapWrap .btn_drag::after{
+        content: "\f8cc";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        right: 5px;
+        font-size: 16px;
+        color: var(--point_R);
+    }
+    .place .section_mapWrap .btn_drag.disabled{background-color: var(--point_R);}
+    .place .section_mapWrap .btn_drag.disabled::after{color: #fff;}
+
     .place .section_list ul{gap: 126px;}
     .place .section_list li:hover{
         transform: none;
