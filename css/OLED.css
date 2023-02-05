@@ -4,6 +4,14 @@ html{
 .contain_margin{
     margin: 162px 0;
 }
+:root {
+    --Rows1 : 27px 0;
+    --Rows3 : 81px 0;
+    --Rows6 : 162px 0;
+}
+p{line-height: 27px;}
+.OLED_sec02 span{display: block;}
+
 /* OLED */
 .banner {
     position: relative;
@@ -52,14 +60,23 @@ html{
     font-size: 2.8rem;
     font-weight: 600;
 }
-.OLED_sec02 p{
+.OLED_sec02 > p{
     font-size: 1.12rem;
     line-height: 27px;
+    width: 70%;
 }
 .warning_txt{
     font-weight: 300;
     font-size: 0.8rem;
     color: var(--font_G);
+}
+.ace_tt h4{
+margin: var(--Rows1);
+}
+.ace_tt p{
+    width: 50%;
+    margin: 0 auto;
+    line-height: 27px;
 }
 .ACE_R{
     color: var(--point_R);
@@ -81,12 +98,13 @@ html{
     width: 50%;
     margin-left: 157px;
 }
+.img_txt > p{
+    width: 70%;
+}
 .OLED_sec02_title{
-    margin-bottom: 81px;
+    margin-bottom: 27px;
 }
 
-.ace_box{
-}
 .ace_box .sub_tt{
     font-size: 1.5rem;
     font-weight: 600;
@@ -141,9 +159,40 @@ html{
     font-size: 1.5rem;
 }
 /* A */
+.ACE_a1_scrollImg{
+    position: relative;
+}
+.a1_scroll{
+    width: 80%;
+    margin-left: auto;
+}
+.a1_scroll img{
+    width: 100%;
+}
+.ACE_a1_scrollImg .OLED_sec2_h3{
+    position: absolute;
+    width: 500px;
+    height: 108px;
+    background: var(--point_R);
+    top: 65%;
+    left: 0;
+}
+.OLED_sec2_h3 span{
+    color: var(--font_W);
+    text-align: center;
+    line-height: 112px;
+}
+.ACE_a1_scrollImg .a1_tt{
+    margin: 81px 0 27px 146px;
+}
+
 
 .ACE_a2{
-background: var(--font_B);
+    background: var(--font_B);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 } 
 .a2_tt h3,
 .ACE_a2 p{
@@ -154,26 +203,138 @@ background: var(--font_B);
     display: inline-block;
     width: 30%;
 }
-.ACE_a2 p{
-    display: inline
+.ACE_a2 p.a2_sub_txt{
+    position: absolute;
+    width: 30%;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+.ACE_a2 p.warning_txt{
+    color: var(--fnt_B);
+    position: absolute;
+    right: 0;
+    bottom: -27px;
 }
 /* C */
 .c1_imgs{
+    margin: 0 167px;
     display: flex;
+    gap: 105px;
+    justify-content: center;
+}
+.c1_imgs .img_box{
+    width: 50%;
+
+}
+.c1_imgs img{
+    width: 100%;
 }
 .c1_tt{
     text-align: center;
+    margin-left: 103px;
+}
+
+.ACE_c1 .warning_txt{
+    text-align: end;
+    margin-right: 167px;
+    margin-bottom: 54px;
 }
 
 .ACE_c2{
     background: #000;
     display: flex;
     align-items: center;
+    position: relative;
 }
+.c2_tt{
+    margin-left: 157px;
+    text-align: center;
+    line-height: 54px;
+}
+.c2_tt:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    bottom: 27px;
+    background-image: url(../img/OLED/ACE_c02_02.png);
+    background-size: cover;
+    width: 130px;
+    height: 38px;
+}
+
+
 .c2_tt,
 .ACE_c2 p{
     color: var(--font_W);
 }
 /* E */
 
-/* // OLED */
+.ACE_E1{
+    width: 100%;
+    padding: 0 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.E1_img{
+    width: 80%;
+    display: inline-block;
+}
+.E1_img img{
+    width: 100%;
+}
+.ACE_E1 .warning_txt{
+    text-align: start;
+    position: absolute;
+    top: -27px;
+    left: 0;
+    margin-left: 30px;
+}
+.E1_tt{
+    text-align: center;
+}
+
+.e2_imgs{
+    gap: 294px;
+    height: 696px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.e2_imgs .e2_02 img{
+    width: 100%;
+}
+.e2_imgs .e2_02:before{
+    content: 'OLED';
+    color: var(--font_W);
+    position: absolute;
+    display: inline-block;
+    font-size: 2.8rem;
+    font-weight: 600;
+    right: 25%;
+    bottom: 15%;
+}
+.e2_imgs .e2_02:after{
+    content: '';
+    background-image: url(../img/OLED/ACE_e02_03.png);
+    position: absolute;
+    background-size: cover;
+    width: 142px;
+    height: 132px;
+    right: 6%;
+    bottom: 15%;
+}
+.ACE_E2 .warning_txt{
+    text-align: end;
+}
+.e2_tt{
+    text-align: center;
+    margin: var(--Rows6);
+}
+
+/* // OLED */  

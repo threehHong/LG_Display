@@ -6,7 +6,7 @@ let gnb = $(".gnb_box"),
     lnb = $(".lnb_box "),
     $btn_lang = $(".header_lang");
 
-gnbList.mouseenter(function (e) {
+gnbList.click(function (e) {
     e.preventDefault();
 
     let $this = $(this);

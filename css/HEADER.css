@@ -61,7 +61,7 @@ header a {
     top: 0;
     left: 0;
     height: 0px;
-    transition: height 0.3s;
+    transition: height 0.4s;
 }
 .wrapper.active {
     height: 297px;
@@ -87,8 +87,8 @@ nav {
 }
 /* .gnb_box li.clicked .lnb_box li a.__link {
     color: var(--point_Y);
-}
-.gnb_box li.clicked .lnb_box li a.__dis_link.__link {
+} */
+/* .gnb_box li .lnb_box li a.__link {
     color: var(--point_Y);
 } */
 .gnb_box > li {
