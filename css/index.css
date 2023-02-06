@@ -126,6 +126,7 @@ header .sns_icon ul{
     display:flex;
     align-items: center;
     gap: 50px;
+
 }
 header .sns_icon ul a{
     color: var(--font_W);
@@ -767,7 +768,9 @@ h2.pcContents{display: none;}
         opacity: 1;
         transition: 1s;
     }
-
+    header .sns_icon{
+        grid-column: 2;
+    }
     
 }
 /* ----------------------------------------------------------------------------------- */
