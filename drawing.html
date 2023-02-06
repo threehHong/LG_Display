@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>drawing</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        img{
-            width: 100%;
-            vertical-align: bottom;
-        }
-        .imgframe{
-            border: 3px solid red;
-            width: 1500px;
-            height: 800px;
-            margin: 50px auto;
-            position: relative;
+      img {
+        width: 100%;
+        vertical-align: bottom;
+      }
+      .imgframe {
+        border: 3px solid red;
+        width: 1500px;
+        height: 800px;
+        margin: 50px auto;
+        position: relative;
 
-            background: url("img/it_img_sketch.jpg") no-repeat;
-            background-size: 100% 100%;
-            background-attachment: fixed;
+        background: url("img/it_img_sketch.jpg") no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
 
-            overflow: hidden;
-        }
-/* 
+        overflow: hidden;
+      }
+      /* 
         .drawcursor{
             position: absolute;
             left: 0;
@@ -45,69 +45,66 @@
             transition: transform 1s;
         } */
 
-        /* .draw{
+      /* .draw{
             background-color: rgba(100, 255, 100, 0.5);
         } */
-        .draw{
-            background: url("img/it_img_drawing.jpg") no-repeat;
-            background-size: 100% 100%;
-            background-attachment: fixed;
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            left: 0px;
-            top: 0px;
-            
-        }
-        .imgframe:hover .draw{
-            width: 200%;
-            height: 200%;
-            /* transform: translate(-50%, -50%); */
-            transition: width 2s, height 2s;
-            /* transform: translate(-50%, -50%); */
-        }
-
-        
-
+      .draw {
+        background: url("img/it_img_drawing.jpg") no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        left: 0px;
+        top: 0px;
+      }
+      .imgframe:hover .draw11 {
+        width: 200%;
+        height: 200%;
+        /* transform: translate(-50%, -50%); */
+        transition: width 2s, height 2s;
+        /* transform: translate(-50%, -50%); */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="imgframe">
-        <!-- <img src="img/it_img_sketch.jpg" alt=""> -->
-            <div class="draw">
-                
-            </div>
-        
+      <!-- <img src="img/it_img_sketch.jpg" alt=""> -->
+      <div class="draw"></div>
     </div>
+    <div style="height: 1000px"></div>
 
-
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
     <script>
-        let imgframe = $(".imgframe"),
-            draw = imgframe.find(".draw");
+      let imgframe = $(".imgframe"),
+        draw = imgframe.find(".draw");
 
-        let frameposX = imgframe.offset().left,
-            frameposY = imgframe.offset().top;
+      let frameposX = imgframe.offset().left,
+        frameposY = imgframe.offset().top;
 
-        $(window).resize(function(){
-            frameposX = imgframe.offset().left,
-            frameposY = imgframe.offset().top;
-        });
+      $(window).resize(function () {
+        (frameposX = imgframe.offset().left),
+          (frameposY = imgframe.offset().top);
+      });
 
-        imgframe.mousemove(function(){
-            let frameWidth = draw.innerWidth(),
-                frameHeight = draw.innerHeight();
-            
-            console.log("frameWidth", frameWidth)
-            // let cursorX = event.pageX - frameposX - frameWidth/2,
-            //     cursorY = event.pageY - frameposY - frameHeight/2;
-            let cursorX = event.pageX - frameposX,
-                cursorY = event.pageY - frameposY;
+      imgframe.mousemove(function () {
+        let frameWidth = draw.innerWidth(),
+          frameHeight = draw.innerHeight();
 
-            draw.css({"left": cursorX+"px", "top": cursorY+"px"});
-            // draw.css({backgroundPositionX: "-"+cursorX+"px", backgroundPositionY: "-"+cursorY+"px"});
-        })
+        console.log("frameWidth", frameWidth);
+        // let cursorX = event.pageX - frameposX - frameWidth/2,
+        //     cursorY = event.pageY - frameposY - frameHeight/2;
+        let cursorX = event.pageX - frameposX,
+          cursorY = event.pageY - frameposY;
+
+        draw.css({ left: cursorX + "px", top: cursorY + "px" });
+        // draw.css({backgroundPositionX: "-"+cursorX+"px", backgroundPositionY: "-"+cursorY+"px"});
+      });
     </script>
-</body>
+  </body>
 </html>

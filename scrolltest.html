@@ -1,84 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        img{
-            width: 100%;
-            vertical-align: bottom;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        width: 100%;
+        vertical-align: bottom;
+      }
 
-        .heightwrap{    /* ------------- 스크롤을 만들기 위한 클래스 */
-            height: 4000px;
-            background-image: linear-gradient(#369cbc, #cbc369);
-            padding-top: 500px;
-        }
-        .heightborder{
-            height: 2000px;
-            width: 1500px;
-            margin: 0 auto;
-            border: 3px solid black;
-            /* position: relative; */   /* ------------- 자식요소 sticky 때문에 position값을 지정할 필요는 없음 */
-            padding-top: 30px;  /* ------------- 이미지 초기 위치를 정하기 위한 padding */
-        }
-        .imgframe{
-            width: 100%;
-            position: sticky;   /* ------------- sticky >> top으로 고정될 위치 지정 */
-            top: 50px;
-            /* top: 0; */
-        }
-        
+      .heightwrap {
+        /* ------------- 스크롤을 만들기 위한 클래스 */
+        height: 6000px;
+        background-image: linear-gradient(#369cbc, #cbc369);
+        padding-top: 500px;
+      }
+      .heightborder {
+        height: 5000px;
+        width: 1500px;
+        margin: 0 auto;
+        border: 3px solid black;
+        /* position: relative; */ /* ------------- 자식요소 sticky 때문에 position값을 지정할 필요는 없음 */
+        padding-top: 30px; /* ------------- 이미지 초기 위치를 정하기 위한 padding */
+      }
+      .imgframe {
+        width: 100%;
+        position: sticky; /* ------------- sticky >> top으로 고정될 위치 지정 */
+        top: 50px;
+        /* top: 0; */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="heightwrap">
-        <div class="heightborder">
-            <div class="imgframe">
-                <img src="img/bezelessimg/OVERVIEW_DESIGN_PC_FHD_00000.jpg" alt="">
-            </div>
+      <div class="heightborder">
+        <div class="imgframe">
+          <img src="img/bezelessimg/OVERVIEW_DESIGN_PC_FHD_00000.jpg" alt="" />
         </div>
+      </div>
     </div>
 
     <script>
-        let scrollnum = 0;
-        let scrollcheck = 0;
-        let imgframe = document.querySelector(".imgframe img");
-        
+      let scrollnum = 0;
+      let scrollcheck = 0;
+      let imgframe = document.querySelector(".imgframe img");
 
-        document.addEventListener("scroll", function(){
-            
-            if(window.pageYOffset > scrollcheck){
-                if(scrollnum < 59){
-                    scrollnum++;
-                }else{
-                    scrollnum = 59
-                }
-            }else{
-                if(scrollnum > 0){
-                    scrollnum--;
-                }else{
-                    scrollnum = 0
-                }
-            }
-            scrollcheck = window.pageYOffset;
+      document.addEventListener("scroll", function () {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset > scrollcheck) {
+          if (scrollnum < 59) {
+            scrollnum++;
+          } else {
+            scrollnum = 59;
+          }
+        } else {
+          if (scrollnum > 0) {
+            scrollnum--;
+          } else {
+            scrollnum = 0;
+          }
+        }
+        scrollcheck = window.pageYOffset;
 
+        let imgaddress = ("0" + parseInt(scrollnum)).substr(-2);
+        // console.log(imgaddress);
+        let imgsrc = `img/bezelessimg/OVERVIEW_DESIGN_PC_FHD_000${imgaddress}.jpg`;
 
-
-            let imgaddress = ("0"+scrollnum).substr(-2);
-            let imgsrc = `img/bezelessimg/OVERVIEW_DESIGN_PC_FHD_000${imgaddress}.jpg`;
-
-
-            imgframe.setAttribute("src", imgsrc);
-            console.log(scrollnum);
-        
-        })
+        imgframe.setAttribute("src", imgsrc);
+        // console.log(scrollnum);
+      });
     </script>
-</body>
+  </body>
 </html>
