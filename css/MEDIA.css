@@ -1,4 +1,7 @@
 /* common */
+html {
+  font-size: 16px;
+}
 .contain_margin {
   margin: 162px 0;
 }
@@ -19,7 +22,7 @@
   width: 100%;
   height: 756px;
 }
-.media_banner_BG img {
+.media_banner_BG img{
   width: 100%;
 }
 .media_banner h2::before {
@@ -49,69 +52,70 @@
 .media_sec01 {
   margin-left: 187px;
 }
-.media_sec01_p h3 {
+.media_sec01_p h3{
   font-size: 4rem;
   font-weight: 900;
   line-height: 78px;
   margin-bottom: 81px;
 }
 
-.media_sec01_p span {
+.media_sec01_p span{
   display: block;
 }
-.media_sec01_p h4 {
+.media_sec01_p h4{
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 27px;
+
 }
-.media_sec01_txt {
+.media_sec01_txt{
   position: relative;
 }
-.media_sec01_txt li {
+.media_sec01_txt li{
   position: absolute;
   background: #fff;
 }
-.media_sec01_txt li:hover {
+.media_sec01_txt li:hover{
   color: var(--point_R);
 }
 
 /* sec01_cardnews_Slide */
-.media_sec01_slide ul {
+.media_sec01_slide ul{
   display: flex;
-  gap: 174px;
+  gap :174px;
   overflow: hidden;
 }
-.media_sec01_slide ul li a {
+.media_sec01_slide ul li a{
   display: inline-block;
   width: 450px;
 }
-.media_sec01_slide ul li a img {
+.media_sec01_slide ul li a img{
   width: 100%;
 }
-.media_sec01_slide ul li.hide a {
+.media_sec01_slide ul li.hide a{
   color: rgba(255, 255, 255, 0.5);
   left: 0;
   right: 0;
 }
 
 /* 슬라이드 */
-.media_slidearrow div {
-}
-.media_slidearrow div::before {
-  content: " ";
+.media_slidearrow div{}
+.media_slidearrow div::before{
+  content: ' ';
   display: inline-block;
   width: 111px;
   height: 31px;
-  background: url("../img/sp01.png");
+  background: url('../img/sp01.png');
 }
-.media_slidearrow .media_next:before {
+.media_slidearrow .media_next:before{
   background-position: 0 -281px;
 }
-.media_slidearrow .media_prev:before {
+.media_slidearrow .media_prev:before{
   background-position: 0 -310px;
 }
 
 /* 281 310*/
+
 
 /* YJ_230206_합침  */
 
