@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+
+/* 4.css 변수명 규칙
+var(--font_B)
+var(--font_G)
+var(--font_W)
+var(--point_R)
+var(--point_Y) */
+
+/* commercial */
+
+.CM_banner {
+  position: relative;
+  width: 100%;
+  height: 756px;
+  margin-bottom: 162px;
+  background: url("../img/main.png") no-repeat;
+  background-size: cover;
+}
+
+.CM_banner h2::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 54px;
+  margin-right: 30px;
+  top: 10px;
+  background: var(--point_R);
+}
+.CM_banner h2 {
+  position: absolute;
+  right: 100px;
+  bottom: 80px;
+  /* width: 336px; */
+  /* height: 69px; */
+  color: var(--font_W);
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 69px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* ---------- Commercial ------------- */
+
+.inner {
+  width: 1586px;
+  margin: 0 auto;
+}
+
+.section1Tk {
+  background: #000;
+}
+
+.titleTk {
+  width: 100%;
+  height: 810px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  font-family: "Playfair Display", serif;
+  font-size: 120px;
+  line-height: 120px;
+  font-weight: normal;
+}
+
+.titleTk h2 {
+  color: #a50034;
+}
+.titleTk .oled {
+  /* 지금 자리를 기준으로 움직이는 것이 relative */
+  position: relative;
+  left: -170px;
+}
+.titleTk .oledd {
+  position: relative;
+  left: 68px;
+}
+.titleTk .video {
+  position: relative;
+  left: -157px;
+}
+.titleTk .Tp {
+  position: relative;
+  left: -96px;
+}
+.titleTk .Tpd {
+  position: relative;
+  left: 300px;
+}
+.titleTk .Touch {
+  position: relative;
+  left: -90px;
+}
+.titleTk .Touchd {
+  position: relative;
+  left: 200px;
+}
+.titleTk .Tiling {
+  position: relative;
+  /* transform: translateX(-80px), translateY(-10px); */
+  left: -80px;
+  top: -10px;
+}
+.titleTk .Tilingd {
+  position: relative;
+  left: 200px;
+}
+
+.titleTk h3 {
+  color: #fff;
+  position: relative;
+  left: 249px;
+  font-size: 120px;
+  line-height: 120px;
+  font-weight: normal;
+}
+
+/* 설명 */
+.contentsTK {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 810px;
+}
+
+.contentTK {
+  font-family: "Gothic A1", sans-serif;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  color: #fff;
+  z-index: 10;
+  animation-delay: 0.5s;
+}
+/* 설명 title*/
+.contentTK h4 {
+  font-size: 55px;
+  line-height: 75px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px #282825;
+  margin-bottom: 50px;
+  animation-delay: 0.3s;
+}
+
+.pTK {
+  font-size: 26px;
+  line-height: 46px;
+  font-weight: medium;
+  color: #fff;
+  text-shadow: 0 0 1px #1d1d1b;
+  animation-delay: 0.5s;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate__animated.animate__fadeInLeft,
+.animate__animated.animate__fadeInRight {
+  --animate-duration: 1s;
+}
+.Tp .animate__animated.animate__fadeInLeft {
+  --animate-duration: 4s;
+}
+
+/* section2 ---------------------------------------------------------- */
+.section2Tk {
+  padding-top: 275px;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: normal;
+}
+
+.descTK img {
+  box-shadow: 5px 10px 15px #d29e9e;
+}
+
+.moredescTK .lineTK:before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 26px;
+  background: #810606;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+.descTK {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 260px;
+  color: #3d3d38;
+}
+.moredescTK h5 {
+  font-size: 26px;
+  font-weight: bold;
+  padding-bottom: 55px;
+  /* color: #1d1d1b; */
+}
+
+.moredescTK p {
+  font-size: 22px;
+  line-height: 35px;
+  /* color: #3d3d38; */
+}
