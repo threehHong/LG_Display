@@ -1,0 +1,399 @@
+/* header / footer css*/
+#header h3 {
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+
+.it footer .f_copyright {
+  
+}
+
+
+
+
+
+
+
+/*---*/
+img {
+  width: 100%;
+  transition: opacity 1s;
+}
+
+* {
+  color: var(--font_B);
+  word-break: keep-all;
+}
+/* a {
+  color: inherit;
+} */
+.notice {
+  position: relative;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.notice::after {
+  content: "※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수 있습니다.";
+  position: absolute;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--font_G);
+  right: 0;
+  top: 100%;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+.focus .notice::after {
+  color: var(--font_W);
+}
+
+/* .mg6 {
+  margin-bottom: 162px;
+} */
+
+.focus {
+  color: var(--font_W);
+  background-color: #000;
+  position: relative;
+}
+.focus h3,
+.focus h4,
+.focus p {
+  color: var(--font_W);
+}
+
+/* .focus::before{
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 200px;
+} */
+
+/* ---------------------------------------------------------------------------- */
+.it h3 {
+  font-size: 55px;
+  font-weight: 700;
+  text-align: center;
+}
+.it h4 {
+  /* font-size: 45px; */
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+.it p {
+  font-size: 22px;
+  line-height: 35px;
+  text-align: center;
+  margin: 54px 0;
+}
+
+.it p > span{
+  display: block;
+  color: inherit;
+}
+.it section {
+  padding: 81px 0;
+  transition: background 0.8s;
+}
+.it figure {
+  margin: 0 auto 162px;
+}
+.it .sectionTitle{
+  height: 756px;
+  margin-bottom: 162px;
+  object-fit: cover;
+  /* object-position: ; */
+}
+
+/* ---------------------------------------------------------------------------- */
+.it .titleBg {
+  height: 756px;
+  background: url("../img/it_img_titleBg_pc.jpg") no-repeat center 70% / cover;
+  padding-top: 104px;
+  margin-bottom: 162px;
+}
+
+.it .titleBg h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 55px;
+  font-weight: bold;
+  margin-left: 147px;
+}
+
+.it .title_deco::before {
+  vertical-align: top;
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 48px;
+  background-color: var(--point_R);
+  margin-right: 30px;
+}
+
+.it .sec_live {
+  width: 82.6%;
+}
+
+.it .sec_zoom {
+  width: 96.9%;
+}
+.it .sec_zoom > div {
+  display: grid;
+  grid-template-columns: 793fr 50fr 423fr;
+  grid-template-rows: auto;
+}
+.it .sec_zoom > div > div:first-of-type {
+  grid-column: 1 / span 1;
+}
+.it .sec_zoom .notice div:last-of-type {
+  grid-column: 3 / span 1;
+  background: url("../img/it_img_zoom.jpg") no-repeat center / 100% 100%;
+}
+
+.it .sec_black {
+  width: 82.6%;
+}
+.it .sec_black .notice > div {
+  background: url("../img/it_img_black_clear.jpg") no-repeat 0 0 / cover;
+  position: absolute;
+  border-right: 5px dashed var(--font_G2);
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+.it .sec_black figcaption {
+  order: 2;
+}
+
+.it .sec_sunlight {
+  width: 86.7%;
+}
+.it .sec_sunlight > div {
+  background: url("../img/it_img_sunlight_clear.jpg") no-repeat center / cover;
+}
+.it .sec_sunlight .focus img {
+  opacity: 0;
+}
+
+.it .sec_size {
+  width: 96.9%;
+  height: 631px;
+}
+.it .sec_size img {
+  height: 100px;
+}
+
+.it .sec_bezeless {
+  position: relative;
+}
+.it .sec_bezeless figcaption {
+  position: absolute;
+  width: 624px;
+  bottom: 0;
+  left: 9.84%;
+  z-index: 1;
+  color: var(--font_W);
+}
+
+svg {
+  width: 300px;
+  height: 300px;
+  fill: none;
+  position: relative;
+}
+svg circle {
+  stroke-dasharray: 10px;
+  stroke: #000;
+  stroke-width: 5px;
+}
+svg circle:nth-child(2) {
+  stroke-width: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  stroke-dasharray: 620;
+  stroke-dashoffset: 620;
+  stroke: #000;
+  stroke-width: 5px;
+  animation: line 2s forwards;
+}
+rect {
+  fill: #000;
+}
+.box rect {
+  fill: #ccc;
+  animation: fade 1.7s forwards;
+}
+.box rect:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.box rect:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.box rect:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fade {
+  0% {
+    fill: #ccc;
+  }
+  100% {
+    fill: #f00;
+  }
+}
+@keyframes line {
+  0% {
+    stroke-dashoffset: 620;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.st0 {
+  fill: #212121;
+}
+.st1 {
+  fill: none;
+  stroke: #000000;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st2 {
+  fill: none;
+  stroke: #212121;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+.st3 {
+  fill: none;
+}
+.st4 {
+  fill: #f4c603;
+}
+
+/* .it #section3{transition: 0.5s;} */
+.it .sec_gaming {
+  width: 75%;
+}
+
+.it .sec_folderable {
+  width: 80.4%;
+}
+.it .sec_battery {
+  width: 80.4%;
+}
+
+/* 반응형 */
+@media (max-width: 1000px) {
+  .it .flex {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .it h3 {
+    font-size: 36px;
+  }
+  .it h4 {
+    font-size: 28px;
+  }
+  .it p {
+    font-size: 18px;
+  }
+
+  .it .titleBg {
+    height: 324px;
+    padding-top: 81px;
+    margin-bottom: 0;
+  }
+  .it .titleBg h2 {
+    font-size: 36px;
+    font-weight: bold;
+    /* margin-left: 101px; */
+    margin-left: 13.2%;
+  }
+  .it .title_deco::before {
+    vertical-align: top;
+    width: 15px;
+    height: 36px;
+  }
+  .it .contents {
+    width: 92.3%;
+  }
+
+  .sectionTitle {
+    height: auto;
+  }
+
+  .it .sec_black .notice {
+    width: 100%;
+  }
+
+  .it .sec_bezeless figcaption {
+    position: static;
+    max-width: 624px;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .it h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .it h4 {
+    font-size: 18px;
+  }
+  .it p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .it .title_deco + p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .it .contents {
+    width: 100%;
+  }
+
+  .it .titleBg {
+    background: none;
+    height: 123px;
+  }
+  .it .titleBg h2 {
+    font-size: 20px;
+    line-height: 42px;
+    margin-left: 22px;
+    color: var(--font_B);
+  }
+  .it .titleBg h2.title_deco::before {
+    height: 42px;
+  }
+  .it .title_deco::before {
+    vertical-align: top;
+    width: 11px;
+    height: 24px;
+    margin-right: 6px;
+  }
+  .sectionTitle {
+    height: 164px;
+  }
+
+  /* .it .sec_bezeless figcaption{width: 100%;} */
+  #section3 .sectionTitle {
+    height: 328px;
+  }
+}
