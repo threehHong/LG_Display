@@ -1,3 +1,10 @@
+/* header css*/
+#header h3 {
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+
 img {
   width: 100%;
   transition: opacity 1s;
@@ -60,36 +67,36 @@ img {
 } */
 
 /* ---------------------------------------------------------------------------- */
-h3 {
+.it h3 {
   font-size: 55px;
   font-weight: 700;
   text-align: center;
 }
-h4 {
+.it h4 {
   /* font-size: 45px; */
   font-size: 32px;
   font-weight: 700;
   text-align: center;
 }
-p {
+.it p {
   font-size: 22px;
   line-height: 35px;
   text-align: center;
   margin: 54px 0;
 }
 
-p > span{
+.it p > span{
   display: block;
   color: inherit;
 }
-section {
+.it section {
   padding: 81px 0;
   transition: background 0.8s;
 }
-figure {
+.it figure {
   margin: 0 auto 162px;
 }
-.sectionTitle{
+.it .sectionTitle{
   height: 756px;
   margin-bottom: 162px;
   object-fit: cover;
