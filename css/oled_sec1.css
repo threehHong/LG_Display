@@ -1,0 +1,309 @@
+/* OLED */
+
+/* OLED BANNER */
+.banner {
+    /* position: relative;
+    background-image: url(../img/OLED_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain; */
+    
+    width: 100%;
+    height: 1107px;
+}
+
+.banner.active_banner_stricky {
+    position: sticky;
+    top: 0;
+}
+
+.image-sequence .img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1107px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+
+
+
+.banner:before {
+    display: inline-block;
+    position: relative;
+    content: '';
+    background: rgb(0, 0, 0);
+    width: 100%;
+    height: 756px;
+    /* height: 60vw; */
+    z-index: -1;
+}
+
+.banner h2::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 54px;
+    margin-right: 10px;
+    top: 10px;
+    background: var(--point_R);
+}
+
+/* vw, vh로 맞춰보기. or 그리드로 해보기 */
+.banner h2 {
+    position: absolute;
+    /* left: 343px;
+    top: 527px; */
+    top: 68%;
+    right: 9%;
+    /* top: 500px;
+    right: 200px; */
+    width: 336px;
+    height: 69px;
+    color: var(--font_W);
+    font-weight: 700;
+    font-size: 3.4rem;
+    line-height: 69px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* OLED EX 문구*/
+.EX_empty_BG_F {
+    /* background: #2b2b2b; */
+    background: #000000;
+    
+    height: 2000px;
+}ㄸ
+.EX_empty_BG_S {
+    background: #000000;
+    
+    width: 100%;
+    height: 4000px;
+}
+
+
+.EX_intro {
+    /* 개발시 구분용 배경 색깔 */
+    /* background: burlywood; */
+
+    background: #000000;
+    height: 1107px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.active_EX_sticky {
+    position: sticky;
+    top: 0;
+}
+
+.EX_intro h1 {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 150px;
+    line-height: 195px;
+    color: var(--font_W);
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: transform .1s;
+}
+
+
+.EX_intro h1:nth-child(1):after {
+    content: '';
+    display: inline-block;
+    width: 68px;
+    height: 31px;
+    background: #B60037;
+}
+
+.EX_intro p {
+    font-family: 'Noto Sans KR';
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: var(--font_W);
+    opacity: 0;
+    transition: opacity 2s 1s;
+}
+
+.EX_intro p.active_EX_intro {
+    opacity: 1;
+    transition: opacity 2s 1s;
+}
+
+.EX_intro p:nth-child(3) {
+    margin: 45px 0 80px 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+.EX_intro p:nth-child(5) {
+    margin-bottom: 60px;
+}
+
+/* EX_intro 애니메이션 */
+.EX_intro h1.active_intro_stop {
+    animation: trans 1s forwards;
+}
+@keyframes trans {
+    0% {
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.EX_intro_img_box {
+    background: rgb(0, 0, 0);
+    height: 5000px;
+}
+
+.EX_intro_img {
+    width: 80.1%;
+    height: 1594px;
+    margin: 0 auto;
+    position: relative;
+}
+.EX_intro_img li[class^='img_'] {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 40.9%;
+    height: 400px;
+    border-radius: 20px;
+}
+.img_deuterium {
+    background-image: url(../img/img_deuterium.jpg);
+}
+.img_algorism {
+    background-image: url(../img/img_algorism.jpg);
+    transform: translateX(145%);
+}
+.img_bezel {
+    background-image: url(../img/img_bezel.jpg);
+}
+
+/********** EX DEUTERIUM **********/
+.EX_deuterium {
+    position: relative;
+    background-image: url(../img/EX_deuterium2.jpg);
+    width: 100%;
+    height: 1107px;
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    
+    /* 구간 바뀔 떄 contain으로 바꾸기 */
+    background-size: cover;
+
+    /* 해당 높이에서 추가하는 방식으로 */
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* font-family: 'Inter'; */
+}
+
+/* .active_deuterium_sticky {
+    position: sticky;
+    top: 0;
+} */
+
+/* .active_deuterium_fixed {
+    background-attachment: fixed;
+} */
+
+.EX_deuterium h2 {
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    font-weight: 600;
+}
+.EX_deuterium p {
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* .active_deuterium_opacity {
+    opacity: 1;
+    transition: opacity 3s ease;
+}
+ */
+
+
+/* EX ALGORISM */
+.EX_algorism {
+    position: relative;
+    width: 100%;
+    height: 1107px;
+}
+
+.EX_algorism .image-sequence-al .img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1107px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+
+.active_al_sticky {
+    position: sticky;
+    top: 0;
+    
+    /* position: fixed;
+    top: 20729px; */
+}
+
+/* 빈 공백이 있어야 sticky 할 때 넘어가지 않음 */
+.EX_empty_BG_T {
+    height: 4900px;
+}
+
+/* EX BEZEL */
+.EX_bezel {
+    position: relative;
+    width: 100%;
+    height: 1107px;
+}
+
+.EX_bezel .image-sequence-bezel .img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1107px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+
+.active_bezel_sticky {
+    position: sticky;
+    top: 0;
+    
+    /* position: fixed;
+    top: 20729px; */
+}
+
+
+.EX_empty_BG_Fourth {
+    height: 8000px;
+}
+
+
+/*
+.EX_deuterium 속성으로 background-attachment: fixed; 
+사용하면 배경 고정됨. 
+ */
