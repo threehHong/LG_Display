@@ -136,6 +136,27 @@ img {
   width: 82.6%;
 }
 
+/* .it .sec_live .notice{} */
+
+.it .sec_live .livemonitor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* right: 0; */
+  /* bottom: 0; */
+  background: url("../img/it_img_livemonitor.png") no-repeat center / contain;
+}
+
+.it .sec_live .livemonitorScreen {
+  background-image: url("../img/it_img_live.png");
+  background-attachment: fixed;
+  background-size: cover;
+  transform: scale(1.01);
+  padding-top: 41.84%;
+}
+
 .it .sec_zoom {
   width: 96.9%;
 }
