@@ -1,16 +1,162 @@
-footer * {
-	background: #1d1b1b;
-	color: #fff;
-	text-decoration: none;
+footer {
+  font-size: 15px;
+  background: var(--font_G);
+  color: var(--font_W);
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 187fr 190fr 266fr 634fr 235fr 190fr 188fr;
+  grid-template-rows: 58px 38px 38px 25px 57px;
 }
-.footer_wrapper {
-	position: relative;
-	padding: 58px 187px;
+.logo_lg {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
 }
-footer .snslist .blog {
-	background: url(../images/blog.svg) no-repeat center;
-	width: 18px;
-	display: inline-block;
-	text-indent: 9999em;
-	overflow: hidden;
+.logo_oled {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+.logo img {
+  display: block;
+  margin-bottom: 50px;
+}
+.f_link_list {
+  text-transform: uppercase;
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 1;
+  display: flex;
+  justify-content: space-between;
+  min-width: 480px;
+}
+.f_link_list li a {
+  color: var(--font_W);
+}
+.f_link_list li a:hover {
+  text-decoration: underline;
+}
+.f_copyright {
+  grid-column: 4 / span 1;
+  grid-row: 4 / span 1;
+  text-align: center;
+  line-height: 24px;
+}
+.f_partners {
+  grid-column: 6 / span 1;
+  grid-row: 2 / span 1;
+  display: flex;
+  flex-direction: column-reverse;
+  border-bottom: 1px solid var(--font_W);
+  line-height: 32px;
+  position: relative;
+}
+.f_partners i {
+  margin-left: 70px;
+}
+.f_partners a {
+  color: var(--font_W);
+}
+.partners_lists {
+  background: var(--font_G);
+  margin-bottom: 10px;
+  display: none;
+  position: absolute;
+  bottom: 110%;
+  left: 0;
+  right: 0;
+}
+.partners_lists li {
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border-bottom: 1px solid #333;
+}
+.partners_lists li:hover {
+  text-decoration: underline;
+}
+
+.f_partners.active .partners_lists {
+  display: block;
+}
+.f_partners.active .btn_partners i {
+  transform: rotate(180deg);
+}
+
+.snslist {
+  font-size: 20px;
+  grid-column: 6 / span 1;
+  grid-row: 4 / span 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.snslist a {
+  color: var(--font_W);
+}
+.snslist .blog {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.snslist .youtube:hover a {
+  color: var(--point_Y);
+}
+.snslist .newsroom:hover a {
+  color: var(--point_Y);
+}
+
+.st0 {
+  fill: #ffffff;
+}
+
+.snslist .blog:hover .st0 {
+  fill: var(--point_Y);
+}
+.snslist .report:hover a {
+  color: var(--point_Y);
+}
+
+/* 반응형 */
+@media screen and (max-width: 880px) {
+  footer {
+    font-size: 14px;
+    grid-template-columns: 101fr 86fr 96fr 202fr 99fr 84fr 80fr;
+    grid-template-rows: 38px 73px 120px 66px;
+  }
+  .logo_lg,
+  .logo_oled {
+    display: none;
+  }
+  .f_link_list {
+    grid-column: 2 / span 5;
+    grid-row: 2 / span 1;
+    min-width: auto;
+  }
+  .f_copyright {
+    grid-column: 2 / span 5;
+    grid-row: 4 / span 1;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .f_partners {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+    text-align: center;
+    justify-content: flex-end;
+    height: 40px;
+  }
+  .snslist {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+    display: flex;
+    align-items: end;
+    height: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    font-size: 10px;
+  }
 }
