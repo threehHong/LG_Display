@@ -68,7 +68,7 @@ body {
 
 /* 순욱 -- 공통클래스명 __으로 시작, __dis_link 클래스명 추가 */
 .__hidden{
-    display: none;
+    display: hidden;
 }
 
 .__dis_link{
