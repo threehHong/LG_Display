@@ -4,8 +4,6 @@
   font-weight: 600;
 }
 
-.it footer .f_copyright {
-}
 
 /*---*/
 img {
@@ -109,7 +107,12 @@ img {
 #section1 div.sectionTitle {
   background: url("../img/it_img_sec1.jpg") no-repeat center / cover fixed;
 }
-
+#section2 div.sectionTitle{
+  background: url('../img/it_img_sec2.jpg') no-repeat center / cover fixed;
+}
+#section3 div.sectionTitle{
+  background: url('../img/it_img_sec3.jpg') no-repeat center / cover fixed;
+}
 /* ---------------------------------------------------------------------------- */
 .it .titleBg {
   height: 756px;
@@ -265,12 +268,49 @@ img {
   opacity: 0;
 }
 
+
+
+
+
+#section2 .stickyWrap{
+  /* position: sticky; */
+  height: 700vh;
+}
 .it .sec_size {
   width: 96.9%;
-  height: 631px;
+  /* height: 631px; */
+  /* position: relative; */
+  position: sticky;
+  top: 50px;
+  overflow: hidden;
 }
-.it .sec_size img {
-  height: 100px;
+
+
+
+.it .sec_size .notice{
+  /* display: flex;
+  justify-content: center;
+  position: sticky; */
+  padding-top: 35%;
+  top: 0;
+}
+.it .sec_size .sizeImgWrap{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.it .sec_size .first~.sizeImgWrap{
+  /* left: 90%; */
+  transform: translateX(20%);
+  opacity: 0;
+}
+.it .sec_size .sizeImgWrap .shadow{
+  position: absolute;
+  left: 0;
+  /* right: 0; */
+  bottom: 0;
+  opacity: 0;
 }
 
 .it .sec_bezeless {
@@ -422,8 +462,31 @@ svg {
 }
 
 /* .it #section3{transition: 0.5s;} */
+
+
 .it .sec_gaming {
   width: 75%;
+  height: 2000px;
+}
+
+.it .sec_gaming .notice{
+  position: sticky;
+  top: 30px;
+}
+.it .sec_gaming .notice > div{
+  position: relative;
+}
+.it .sec_gaming .notice .gamingAfter{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 100%;
+  background: url("../img/it_img_gamingafter.jpg") no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  opacity: 1;
+
 }
 
 .it .sec_folderable {

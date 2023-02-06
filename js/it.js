@@ -5,7 +5,14 @@ let section2 = $("#section2"),
   figBlack = $("#section1 .sec_black .notice"),
   figBlackFrame = figBlack.find("div"),
   figBezel = section2.find(".sec_bezeless"),
-  bezelImg = figBezel.find(".notice img");
+  bezelImg = figBezel.find(".notice img"),
+  section2Title = $("#section2 .sectionTitle"),
+  figSize = $("#section2 .sec_size"),
+  figSizeImg = figSize.find(".sizeImgWrap"),
+  figGaming = $("#section3 .sec_gaming .notice"),
+  gamingImg = figGaming.find(".gamingAfter");
+
+  
 
 // let screenHeight = $(window).innerHeight(),
 //     section2_Position = section2.offset().top,
@@ -14,6 +21,9 @@ let section2 = $("#section2"),
 //     figSunlight_Position = figSunlight.offset().top;
 
 // bezeless event
+let sizeCount = 0,
+    scrollDirectionCheck = 0;
+
 
 let screenHeight,
   section2_Position,
@@ -22,7 +32,12 @@ let screenHeight,
   figLive_Position,
   figSunlight_Position,
   figBezelPos,
-  figBezelHeight;
+  figBezelHeight,
+  figSizeStartPos,
+  figSizePos,
+  figSizeHeight,
+  figGamingPos,
+  figGamingHeight;
 
 function resizeEvent() {
   console.log("resize event");
@@ -33,7 +48,14 @@ function resizeEvent() {
     (figLive_Position = figLive.offset().top),
     (figSunlight_Position = figSunlight.offset().top),
     (figBezelPos = figBezel.offset().top),
-    (figBezelHeight = figBezel.innerHeight());
+    (figBezelHeight = figBezel.innerHeight()),
+
+    figSizeStartPos = section2Title.offset().top + section2Title.innerHeight(),
+
+    figSizePos = figSize.offset().top,
+    figSizeHeight = figSize.innerHeight(),
+    figGamingPos = figGaming.offset().top,
+    figGamingHeight = figGaming.innerHeight(); 
 }
 
 $(window).resize(function () {
@@ -63,6 +85,8 @@ $(window).scroll(function () {
     section2.add(section3).removeClass("focus");
   }
 
+
+  //bezel event
   if (windowScroll > figBezelPos) {
     // console.log("windowScroll : ", windowScroll);
     // console.log("figBezelPos + figBezelHeight", figBezelPos + figBezelHeight);
@@ -78,8 +102,51 @@ $(window).scroll(function () {
     // console.log("bezelNum : ", bezelNum);
     // console.log(bezelNum);
   }
+  console.log(windowScroll);
 
-  //bezel event
+  
+  //size event
+  // if(windowScroll > figSizeStartPos){
+  //   sizeCount = (windowScroll - figSizeStartPos) / 3000 * 100;
+  //   if(sizeCount > 100) {sizeCount = 100};
+    
+    // sizeFunc(sizeCount);
+
+    // function sizeFunc(sizeCount){
+    //   let num = sizeCount * 2,
+    //     index = Math.floor(num / 10);
+    
+    // console.log("index", index);
+    // figSizeImg.eq(index).css({
+    //   transform: `translateX(${20 + (index * 20) - sizeCount*7}%)`,
+    //   opacity : `${index - sizeCount / 100}`
+    // })
+    // figSizeImg.eq(index).find(".shadow").css({
+    //   opacity: (index - (sizeCount / 10)),
+    // })
+
+    // $("#section2 .shadow").css({});
+    // console.log(sizeCount / 100)
+    // $("#section2 .sizeImgWrap").css({
+    //   left: `${50 - sizeCount / 100}%`,
+    //   opacity : `${2 - sizeCount / 1000}`
+    // });
+    // console.log("opacity:", 10 - sizeCount / 50000)
+    // }
+    
+  // }
+
+
+  
+  //gaming event
+  if(windowScroll > figGamingPos){
+    let gamingImgHeight = (windowScroll-figGamingPos) / figGamingHeight * 100;
+    if(gamingImgHeight > 100){gamingImgHeight = 100};
+    console.log("gamingImgHeight", gamingImgHeight)
+    gamingImg.css({bottom: (100-gamingImgHeight) + "%"});
+  }
+
+  
 });
 
 figBlack.mousemove(function () {
@@ -122,3 +189,7 @@ imgOrg.mousemove(function () {
     "background-position-y": `${backPosY}%`,
   });
 });
+
+
+
+var s = skrollr.init();

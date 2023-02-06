@@ -23,8 +23,8 @@
         position: relative;
 
         background: url("img/it_img_sketch.jpg") no-repeat;
-        background-size: 100% 100%;
-        background-attachment: fixed;
+        background-size: cover;
+        /* background-attachment: fixed; */
 
         overflow: hidden;
       }
@@ -49,29 +49,42 @@
             background-color: rgba(100, 255, 100, 0.5);
         } */
       .draw {
-        background: url("img/it_img_drawing.jpg") no-repeat;
-        background-size: 100% 100%;
-        background-attachment: fixed;
+        /* background: url("img/it_img_drawing.jpg") no-repeat; */
+        /* background-size: 100% 100%; */
         position: absolute;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
+        /* width: 10%; */
+        /* height: 10%; */
+        /* border-radius: 50%; */
+        width: 400px;
+        height: 400px;
         left: 0px;
+        right: 0;
         top: 0px;
-      }
-      .imgframe:hover .draw11 {
-        width: 200%;
-        height: 200%;
+        bottom: 0;
+        border: 1px solid red;
         /* transform: translate(-50%, -50%); */
-        transition: width 2s, height 2s;
-        /* transform: translate(-50%, -50%); */
+        /* transform-origin: right bottom; */
+        overflow: hidden;
       }
+
+      .draw img{
+        width: 100vw;
+        object-fit: none;
+        object-position: left top;
+        position: absolute;
+        /* left: 0; */
+        /* top: 0; */
+      }
+
     </style>
   </head>
   <body>
+    <div style="height: 1000px"></div>
     <div class="imgframe">
       <!-- <img src="img/it_img_sketch.jpg" alt=""> -->
-      <div class="draw"></div>
+      <div class="draw">
+        <img src="img/it_img_drawing.jpg" alt="">
+      </div>
     </div>
     <div style="height: 1000px"></div>
 
@@ -91,18 +104,27 @@
         (frameposX = imgframe.offset().left),
           (frameposY = imgframe.offset().top);
       });
-
+      let count = 0;
       imgframe.mousemove(function () {
         let frameWidth = draw.innerWidth(),
           frameHeight = draw.innerHeight();
+          count++;
 
         console.log("frameWidth", frameWidth);
         // let cursorX = event.pageX - frameposX - frameWidth/2,
         //     cursorY = event.pageY - frameposY - frameHeight/2;
         let cursorX = event.pageX - frameposX,
           cursorY = event.pageY - frameposY;
-
-        draw.css({ left: cursorX + "px", top: cursorY + "px" });
+          
+          draw.css({
+            left: cursorX - 250 + "px",
+            top: cursorY - 250 + "px",
+            // "background-position-x": cursorX / frameWidth *100 + "%",
+            // "background-position-y": cursorY / frameHeight * 100 + "%",
+            "background-position-x": "-" + (cursorX - 250) + "px",
+            "background-position-y":  "-" + (cursorY - 250) + "px",
+          });
+        
         // draw.css({backgroundPositionX: "-"+cursorX+"px", backgroundPositionY: "-"+cursorY+"px"});
       });
     </script>
