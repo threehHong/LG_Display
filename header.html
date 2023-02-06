@@ -11,141 +11,11 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
         />
         <link rel="stylesheet" href="./css/common.css" />
-        <link rel="stylesheet" href="./css/style.css" />
-        <style>
-            /* 진아_0126 -- 추후 링크로 바꿀 예정 */
-            h3 {
-                font-size: 1.125em;
-                font-weight: 600;
-            }
-            .container {
-                margin: 0px 30px;
-            }
-            .d-flex {
-                display: flex;
-            }
-            .jsc {
-                justify-content: center;
-            }
-
-            /* header */
-            header {
-                width: 100%;
-                height: 54px;
-                background: rgba(0, 0, 0, 0.6);
-            }
-            header div.d-flex {
-                height: 100%;
-                justify-content: space-between;
-                align-items: center;
-            }
-            h1{
-                position: relative;
-                z-index: 2;
-            }
-            header a {
-                /* color: #fff; */
-                color: var(--font_W);
-                text-transform: uppercase;
-            }
-            /* LOGO */
-            .header_logo {
-                position: relative;
-            }
-            .header_logo:after {
-                content: "LG디스플레이";
-                text-indent: -99999em;
-                overflow: hidden;
-                position: absolute;
-            }
-            /* nav */
-            .wrapper{
-                width: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 0px;
-            }
-            .wrapper.active{
-                height: 297px;
-            }
-            nav {
-                width: 70%;
-                margin: 0 auto;
-            }
-            /* nav_GNB */
-            .gnb_box {
-                align-items: center;
-                justify-content: space-around;
-                text-align: center;
-            }
-            .gnb_box > li{
-                position: relative;
-                width: 25%;
-            }
-            .gnb_box > li > h3 {
-                line-height: 54px;
-            }
-            .gnb_box.current .lnb_box{
-                opacity: 1;
-            }
-            .gnb_box.current li > .lnb_box 
-
-            /* nav_lnb */
-            #header .lnb_box {
-                position: absolute;
-                width: 100%;
-                top: 54px;
-                left: 0;
-                opacity: 0;
-            }
-            #header .lnb_box li{
-                line-height: 40.5px;
-            }
-            /* #header .lnb_box.active{
-                opacity: 1;
-            } */
-
-            /* Header_icon */
-            .Header_icon{
-                width: 10%;
-            }
-            .Header_icon div{
-                display: inline-block;
-                width: 50%;
-                z-index: 2;
-            }
-            .Header_icon div a{
-                padding-left: calc(50%);
-                transform: translateX(50%);
-            }
-            .Header_icon div a:before {
-                content: '';
-                display: inline-block;
-                width: 29px;
-                height: 29px;
-                background-image: url(./img/sp01.png);
-            }
-            .header_search a:before{
-                background-position: -34px -220px;
-            }
-            .header_lang a:before{
-                background-position: 0px -220px;
-            }
-            .__blind {
-                position: absolute;
-                text-indent: -99999em;
-                overflow: hidden;
-            }
-            .Header_icon .bar{
-                display: none;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/HEADER.css" />
     </head>
     <body>
         <header id="header">
-            <div class="container d-flex">
+            <div class="M30 d-flex">
                 <h1>
                     <a href="index.html" class="header_logo">
                         <img
@@ -167,12 +37,18 @@
                                             >automotive</a
                                         >
                                     </li>
-                                    <li><a href="">it</a></li>
-                                    <li><a href="#" class="__dis_link">tv</a></li>
+                                    <li><a href="" class="__link">it</a></li>
                                     <li>
-                                        <a href="#" class="__dis_link">mobile</a>
+                                        <a href="#" class="__dis_link">tv</a>
                                     </li>
-                                    <li><a href="">commercial</a></li>
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >mobile</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="" class="__link">commercial</a>
+                                    </li>
                                     <li>
                                         <a href="#" class="__dis_link"
                                             >experience</a
@@ -182,16 +58,22 @@
                             </li>
                             <li>
                                 <h3>
-                                    <a href="#" class="__dis_link">technology</a>
+                                    <a href="#" class="__dis_link"
+                                        >technology</a
+                                    >
                                 </h3>
                                 <ul class="lnb_box">
-                                    <li><a href="">oled</a></li>
-                                    <li><a href="#" class="__dis_link">lcd</a></li>
+                                    <li><a href="" class="__link">oled</a></li>
+                                    <li>
+                                        <a href="#" class="__dis_link">lcd</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
                                 <h3>
-                                    <a href="#" class="__dis_link">esg</a>
+                                    <a href="#" class="__dis_link __link"
+                                        >esg</a
+                                    >
                                 </h3>
                                 <ul class="lnb_box">
                                     <li>
@@ -199,10 +81,16 @@
                                             >지속가능경영</a
                                         >
                                     </li>
-                                    <li><a href="#" class="__dis_link">환경</a></li>
-                                    <li><a href="#" class="__dis_link">사회</a></li>
                                     <li>
-                                        <a href="#" class="__dis_link">지배구조</a>
+                                        <a href="#" class="__dis_link">환경</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="__dis_link">사회</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >지배구조</a
+                                        >
                                     </li>
                                 </ul>
                             </li>
@@ -212,14 +100,28 @@
                                 </h3>
                                 <ul class="lnb_box">
                                     <li>
-                                        <a href="#" class="__dis_link">기업개요</a>
+                                        <a href="#" class="__dis_link"
+                                            >기업개요</a
+                                        >
                                     </li>
-                                    <li><a href="#" class="__dis_link">채용</a></li>
                                     <li>
-                                        <a href="#" class="__dis_link">투자정보</a>
+                                        <a href="#" class="__dis_link">채용</a>
                                     </li>
-                                    <li><a href="">미디어센터</a></li>
-                                    <li><a href="">사업장위치</a></li>
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >투자정보</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="media.html"
+                                            class="__link current"
+                                            >미디어센터</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="" class="__link">사업장위치</a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -227,28 +129,32 @@
                 </div>
                 <div class="Header_icon d-flex">
                     <div class="header_search">
-                        <a href="#" class="__dis_link"> 
-                            <span class ="__blind">검색아이콘</span>
+                        <a href="#" class="__dis_link icon">
+                            <span class="__blind">검색아이콘</span>
                         </a>
                     </div>
                     <div class="header_lang">
-                        <a href="#" class="__dis_link"><span class ="__blind">언어변경아이콘</span></a>
-                    </div>
-                    <div class="bar"> <!-- 햄버거 메뉴_ 모바일 -->
+                        <a href="#" class="__dis_link icon_lang icon"
+                            ><span class="__blind">언어변경아이콘</span></a
+                        >
+                        <ul class="lang_list">
+                            <li><a href="#" class="__dis_link">kor</a></li>
+                            <li><a href="#" class="__dis_link">Eng</a></li>
+                            <li><a href="#" class="__dis_link">chn</a></li>
+                            <li><a href="#" class="__dis_link">vtn</a></li>
+                        </ul>
+                        <div class="bar"><span></span><span></span></div>
+
+                        <!-- 햄버거 메뉴_ 모바일 -->
                     </div>
                 </div>
             </div>
         </header>
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-        <script>
-            let gnb = $('.gnb_box > li');
-            let lnbBG = $('.wrapper');
-            let lnb = $('#header .lnb_box');
-
-            gnb.click(function(){
-                lnb
-            });
-
-        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"
+        ></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>

@@ -1,17 +1,27 @@
-// header_JA_230130 
+// header_JA_230130
 
-let gnb = $('.gnb_box > li'),
-lnbBG = $('.wrapper'),
-lnb = $('#header .lnb_box');
+let gnb = $(".gnb_box"),
+    gnbList = $(".gnb_box > li"),
+    lnbBG = $(".wrapper"),
+    lnb = $(".lnb_box "),
+    $btn_lang = $(".header_lang");
 
-    $('.gnb_box').mouseenter(function(){
-        $('header').addClass('h_color'); //addremove로 수정
+gnbList.mouseenter(function (e) {
+    e.preventDefault();
+
+    let $this = $(this);
+    lnbBG.addClass("active");
+    gnb.addClass("open");
+    $("header, .wrapper").mouseleave(function () {
+        lnbBG.removeClass("active");
+        gnb.removeClass("open");
     });
-    gnb.click(function(){
-        $(this).parent('ul').toggleClass('clicked');
-        lnbBG.toggleClass('active');
-        lnb.addClass('active');
-    });
 
+    $this.addClass("clicked");
+    $this.siblings().removeClass("clicked");
+});
 
-// /header_JA_230130 
+$btn_lang.click(function () {
+    $(this).toggleClass("open");
+});
+// /header_JA_230130
