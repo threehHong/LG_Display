@@ -30,6 +30,7 @@ main * {
 }
 
 .notice::after {
+  /* font-family: "Gothic A1"; */
   content: "※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수 있습니다.";
   position: absolute;
   font-weight: 300;
@@ -39,6 +40,7 @@ main * {
   top: 100%;
   margin-top: 10px;
   white-space: nowrap;
+  
 }
 .focus .notice::after {
   color: var(--font_W);
@@ -93,14 +95,14 @@ main * {
   display: block;
   color: inherit;
 }
-.it main section {
+.it section {
   padding: 81px 0;
   transition: background 0.8s;
 }
-.it main figure {
+.it figure {
   margin: 0 auto 162px;
 }
-.it main .sectionTitle {
+.it .sectionTitle {
   height: 756px;
   margin-bottom: 162px;
   object-fit: cover;
@@ -277,7 +279,7 @@ main * {
 
 #section2 .stickyWrap{
   /* position: sticky; */
-  height: 700vh;
+  height: 350vh;
 }
 .it .sec_size {
   width: 96.9%;
@@ -289,7 +291,9 @@ main * {
 }
 
 
-
+.it .sec_size .notice img{
+  width: 80%;
+}
 .it .sec_size .notice{
   /* display: flex;
   justify-content: center;
@@ -467,6 +471,30 @@ main * {
 /* .it #section3{transition: 0.5s;} */
 
 
+.it .sec_sketch .notice .grid{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  grid-auto-flow: row;
+}
+
+.it .sec_sketch .notice .penTouch{
+  display: block;
+  background-image: url("../img/it_img_drawing.jpg");
+  background-repeat: no-repeat;
+  transition: 0.2s;  
+  opacity: 0;
+}
+
+.it .sec_sketch .notice .penTouch.drawing{
+  opacity: 1;
+}
+
 .it .sec_gaming {
   width: 75%;
   height: 2000px;
@@ -489,7 +517,7 @@ main * {
   background-position: 0 0;
   background-size: cover;
   opacity: 1;
-
+  border-bottom: 4px dashed red;
 }
 
 .it .sec_folderable {
@@ -501,19 +529,19 @@ main * {
 
 /* 반응형 */
 @media (max-width: 1000px) {
-  .it .flex {
+  .it main .flex {
     display: block;
   }
 }
 
 @media (max-width: 768px) {
-  .it h3 {
+  .it main h3 {
     font-size: 36px;
   }
-  .it h4 {
+  .it main h4 {
     font-size: 28px;
   }
-  .it p {
+  .it main p {
     font-size: 18px;
   }
 
@@ -537,7 +565,7 @@ main * {
     width: 92.3%;
   }
 
-  .sectionTitle {
+  .it .sectionTitle {
     height: auto;
   }
 
@@ -552,14 +580,14 @@ main * {
   }
 }
 @media (max-width: 480px) {
-  .it h3 {
+  .it main h3 {
     font-size: 20px;
     line-height: 24px;
   }
-  .it h4 {
+  .it main h4 {
     font-size: 18px;
   }
-  .it p {
+  .it main p {
     font-size: 10px;
     line-height: 14px;
   }
@@ -594,6 +622,18 @@ main * {
   .sectionTitle {
     height: 164px;
   }
+
+  .it .sec_sketch .notice .grid{
+    grid-template-columns: 1fr 40fr;
+    grid-template-rows: 1fr 40fr;
+    transition: 0.8s;
+    opacity: 1;
+  }
+  .it .sec_sketch .notice .grid.mobileSketch{
+    grid-template-columns: 1fr 0fr;
+    grid-template-rows: 1fr 0fr;
+  }
+  
 
   /* .it .sec_bezeless figcaption{width: 100%;} */
   #section3 .sectionTitle {
