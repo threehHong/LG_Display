@@ -1,22 +1,54 @@
-let $disLink = $(".__dis_link");
+// header_JA_230130
 
-$disLink.click(function(e){
-    e.preventDefault();
-})
+let gnb = $(".gnb_box"),
+  gnbList = $(".gnb_box > li"),
+  lnbBG = $(".wrapper"),
+  lnb = $(".lnb_box "),
+  $btn_lang = $(".header_lang");
 
-let $gnbMenu = $(".gnb_box > li");
+gnbList.mouseenter(function (e) {
+  e.preventDefault();
 
+  let $this = $(this);
+  lnbBG.addClass("active");
+  gnb.addClass("open");
+  $("header, .wrapper").mouseleave(function () {
+    lnbBG.removeClass("active");
+    gnb.removeClass("open");
+  });
 
-$gnbMenu.click(function(){
-    console.log($(this));
-    $gnbMenu.removeClass("click");
-    $(this).addClass("click");
+  $this.addClass("clicked");
+  $this.siblings().removeClass("clicked");
 });
 
-let $btn_lang = $(".header_lang .icon_lang"),
-    $lang_list = $(".header_lang .lang_list")
-    $container = $("header .container");
+$btn_lang.find("a").click(function () {
+  $btn_lang.toggleClass("open");
+  $("#header nav").toggleClass("mobileLang");
+});
 
-$btn_lang.click(function(){
-    $container.toggleClass("click");
-})
+// footer 윤정
+$(".__dis_link").click((e) => {
+  e.preventDefault();
+});
+
+$(".f_partners").click((e) => {
+  $(e.currentTarget).toggleClass("active");
+});
+
+
+
+/* -------------- */
+$mobileMenu = $("header .bar"),
+$headerIcon = $("header .Header_icon");
+
+$mobileMenu.click(function(){
+  $(this).toggleClass("active");
+  $("#header nav").toggleClass("mobileActive");
+  $headerIcon.toggleClass("mobileActive");
+  $("body").toggleClass("mobileActive");
+});
+
+gnbList.click(function(){
+  gnbList.removeClass("mobileMenuClick");
+  $(this).addClass("mobileMenuClick");
+});
