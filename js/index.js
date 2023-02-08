@@ -35,7 +35,9 @@ const swiper = new Swiper('.swiper', {
 });
 
 swiper.on("slideChangeTransitionStart", function(){
+    console.log("swiper.activeIndex", swiper.activeIndex);
     slideIndex = ((swiper.activeIndex-1)%5)+1;
+    if(slideIndex == 0) slideIndex = 5;
     slideActive();
     // if(timerSwitch){timerActive();};
 });
