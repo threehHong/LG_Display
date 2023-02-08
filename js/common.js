@@ -37,7 +37,21 @@ $(".f_partners").click((e) => {
 
 
 
-/* -------------- */
+
+/* 메뉴바 스크립트 */
+$header = $("header");
+
+
+$(window).scroll(function(){
+  $header.addClass("toggle");
+})
+$header.mouseover(function(){
+  $header.removeClass("toggle");
+});
+
+
+
+/* - 모바일 메뉴 버튼------------- */
 $mobileMenu = $("header .bar"),
 $headerIcon = $("header .Header_icon");
 
