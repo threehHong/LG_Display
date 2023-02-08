@@ -125,15 +125,12 @@ $(window).scroll(function(){
 })
 
 /* SKROLLR */
-var s = skrollr.init();
-
-/* 모바일 문제 */
-/* $(window).resize(function() {
-    if($(window).innerWidth() < 480) {
-        s.destroy();
+var s = skrollr.init({
+    /* 모바일 문제 해결 코드 */
+    mobileCheck: function(){
+        return false
     }
-}) */
-
+});
 /********** OLED EX(SECTION1) **********/
 
 

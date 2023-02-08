@@ -7,6 +7,36 @@
     }
 }
 
+/* @media (max-width: 1650px) {
+    .EX_bezel {
+        position: relative;
+        display: block;
+    }
+
+    .EX_bezel img {
+        position: relative;
+        left: 0%;
+        left: 2%
+    }
+
+    .EX_bezel h2, .EX_bezel p {
+        position: absolute;
+    }
+
+    .EX_bezel h2 {
+        position: absolute;
+        left: 62%;
+        top: 59%;
+    }
+
+    .EX_bezel p {
+        position: relative;
+        margin-top: 30px;
+        right: 23.5%;
+    }
+}  */
+
+
 @media (max-width: 885px) {
     /* EX DEUTERIUM(중수소 소자) */
     .EX_deuterium h2 {
@@ -54,7 +84,23 @@
     }
 
 
+    /* EX Bezel(베젤) */
+    /* .EX_bezel img {
+        width: 343px;
+        height: 245px;
+    } */   
 
+    .EX_bezel h2 {
+        /* font-size: 26px;
+        grid-column: 2/3;
+        grid-row: 2/3; */
+    }
+
+    .EX_bezel p {
+        /* font-size: 16px;
+        grid-column: 2/3;
+        grid-row: 3/4; */
+    }
     
 }
 

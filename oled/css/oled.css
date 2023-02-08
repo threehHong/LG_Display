@@ -293,7 +293,8 @@ p {
 /* EX Bezel(베젤) */
 .EX_bezel_container {
     height: 6000px;
-    width: 1920px;
+    /* width: 1920px; */
+    width: 100%;
 }
 
 .EX_bezel {
@@ -304,59 +305,92 @@ p {
     width: 100%;
     height: 1107px;
 
-    display: grid;
-    grid-template-columns: 2.81fr 22.13fr 8.85fr 42.39fr 3.02fr 14.94fr 4.8fr;
-    grid-template-rows: 15.26fr 14.18fr 12.01fr 29.35fr 20fr 14.12fr
+    /* display: grid;
+    grid-template-columns: 4.81fr 22.13fr 28.85fr 15.39fr 3.02fr 6.94fr 2.8fr;
+    grid-template-rows: 1.26fr 14.18fr 15.01fr 29.35fr 20fr 40.12fr */
 }
 
 
+.EX_bezel_img_h {
+    display: flex;
+    gap: 40px
+}
+
 .EX_bezel img {
-    /* width: 100%; */
+
+
     width: 1140px;
     height: 700px;
-    grid-column: 2/4;
-    grid-row: 1/5;
+
+
+    /* grid-column: 2/4;
+    grid-row: 2/5; */
+
 }
 
 .EX_bezel h2 {
     font-size: 45px;
     font-weight: 700;
 
-    grid-column: 4/5;
-    grid-row: 4/5;
-
     display: flex;
     align-items: flex-end;
-    justify-content: right;
 
-    margin-bottom: 45px;
+    /* align-items: flex-end; */
+
+    /* grid-column: 4/5;
+    grid-row: 4/5; */
+
+
+
+    /* display: flex;
+    align-items: flex-end;
+    justify-content: right; */
+
+
 }
 
 .EX_bezel p {
     font-size: 24px;
     line-height: 30px;
+    
+    display: inline-block;
+    margin: 30px 0px 0px 25.5%;
     text-align: right;
 
-    grid-row: 5/6;
+    /* grid-row: 5/6;
     grid-column: 3/5;
+
+    text-align: right;
+
+    margin-top: 30px; */
+
 }
 
 .EX_bezel span {
     color: var(--font_W);
-    grid-column: 3/4;
-    text-align: center;
+
+    position: absolute;
+
+    /* grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: right; */
 }
 
 .EX_bezel span:nth-of-type(1) {
     font-size: 75px;
-    grid-row: 2/3;
-    grid-column: 3/4;
-    margin-top: 75px;
+    /* margin-top: 12%; */
+    left: 19%;
+    top: 22%;
 }
 
 .EX_bezel span:nth-of-type(2) {
     font-size: 35px;
-    grid-row: 3/4;
+    left:19%;
+    top: 29%;
+    margin-left: 14px;
+    
+    /* margin-top: 28%;
+    margin-right: 20px; */
 }
 /********** OLED EX(SECTION1) **********/
 
