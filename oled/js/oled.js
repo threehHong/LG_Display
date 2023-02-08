@@ -26,7 +26,7 @@ $(window).scroll(function(){
     count = Math.floor(((scroll_AMT) / banner_height) * 24)
     if(count > 24) { count = 24 }
     // $(".banner").css({"background-image":`url(../img/flower/flower${count}.jpg)`,})
-    $(".banner img").attr({"src":`../img/flower/flower${count}.jpg`})
+    $(".banner img").attr({"src":`/img/flower/flower${count}.jpg`})
     /* 꽃 피는 이미지 이벤트 */
 
     // OLED EX 문구(좌우 등장)
@@ -126,6 +126,13 @@ $(window).scroll(function(){
 
 /* SKROLLR */
 var s = skrollr.init();
+
+/* 모바일 문제 */
+/* $(window).resize(function() {
+    if($(window).innerWidth() < 480) {
+        s.destroy();
+    }
+}) */
 
 /********** OLED EX(SECTION1) **********/
 
