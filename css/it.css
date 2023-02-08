@@ -149,7 +149,7 @@ main * {
 }
 
 .it .sec_live .notice {
-  background-image: url("../img/it_img_live.png");
+  background-image: url("../img/it_img_live.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -197,7 +197,7 @@ main * {
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: url("../img/it_img_live.png");
+  background-image: url("../img/it_img_live.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transform: scale(1.02);
@@ -232,7 +232,7 @@ main * {
 .it .sec_zoom > div > .img_origin .lens {
   width: 10%;
   height: 15%;
-  border: 1px solid black;
+  border: 1px solid white;
   background: rgba(100, 100, 100, 0.3);
   position: absolute;
   transform: translate(-50%, -50%);
