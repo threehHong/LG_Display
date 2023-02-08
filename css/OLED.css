@@ -1,16 +1,20 @@
-html{
+html {
     font-size: 16px;
 }
-.contain_margin{
+.contain_margin {
     margin: 162px 0;
 }
 :root {
-    --Rows1 : 27px 0;
-    --Rows3 : 81px 0;
-    --Rows6 : 162px 0;
+    --Rows1: 27px 0;
+    --Rows3: 81px 0;
+    --Rows6: 162px 0;
 }
-p{line-height: 27px;}
-.OLED_sec02 span{display: block;}
+p {
+    line-height: 27px;
+}
+.OLED_sec02 span {
+    display: block;
+}
 
 /* OLED */
 .banner {
@@ -25,7 +29,7 @@ p{line-height: 27px;}
     right: 0;
     z-index: -10;
 }
-.banner_BG img{
+.banner_BG img {
     width: 100%;
 }
 .banner h2::before {
@@ -52,73 +56,75 @@ p{line-height: 27px;}
 }
 /* JA_230201_작업시작 */
 /* OLED Common */
-.OLED_sec2_h3{
+.OLED_sec2_h3 {
     font-size: 3.4rem;
     font-weight: 600;
 }
-.OLED_sec2_h4{
+.OLED_sec2_h4 {
     font-size: 2.8rem;
     font-weight: 600;
 }
-.OLED_sec02 > p{
+.OLED_sec02 > p {
     font-size: 1.12rem;
     line-height: 27px;
     width: 70%;
 }
-.warning_txt{
+.warning_txt {
     font-weight: 300;
     font-size: 0.8rem;
     color: var(--font_G);
 }
-.ace_tt h4{
-margin: var(--Rows1);
+.ace_tt h4 {
+    margin: var(--Rows1);
 }
-.ace_tt p{
+.ace_tt p {
     width: 50%;
     margin: 0 auto;
     line-height: 27px;
 }
-.ACE_R{
+.ACE_R {
     color: var(--point_R);
 }
-.ACE_Y{
+.ACE_Y {
     color: var(--point_Y);
-} 
+}
 
 /* ACE_tt */
-.OLED_ace{
+.OLED_ace {
     display: flex;
     align-items: center;
 }
-.OLEd_img{
+.OLEd_img {
     width: 50%;
 }
-.OLEd_img img{width: 100%;}
-.img_txt{
+.OLEd_img img {
+    width: 100%;
+}
+.img_txt {
     width: 50%;
     margin-left: 157px;
 }
-.img_txt > p{
+.img_txt > p {
     width: 70%;
 }
-.OLED_sec02_title{
+.OLED_sec02_title {
     margin-bottom: 27px;
 }
 
-.ace_box .sub_tt{
+.ace_box .sub_tt {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 54px;
 }
-.ace_box h2{
+.ace_box h2 {
     color: var(--point_Y);
     font-size: 4rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 81px;
 }
-.ace_box h2::before{
+.ace_box h2::before {
     content: "";
     display: inline-block;
     width: 34px;
@@ -127,49 +133,89 @@ margin: var(--Rows1);
     background-position: 0px -340px;
     margin-bottom: 17.5px;
 }
-.ACE_tt_box{
+.ACE_tt_box {
     display: flex;
     justify-content: space-evenly;
-
 }
-.ACE_tt_box li{
+.ACE_tt_box li {
     width: 470px;
     height: 540px;
     text-align: center;
-
 }
-.ACE_tt_box li:hover{
+.ACE_tt_box li:hover {
     box-shadow: 0px 0px 10px rgba(129, 6, 6, 0.5);
 }
-.ACE_tt_box li a{
-    display:inline-block;
+.ACE_tt_box li a {
+    display: inline-block;
     padding: 54px 0px;
     box-sizing: border-box;
 }
-.ACE_tt_box .ace_tt{
+.ACE_tt_box .ace_tt {
     font-size: 3.4rem;
     font-weight: 600;
     margin: 54px 0;
 }
-.ACE_tt_box .ace_tt b{
+.ACE_tt_box .ace_tt b {
     color: var(--point_R);
 }
-.A_txt_box p{
+.A_txt_box p {
     line-height: 27px;
     font-size: 1.5rem;
 }
-/* A */
-.ACE_a1_scrollImg{
-    position: relative;
-}
-.a1_scroll{
-    width: 80%;
-    margin-left: auto;
-}
-.a1_scroll img{
+/* clone_sticky */
+.ace_clone {
+    position: fixed;
+    top: -81.5px;
     width: 100%;
+    background-color: var(--font_W);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+    z-index: 999999999;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    transition: top 0.3s;
 }
-.ACE_a1_scrollImg .OLED_sec2_h3{
+.ace_clone.visible {
+    top: 0;
+}
+.ace_clone li a img {
+    width: 35%;
+}
+.ace_clone .ace_tt {
+    font-weight: 600;
+    margin-top: 5px;
+}
+.ace_clone .ace_tt b {
+    color: var(--point_R);
+}
+.ace_clone .A_txt_box {
+    display: none;
+}
+
+/* A */
+.ACE_A {
+    margin-top: 162px;
+}
+.ACE_a1_scrollImg {
+    position: relative;
+    height: 2500px;
+}
+.a1_scroll {
+    width: 100%;
+    margin-left: auto;
+    position: sticky;
+    top: 100px;
+}
+.a1_scroll div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.a1_scroll img {
+    width: 80%;
+}
+.ACE_a1_scrollImg .OLED_sec2_h3 {
     position: absolute;
     width: 500px;
     height: 108px;
@@ -177,83 +223,84 @@ margin: var(--Rows1);
     top: 65%;
     left: 0;
 }
-.OLED_sec2_h3 span{
+.OLED_sec2_h3 span {
     color: var(--font_W);
     text-align: center;
     line-height: 112px;
 }
-.ACE_a1_scrollImg .a1_tt{
+.ACE_a1_scrollImg .a1_tt {
     margin: 81px 0 27px 146px;
 }
+.ACE_a1_scrollImg > p {
+    margin-left: 146px;
+}
 
-
-.ACE_a2{
+.ACE_a2 {
     background: var(--font_B);
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-} 
+}
 .a2_tt h3,
-.ACE_a2 p{
+.ACE_a2 p {
     color: var(--font_W);
 }
 .ACE_a2 img,
-.ACE_a2 .a2_tt{
+.ACE_a2 .a2_tt {
     display: inline-block;
     width: 30%;
 }
-.ACE_a2 p.a2_sub_txt{
+.ACE_a2 p.a2_sub_txt {
     position: absolute;
     width: 30%;
     bottom: 30%;
     left: 50%;
     transform: translate(-50%, 100%);
 }
-.ACE_a2 p.warning_txt{
+.ACE_a2 p.warning_txt {
     color: var(--fnt_B);
     position: absolute;
     right: 0;
     bottom: -27px;
 }
 /* C */
-.c1_imgs{
+.c1_imgs {
     margin: 0 167px;
     display: flex;
     gap: 105px;
     justify-content: center;
 }
-.c1_imgs .img_box{
+.c1_imgs .img_box {
     width: 50%;
-
 }
-.c1_imgs img{
+.c1_imgs img {
     width: 100%;
 }
-.c1_tt{
+.c1_tt {
     text-align: center;
     margin-left: 103px;
 }
 
-.ACE_c1 .warning_txt{
+.ACE_c1 .warning_txt {
     text-align: end;
     margin-right: 167px;
     margin-bottom: 54px;
 }
 
-.ACE_c2{
+.ACE_c2 {
     background: #000;
     display: flex;
     align-items: center;
     position: relative;
 }
-.c2_tt{
+.c2_tt {
     margin-left: 157px;
     text-align: center;
     line-height: 54px;
 }
-.c2_tt:after{
-    content: '';
+.ACE_c2:after {
+    content: "";
     display: inline-block;
     position: absolute;
     right: 30px;
@@ -264,14 +311,13 @@ margin: var(--Rows1);
     height: 38px;
 }
 
-
 .c2_tt,
-.ACE_c2 p{
+.ACE_c2 p {
     color: var(--font_W);
 }
 /* E */
 
-.ACE_E1{
+.ACE_E1 {
     width: 100%;
     padding: 0 30px;
     position: relative;
@@ -279,25 +325,25 @@ margin: var(--Rows1);
     align-items: center;
     box-sizing: border-box;
 }
-.E1_img{
+.E1_img {
     width: 80%;
     display: inline-block;
 }
-.E1_img img{
+.E1_img img {
     width: 100%;
 }
-.ACE_E1 .warning_txt{
+.ACE_E1 .warning_txt {
     text-align: start;
     position: absolute;
     top: -27px;
     left: 0;
     margin-left: 30px;
 }
-.E1_tt{
+.E1_tt {
     text-align: center;
 }
 
-.e2_imgs{
+.e2_imgs {
     gap: 294px;
     height: 696px;
     background: #000;
@@ -306,11 +352,11 @@ margin: var(--Rows1);
     justify-content: center;
     position: relative;
 }
-.e2_imgs .e2_02 img{
+.e2_imgs .e2_02 img {
     width: 100%;
 }
-.e2_imgs .e2_02:before{
-    content: 'OLED';
+.e2_imgs .e2_02:before {
+    content: "OLED";
     color: var(--font_W);
     position: absolute;
     display: inline-block;
@@ -319,8 +365,8 @@ margin: var(--Rows1);
     right: 25%;
     bottom: 15%;
 }
-.e2_imgs .e2_02:after{
-    content: '';
+.e2_imgs .e2_02:after {
+    content: "";
     background-image: url(../img/OLED/ACE_e02_03.png);
     position: absolute;
     background-size: cover;
@@ -329,12 +375,263 @@ margin: var(--Rows1);
     right: 6%;
     bottom: 15%;
 }
-.ACE_E2 .warning_txt{
+.ACE_E2 .warning_txt {
     text-align: end;
 }
-.e2_tt{
+.e2_tt {
     text-align: center;
     margin: var(--Rows6);
 }
 
-/* // OLED */  
+/* // OLED */
+/* 반응형 */
+@media (max-width: 1280px) {
+}
+@media (max-width: 768px) {
+    .OLED_ace {
+        display: block;
+        margin: 108px 0;
+    }
+    .OLEd_img {
+        width: 100%;
+        margin-bottom: 54px;
+    }
+    .OLEd_img .warning_txt {
+        position: absolute;
+        right: 0;
+        margin-right: 30px;
+        line-height: 27px;
+    }
+    .img_txt {
+        box-sizing: border-box;
+        padding: 0px 30px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .OLED_sec2_h3 {
+        font-size: 1.8rem;
+    }
+    .img_txt p {
+        width: 100%;
+    }
+    .ACE_tt_box li {
+        width: 187px;
+        height: 378px;
+    }
+    .ACE_tt_box li a {
+        width: 40%;
+        padding: 27px 0px;
+    }
+    .ACE_tt_box li a img {
+        width: 100%;
+    }
+    .ACE_tt_box li a .ace_tt {
+        font-size: 1.6rem;
+        margin-top: 0;
+        margin-bottom: 27px;
+    }
+    /* 수정 */
+    .ACE_tt_box li a .A_txt_box {
+        width: 100%;
+    }
+    .ACE_tt_box li a .A_txt_box p {
+        font-size: 1rem;
+    }
+    .a1_scroll {
+        width: 100%;
+    }
+    .ACE_a1_scrollImg .OLED_sec2_h3 {
+        position: relative;
+        height: 54px;
+        width: 384px;
+        margin-top: 54px;
+    }
+    .OLED_sec2_h3 span {
+        line-height: 54px;
+        font-size: 1.6rem;
+    }
+    .ACE_a1_scrollImg .a1_tt {
+        margin: 54px 30px 27px 0;
+    }
+    .OLED_sec2_h4 {
+        font-size: 1.25rem;
+        text-align: right;
+        margin-left: 30px;
+        line-height: 27px;
+    }
+    .ACE_a1_scrollImg p {
+        width: 62%;
+        text-align: right;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+    .ACE_a2 {
+        margin: 81px 0;
+        height: 826px;
+        position: relative;
+    }
+    .ACE_a2 img {
+        width: 47%;
+    }
+    .ACE_a2 img:first-child {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .ACE_a2 img:last-of-type {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .ACE_a2 .a2_tt {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translateX(123%);
+    }
+    .ACE_a2 .a2_tt h3 {
+        color: var(--font_W);
+        line-height: 43px;
+        margin-bottom: 27px;
+    }
+    .ACE_a2 .a2_tt h4 {
+        margin: 0;
+        width: 90%;
+        line-height: 33px;
+    }
+    .ACE_a2 p.a2_sub_txt {
+        bottom: 35%;
+        left: 26%;
+        width: 44%;
+        text-align: center;
+    }
+
+    /* C */
+    .ACE_c1 {
+        margin: 81px 0;
+    }
+
+    .c1_imgs {
+        gap: 30px;
+        margin: 0;
+    }
+    .c1_imgs .img_box {
+        width: 100%;
+    }
+    .ACE_c1 .warning_txt {
+        margin-right: 30px;
+        margin-top: 13.5px;
+    }
+    .c1_tt {
+        margin-left: 0;
+    }
+    .ACE_c2 {
+        align-items: flex-start;
+        margin: 54px 0;
+    }
+    .ACE_c2 .c2_img {
+        width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    .c2_img img {
+        width: 100%;
+    }
+    .ACE_c2 {
+        display: inline-block;
+    }
+    .c2_tt {
+        margin-left: 0;
+    }
+    .ace_tt h3 {
+        margin-top: 54px;
+        color: var(--font_w);
+    }
+    .ace_tt h4 {
+        text-align: center;
+        width: 87%;
+        margin: 0 30px;
+    }
+    .ace_tt p {
+        margin-bottom: 81px;
+    }
+
+    /* E */
+    .ACE_E {
+        margin-top: 54px;
+    }
+    .ACE_E1 {
+        display: inline-block;
+    }
+    .E1_img {
+        width: 100%;
+    }
+    .E1_tt h3 {
+        color: var(--font_B);
+    }
+    .ACE_E2 {
+        margin-top: 0;
+        height: 900px;
+        background: #000;
+    }
+    .e2_imgs {
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 30px;
+        margin-top: 54px;
+        height: 550px;
+    }
+    .e2_imgs img {
+        width: 70%;
+    }
+    .e2_02 {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .e2_imgs .e2_02 img {
+        width: 60%;
+    }
+    .e2_imgs .e2_02:after {
+        right: 1%;
+        bottom: 5%;
+    }
+    .e2_imgs .e2_02:before {
+        right: 33%;
+        bottom: 5%;
+    }
+    .ACE_E2 .warning_txt {
+        color: var(--font_W);
+        margin-right: 30px;
+    }
+
+    .ACE_E2 .OLED_sec2_h3,
+    .ACE_E2 .e2_tt p {
+        color: var(--font_W);
+    }
+    .e2_tt {
+        margin: var(--Rows1);
+        background: #000;
+        padding-bottom: 81px;
+    }
+}
+@media (max-width: 400px) {
+    .e2_imgs {
+        height: 405px;
+        margin-top: 54px;
+        height: 405px;
+    }
+    .e2_imgs .e2_02:after {
+        right: 4%;
+        bottom: 29%;
+        background-image: url(../img/OLED/ACE_e02_04.png);
+        width: 86px;
+        height: 80px;
+    }
+}
+.e2_imgs .e2_02:before {
+    right: 35%;
+    bottom: 29%;
+    font-size: 1.5rem;
+}
