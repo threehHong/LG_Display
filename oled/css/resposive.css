@@ -1,6 +1,66 @@
 /* OLED EX (SECTOIN1) */
 
-/* OLED EX 1600px */
+/* OLED EX 1490px */
+@media (max-width: 1490px) {
+    /* EX BEZEL */
+    .EX_bezel {
+        width: 1000px;
+    }
+    .EX_bezel_img_h {
+        gap: 12px
+    }
+    .EX_bezel img {
+        width: 800px;
+    }
+    .EX_bezel h2 {
+        font-size: 30px;
+    }
+    .EX_bezel p {
+        font-size: 16px;
+        margin: 30px 0px 0px 34.9%;
+    }
+    .EX_bezel span:nth-of-type(1) {
+        font-size: 60px;
+    }
+    .EX_bezel span:nth-of-type(2) {
+        font-size: 20px;
+    }
+}
+
+/* OLED EX 1040px */
+@media (max-width: 1040px) {
+    /* EX BEZEL */
+    .EX_bezel {
+        width: 600px;
+    }
+    .EX_bezel img {
+        width: 450px;
+        height: 550px;
+    }
+    .EX_bezel h2 {
+        font-size: 22px;
+    }
+    
+    .EX_bezel p {
+        font-size: 14px;
+        margin: 25px 0px 0px 5%;
+    }
+    .EX_bezel span:nth-of-type(1) {
+        font-size: 45px;
+    }
+    .EX_bezel span:nth-of-type(2) {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .EX_thinner {
+        width: 105px;
+        height: 105px;
+    }
+}
+
+
+
+
 @media (max-width: 1600px) {
     .EX_algorism .img {
         background-size: contain;
@@ -49,7 +109,7 @@
     }
 }
 
-/* OLED EX TABLET */
+/* OLED EX 768px */
 @media (max-width: 768px) {
     /* OLED EX INTRO */
     .banner h2 {
@@ -82,31 +142,83 @@
         font-size: 10px;
         line-height: 14px;
     }
-
-
-    /* EX Bezel(베젤) */
-    /* .EX_bezel img {
-        width: 343px;
-        height: 245px;
-    } */   
-
-    .EX_bezel h2 {
-        /* font-size: 26px;
-        grid-column: 2/3;
-        grid-row: 2/3; */
-    }
-
-    .EX_bezel p {
-        /* font-size: 16px;
-        grid-column: 2/3;
-        grid-row: 3/4; */
-    }
     
 }
 
 
+/* OLED EX 650px */
+@media (max-width: 650px) {
+    /* EX BEZEL */
+    .EX_bezel {
+        width: 300px;
+        text-align: center;
+    }
+    .EX_bezel_img_h {
+        display: inline-block;
+    }
+    .EX_bezel img {
+        width: 250px;
+        height: 350px;
+    }
+    .EX_bezel h2 {
+        font-size: 20px;
+        justify-content: flex-end;
+        margin-top: 16px;
+    }
+    
+    .EX_bezel p {
+        font-size: 13px;
+        margin: 10px 23px 0px 0px;
+    }
+    .EX_bezel span:nth-of-type(1) {
+        font-size: 35px;
+    }
+    .EX_bezel span:nth-of-type(2) {
+        font-size: 16px;
+        margin-left: 0px;
+    }
+    .EX_thinner {
+        width: 105px;
+        height: 105px;
+        left: 31%;
+        top: 13%;
+    }
+}
 
-/* OLED EX MOBILE */
-@media (max-width: 390px) {
 
+@media (max-width: 595px) {
+    .EX_deuterium h2 {
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .EX_deuterium p {
+        font-size: 12px;
+        line-height: 27px;
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 595px) {
+    .EX_deuterium h2 {
+        font-size: 22px;
+    }
+    .EX_deuterium p {
+        font-size: 12px;
+        line-height: 27px;
+
+    }
+}
+
+
+/* OLED EX 425px */
+@media (max-width: 595px) {
+    .EX_deuterium h2 {
+        font-size: 16px;
+    }
+    .EX_deuterium p {
+        font-size: 10px;
+        line-height: 25px;
+        margin-top: 15px;
+    }
 }

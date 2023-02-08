@@ -295,6 +295,7 @@ p {
     height: 6000px;
     /* width: 1920px; */
     width: 100%;
+    /* background: #F6F6F6; */
 }
 
 .EX_bezel {
@@ -302,8 +303,9 @@ p {
     top: 0;
 
     background: #F6F6F6;
-    width: 100%;
+    width: 1470px;
     height: 1107px;
+    margin: 0 auto;
 
     /* display: grid;
     grid-template-columns: 4.81fr 22.13fr 28.85fr 15.39fr 3.02fr 6.94fr 2.8fr;
@@ -313,14 +315,15 @@ p {
 
 .EX_bezel_img_h {
     display: flex;
-    gap: 40px
+    gap: 40px;
+    /* margin-left: 100px; */
 }
 
 .EX_bezel img {
 
 
     width: 1140px;
-    height: 700px;
+    height: 600px;
 
 
     /* grid-column: 2/4;
@@ -354,7 +357,7 @@ p {
     line-height: 30px;
     
     display: inline-block;
-    margin: 30px 0px 0px 25.5%;
+    margin: 30px 0px 0px 33%;
     text-align: right;
 
     /* grid-row: 5/6;
@@ -366,10 +369,18 @@ p {
 
 }
 
+.EX_thinner {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 24%;
+    top: 19%;
+}
+
 .EX_bezel span {
     color: var(--font_W);
 
-    position: absolute;
+    /* position: absolute; */
 
     /* grid-column: 2/3;
     grid-row: 3/4;
@@ -379,15 +390,18 @@ p {
 .EX_bezel span:nth-of-type(1) {
     font-size: 75px;
     /* margin-top: 12%; */
-    left: 19%;
-    top: 22%;
+    /* left: 19%;
+    top: 22%; */
 }
 
 .EX_bezel span:nth-of-type(2) {
     font-size: 35px;
-    left:19%;
-    top: 29%;
-    margin-left: 14px;
+
+    margin-left: 14px
+
+    /* margin-left: 14px; */
+    /* left:19%;
+    top: 29%; */
     
     /* margin-top: 28%;
     margin-right: 20px; */
