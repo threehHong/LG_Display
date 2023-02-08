@@ -1,17 +1,3 @@
-/* header{
-    width: 100%;
-    height: 54px;
-    background-color: rgba(0, 0, 0, 0.25);
-    position: fixed;
-    top: 0;
-}
-footer{
-    width: 100%;
-    height: 300px;
-    background-color: #333;
-} */
-/* -------------------------------------------- */
-
 .place{
     --color_green: #238037;
 }
@@ -368,7 +354,7 @@ main *{
 .place .section_list .place_lg{background-image: url("../img/place_img_place_lg.jpg");}
 .place .section_list .place_science{background-image: url("../img/place_img_place_science.jpg");}
 .place .section_list .place_paju{background-image: url("../img/place_img_place_paju.jpg");}
-.place .section_list .place_gumi{background-image: url("../img/place_img_place_gumi.png");}
+.place .section_list .place_gumi{background-image: url("../img/place_img_place_gumi.jpg");}
 
 .place .section_list li address{
     display: grid;

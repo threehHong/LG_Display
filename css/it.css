@@ -1,26 +1,11 @@
-/* header / footer css*/
-/* #header h3 {
-  font-size: 1.125em;
-  font-weight: 600;
-} */
-
-/* footer *{
-  color: var(--font_W);
-} */
-
-/*---*/
 img {
   width: 100%;
   transition: opacity 1s;
 }
-
 main * {
   color: var(--font_B);
   word-break: keep-all;
 }
-/* a {
-  color: inherit;
-} */
 .notice {
   position: relative;
 }
@@ -28,9 +13,7 @@ main * {
   display: flex;
   align-items: center;
 }
-
 .notice::after {
-  /* font-family: "Gothic A1"; */
   content: "※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수 있습니다.";
   position: absolute;
   font-weight: 300;
@@ -40,16 +23,10 @@ main * {
   top: 100%;
   margin-top: 10px;
   white-space: nowrap;
-  
 }
 .focus .notice::after {
   color: var(--font_W);
 }
-
-/* .mg6 {
-  margin-bottom: 162px;
-} */
-
 .focus {
   color: var(--font_W);
   background-color: #000;
@@ -60,26 +37,12 @@ main * {
 .focus p {
   color: var(--font_W);
 }
-
-/* .focus::before{
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-  left: 0;
-  right: 0;
-  bottom: 100%;
-  height: 200px;
-} */
-
-/* ---------------------------------------------------------------------------- */
 .it main h3 {
   font-size: 55px;
   font-weight: 700;
   text-align: center;
 }
 .it main h4 {
-  /* font-size: 45px; */
   font-size: 32px;
   font-weight: 700;
   text-align: center;
@@ -106,9 +69,7 @@ main * {
   height: 756px;
   margin-bottom: 162px;
   object-fit: cover;
-  /* object-position: ; */
 }
-
 #section1 div.sectionTitle {
   background: url("../img/it_img_sec1.jpg") no-repeat center / cover fixed;
 }
@@ -118,14 +79,12 @@ main * {
 #section3 div.sectionTitle{
   background: url('../img/it_img_sec3.jpg') no-repeat center / cover fixed;
 }
-/* ---------------------------------------------------------------------------- */
 .it .titleBg {
   height: 756px;
   background: url("../img/it_img_titleBg_pc.jpg") no-repeat center 70% / cover;
   padding-top: 104px;
   margin-bottom: 162px;
 }
-
 .it .titleBg h2 {
   margin: 0;
   color: #fff;
@@ -133,7 +92,6 @@ main * {
   font-weight: bold;
   margin-left: 147px;
 }
-
 .it .title_deco::before {
   vertical-align: top;
   content: "";
@@ -143,23 +101,15 @@ main * {
   background-color: var(--point_R);
   margin-right: 30px;
 }
-
 .it .sec_live {
   width: 82.6%;
 }
-
 .it .sec_live .notice {
   background-image: url("../img/it_img_live.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
 }
-
-/* .it .sec_live .notice img {
-  width: 100%;
-  height: 100%;
-} */
-
 .it .sec_live .notice::before {
   content: "";
   position: absolute;
@@ -170,7 +120,6 @@ main * {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-
 .it .sec_live .monitorWrap {
   position: absolute;
   overflow: hidden;
@@ -179,7 +128,6 @@ main * {
   top: 0;
   bottom: 0;
 }
-
 .it .sec_live .monitorWrap img {
   position: absolute;
   z-index: 3;
@@ -188,9 +136,7 @@ main * {
   top: 25%;
   left: 15%;
   transition: 1s;
-  /* right: -10%; */
 }
-
 .it .sec_live .livemonitor {
   position: absolute;
   left: 0;
@@ -214,7 +160,6 @@ main * {
 .it .sec_live .monitorWrap.focus .livemonitor {
   clip-path: inset(26% 16% 30%);
 }
-
 .it .sec_zoom {
   width: 96.9%;
 }
@@ -228,28 +173,23 @@ main * {
   position: relative;
   overflow: hidden;
 }
-
 .it .sec_zoom > div > .img_origin .lens {
   width: 10%;
-  height: 15%;
-  border: 1px solid white;
+  height: 20%;
+  border: 1px solid var(--font_W);
   background: rgba(100, 100, 100, 0.3);
   position: absolute;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
-
 .it .sec_zoom .notice .screen {
   grid-column: 3 / span 1;
   background: url("../img/it_img_zoom.jpg") no-repeat;
-  /* background-size: auto; */
   background-position: 0, 0;
 }
-
 .it .sec_black {
   width: 82.6%;
 }
-
 .it .sec_black .notice > div {
   background: url("../img/it_img_black_clear.jpg") no-repeat 0 0 / cover;
   position: absolute;
@@ -262,7 +202,6 @@ main * {
 .it .sec_black figcaption {
   order: 2;
 }
-
 .it .sec_sunlight {
   width: 86.7%;
 }
@@ -272,32 +211,19 @@ main * {
 .it .sec_sunlight .focus img {
   opacity: 0;
 }
-
-
-
-
-
 #section2 .stickyWrap{
-  /* position: sticky; */
   height: 350vh;
 }
 .it .sec_size {
   width: 96.9%;
-  /* height: 631px; */
-  /* position: relative; */
   position: sticky;
   top: 50px;
   overflow: hidden;
 }
-
-
 .it .sec_size .notice img{
   width: 80%;
 }
 .it .sec_size .notice{
-  /* display: flex;
-  justify-content: center;
-  position: sticky; */
   padding-top: 35%;
   top: 0;
 }
@@ -308,23 +234,19 @@ main * {
   transform: translateX(-50%);
 }
 .it .sec_size .first~.sizeImgWrap{
-  /* left: 90%; */
   transform: translateX(20%);
   opacity: 0;
 }
 .it .sec_size .sizeImgWrap .shadow{
   position: absolute;
   left: 0;
-  /* right: 0; */
   bottom: 0;
   opacity: 0;
 }
-
 .it .sec_bezeless {
   position: relative;
   height: 250vh;
 }
-
 .it .sec_bezeless .bezelDesc {
   position: sticky;
   top: 70vh;
@@ -338,14 +260,9 @@ main * {
   z-index: 1;
   color: var(--font_W);
 }
-
 .it .sec_bezeless .notice {
   position: sticky;
   top: 0;
-}
-
-.sec_battery .notice {
-  position: relative;
 }
 .it main svg {
   display: block;
@@ -377,25 +294,19 @@ main * {
 .it main .st4 {
   fill: none;
 }
-
 #line {
   stroke-dasharray: 450;
   stroke-dashoffset: 450;
   stroke-width: 2px;
   transform-origin: center;
   transform: rotate(317deg);
-  /* animation: cells1 2s forwards infinite; */
 }
 #dashed {
-  /* stroke-dasharray: 942; */
-  /* stroke-dashoffset: 942; */
   stroke-dasharray: 20, 10;
   stroke-dashoffset: 942;
   transform-origin: center;
   transform: rotate(317deg);
-  /* animation: dahsed 2s infinite; */
 }
-
 @keyframes dahsed {
   0% {
     stroke-dashoffset: 942;
@@ -459,7 +370,6 @@ main * {
     transform: rotate(360deg);
   }
 }
-
 .sec_battery .notice img:nth-of-type(2) {
   position: absolute;
   left: 0;
@@ -467,10 +377,6 @@ main * {
   opacity: 0;
   animation: cells1 2s alternate infinite;
 }
-
-/* .it #section3{transition: 0.5s;} */
-
-
 .it .sec_sketch .notice .grid{
   position: absolute;
   top: 0;
@@ -482,7 +388,6 @@ main * {
   grid-template-rows: repeat(20, 1fr);
   grid-auto-flow: row;
 }
-
 .it .sec_sketch .notice .penTouch{
   display: block;
   background-image: url("../img/it_img_drawing.jpg");
@@ -490,16 +395,13 @@ main * {
   transition: 0.2s;  
   opacity: 0;
 }
-
 .it .sec_sketch .notice .penTouch.drawing{
   opacity: 1;
 }
-
 .it .sec_gaming {
   width: 75%;
   height: 2000px;
 }
-
 .it .sec_gaming .notice{
   position: sticky;
   top: 30px;
@@ -519,21 +421,17 @@ main * {
   opacity: 1;
   border-bottom: 4px dashed red;
 }
-
 .it .sec_folderable {
   width: 80.4%;
 }
 .it .sec_battery {
   width: 80.4%;
 }
-
-/* 반응형 */
 @media (max-width: 1000px) {
   .it main .flex {
     display: block;
   }
 }
-
 @media (max-width: 768px) {
   .it main h3 {
     font-size: 36px;
@@ -544,7 +442,6 @@ main * {
   .it main p {
     font-size: 18px;
   }
-
   .it .titleBg {
     height: 324px;
     padding-top: 81px;
@@ -553,7 +450,6 @@ main * {
   .it .titleBg h2 {
     font-size: 36px;
     font-weight: bold;
-    /* margin-left: 101px; */
     margin-left: 13.2%;
   }
   .it .title_deco::before {
@@ -564,19 +460,33 @@ main * {
   .it .contents {
     width: 92.3%;
   }
-
   .it .sectionTitle {
     height: auto;
   }
-
   .it .sec_black .notice {
     width: 100%;
   }
-
   .it .sec_bezeless figcaption {
-    position: static;
+    position: sticky;
     max-width: 624px;
     width: 100%;
+    height: auto;
+    top: 10vh;
+    left: 0;
+    margin: 0 auto;
+  }
+  .it .sec_bezeless .notice {
+    top: 45vh;
+  }
+  .it .sec_gaming{
+    height: 200vh;
+  }
+  .it .sec_gaming figcaption{
+    position: sticky;
+    top: 10vh;
+  }
+  .it .sec_gaming .notice{
+    top: 45vh;
   }
 }
 @media (max-width: 480px) {
@@ -595,11 +505,9 @@ main * {
     font-size: 12px;
     line-height: 18px;
   }
-
   .it .contents {
     width: 100%;
   }
-
   .it .titleBg {
     background: none;
     height: 123px;
@@ -622,7 +530,6 @@ main * {
   .sectionTitle {
     height: 164px;
   }
-
   .it .sec_sketch .notice .grid{
     grid-template-columns: 1fr 40fr;
     grid-template-rows: 1fr 40fr;
@@ -633,10 +540,43 @@ main * {
     grid-template-columns: 1fr 0fr;
     grid-template-rows: 1fr 0fr;
   }
-  
-
-  /* .it .sec_bezeless figcaption{width: 100%;} */
   #section3 .sectionTitle {
     height: 328px;
   }
+  #section2 .stickyWrap{
+    height: 300vh;
+  }
+  .it .sec_size {
+    top: 20vh;
+  }
+  .it .sec_bezeless {
+    height: 180vh;
+  }
+  .it .sec_bezeless figcaption {
+    top: 20vh;
+  }
+  .it .sec_bezeless .bezelDesc {
+    position: sticky;
+    top: 30vh;
+    height: auto;
+  }
+  #section3 div.sectionTitle{
+    background-position-y: 60px;
+  }
+  .it .sec_gaming{
+    height: 150vh;
+  }
+  .it .sec_gaming figcaption{
+    top: 20vh;
+  }
+  .it .sec_gaming .notice{
+    top: 40vh;
+  }
+  .it .sec_battery svg{
+    width: 200px;
+    height: 200px;
+    top: -5%;
+    left: 5%;
+  }
+
 }

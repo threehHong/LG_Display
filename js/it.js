@@ -114,9 +114,14 @@ function event_Size(){
       foo : function(){
         return figSizePos;
       }
+    },
+    mobileCheck : function() {
+      return false
     }
+    
   });
- 
+  if($(window).innerWidth <= 480) s.destroy();
+  
 }
 
 function event_Bezel(){
@@ -178,6 +183,9 @@ $(window).trigger("resize");
 event_Zoom();
 event_Black();
 
+setTimeout(function(){event_Sketch();}, 1000);
+
+
 $(window).scroll(function () {
   windowScroll = $(window).scrollTop();
   event_Live();
@@ -189,12 +197,11 @@ $(window).scroll(function () {
 });
 
 
-/*
-const IMG = new Image();
-IMG.src = '이미지url';
- 
-// IMG.src 에 이미지 url을 넣으면 브라우저에서 이미지를 다운하게 되고 로드가 다되면 이벤트 발생
-IMG.addEventListener('load', function() {
-    console.log('높이 : ', this.naturalHeight , '너비 : ', this.naturalWidth, "이미지 : ", this.src);	
-});
-*/
+
+function imgPreLoading () {
+  for (let i = 0; i < 60; i++) {
+      let img = new Image();
+      img.src = `../img/bezelessimg/OVERVIEW_DESIGN_PC_FHD_000${("0"+i).substr(-2)}.jpg`;
+  }
+}
+imgPreLoading ();

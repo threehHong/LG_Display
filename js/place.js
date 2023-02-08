@@ -1,9 +1,3 @@
-let linkPrevent = $(".__dis_link");
-
-linkPrevent.click(e=>{
-    e.preventDefault();
-})
-
 let lg_list =[
     {
         latlng: new kakao.maps.LatLng(37.5279663, 126.9292856),
@@ -73,7 +67,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         center: lg_list[0].latlng,
         draggable: false,
         level: 3,
-        
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); 
@@ -87,7 +80,6 @@ let overlay_list = [];
 for(let i of lg_list){
     let marker = new kakao.maps.Marker({
         position: i.latlng,
-        // title : 툴팁
     });
     var content = `
         <section class="mapOverlay">
@@ -219,13 +211,10 @@ function mapHandler(bool){
 
 $btn_map.click(e=>{
     let selectedIndex = $(e.currentTarget).parent().index();
-    // map.setCenter(lg_list[selectedIndex].latlng);
     focusCenter(lg_list[selectedIndex].lat, lg_list[selectedIndex].lng)
     setMarkerZndex(selectedIndex);
     insertOverlay(selectedIndex);
 });
-
-
 
 $btn_drag.click((e)=>{
     $(e.currentTarget).toggleClass("disabled");
@@ -237,6 +226,4 @@ $btn_drag.click((e)=>{
         $(e.currentTarget).text("드래그 끄기");
         mapHandler(true);
     }
-})
-
-console.log("테스트용 콘솔4");
+});

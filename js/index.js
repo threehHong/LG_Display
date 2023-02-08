@@ -1,3 +1,67 @@
+/* -- common js  --- */
+
+let $disLink = $(".__dis_link");
+
+$disLink.click(function(e){
+    e.preventDefault();
+})
+
+let $gnbMenu = $(".gnb_box > li");
+
+
+$gnbMenu.click(function(){
+    $gnbMenu.removeClass("click");
+    $(this).addClass("click");
+});
+
+let $btn_lang = $(".header_lang .icon_lang"),
+    $lang_list = $(".header_lang .lang_list")
+    $container = $("header .container");
+
+$btn_lang.click(function(){
+    $container.toggleClass("click");
+})
+
+
+/* -- portfolio popup --- */
+
+let modal = $(".notice_portfolio"),
+    modalBtnClose = modal.find("button"),
+    modalInput = modal.find("input");
+ 
+function setCookie(name, value, day){
+    let date = new Date();
+    date.setDate(date.getDate() + day);
+    document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+}
+function checkCookie(name){
+    let cookieArr = document.cookie.split(';');
+    let reject = false;
+
+    for(let cookie of cookieArr){
+        if(cookie.search(name) > -1){
+            reject = true;
+            break;
+        }
+    }
+    if(!reject){
+        modal.removeClass('__hidden');
+    }
+}
+checkCookie('portfolio_LGDisplay');
+
+modalBtnClose.click(function(){
+    modal.addClass('__hidden');
+    if(modalInput.is(":checked")){
+        console.log("button click");
+        setCookie('portfolio_LGDisplay','본 사이트는 구직용 포트폴리오 사이트입니다.',1);
+    } else{
+        setCookie('portfolio_LGDisplay','본 사이트는 구직용 포트폴리오 사이트입니다.',-1);
+    }
+});
+
+/* -- index --- */
+
 let btn_menu = $("header .menu");
 
 btn_menu.click(function(){
@@ -7,7 +71,6 @@ btn_menu.click(function(){
 
 let main = $(".section_main");
 let slideIndex = 1;
-    // timerSwitch = true;
 
 function slideActive(){
     main.removeClass("active pagerTimer");
@@ -35,23 +98,9 @@ const swiper = new Swiper('.swiper', {
 });
 
 swiper.on("slideChangeTransitionStart", function(){
-    console.log("swiper.activeIndex", swiper.activeIndex);
-    slideIndex = ((swiper.activeIndex-1)%5)+1;
-    if(slideIndex == 0) slideIndex = 5;
+    slideIndex = ((swiper.activeIndex-1+5)%5)+1;
     slideActive();
-    // if(timerSwitch){timerActive();};
 });
-
-// $("main").hover(function(){
-//     swiper.autoplay.pause();
-//     timerSwitch = false;
-//     main.removeClass("pagerTimer");
-// }, function(){
-//     swiper.autoplay.run();
-//     timerSwitch = true;
-//     main.addClass("pagerTimer");
-// });
-
 
 $("main").mouseover(function(){
     swiper.autoplay.pause();
