@@ -311,8 +311,10 @@ p {
 
 
 .EX_bezel img {
-    width: 100%;
-    grid-column: 2/5;
+    /* width: 100%; */
+    width: 1140px;
+    height: 700px;
+    grid-column: 2/4;
     grid-row: 1/5;
 }
 
@@ -320,11 +322,12 @@ p {
     font-size: 45px;
     font-weight: 700;
 
-    grid-column: 6/7;
+    grid-column: 4/5;
     grid-row: 4/5;
 
     display: flex;
     align-items: flex-end;
+    justify-content: right;
 
     margin-bottom: 45px;
 }
@@ -335,7 +338,7 @@ p {
     text-align: right;
 
     grid-row: 5/6;
-    grid-column: 3/7;
+    grid-column: 3/5;
 }
 
 .EX_bezel span {
