@@ -44,9 +44,17 @@ p {
     position: sticky;
 
     width: 100%;
-    height: 756px;
+    /* height: 756px; */
+    height: 920px;
     background: #000000;
     
+}
+
+.banner_a {
+    position: relative;
+    width: 100%;
+    /* padding-top: 53.33%; */
+    height: 53.33vw;
 }
 
 .banner h2:before {
@@ -70,7 +78,7 @@ p {
  
     position: absolute;
     right: 4%;
-    bottom: 3%;
+    bottom: 25%;
 }
 
 /* OLED EX INTRO */
@@ -285,6 +293,7 @@ p {
 /* EX Bezel(베젤) */
 .EX_bezel_container {
     height: 6000px;
+    width: 1920px;
 }
 
 .EX_bezel {
@@ -297,7 +306,7 @@ p {
 
     display: grid;
     grid-template-columns: 2.81fr 22.13fr 8.85fr 42.39fr 3.02fr 14.94fr 4.8fr;
-    grid-template-rows: 15.26fr 14.18fr 12.01fr 29.35fr 14.45fr 14.12fr
+    grid-template-rows: 15.26fr 14.18fr 12.01fr 29.35fr 20fr 14.12fr
 }
 
 
@@ -317,7 +326,7 @@ p {
     display: flex;
     align-items: flex-end;
 
-    margin-bottom: 87px;
+    margin-bottom: 45px;
 }
 
 .EX_bezel p {
