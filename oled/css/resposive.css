@@ -107,6 +107,14 @@
         line-height: 27px;
         margin-top: 30px;
     }
+
+    .EX_deuterium {
+         width: 424px;
+         height: 600px;
+         background: #EAEAEC;
+         /* background-image: url(../img/EX_deuterium.jpg); */
+    }
+
 }
 
 /* OLED EX 768px */
