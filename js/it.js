@@ -208,11 +208,12 @@ $(window).scroll(function () {
 function imgPreLoading() {
   for (let i = 0; i < 60; i++) {
     let img = new Image();
-    img.src = `../img/bezelessimg/OVERVIEW_DESIGN_PC_FHD_000${("0" + i).substr(
+    img.src = `./img/bezelessimg/OVERVIEW_DESIGN_PC_FHD_000${("0" + i).substr(
       -2
     )}.jpg`;
+    console.log(img.src);
   }
   img = new Image();
-  img.src = `../img/it_img_gamingafter.jpg`;
+  img.src = `./img/it_img_gamingafter.jpg`;
 }
 imgPreLoading();
