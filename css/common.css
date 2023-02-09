@@ -394,30 +394,13 @@ footer {
 }
 
 /* 반응형 */
-@media (min-width: 600px) {
-  header.toggle {
-    /* height: 60px; */
-    height: 10px;
-    /* background: linear-gradient(rgba(0, 0, 0, 0.8) 10px, rgba(0, 0, 0, 0) 10px); */
-  }
-
-  header.toggle > div {
-    display: none;
-  }
-}
 
 @media (max-width: 1300px) {
-  .header_logo {
-    width: 100%;
-  }
   .Header_icon {
     width: 12%;
   }
 }
 @media (max-width: 1190px) {
-  .header_logo {
-    width: 100%;
-  }
   .Header_icon {
     width: 12%;
   }
@@ -428,6 +411,42 @@ footer {
   }
   nav {
     margin-left: 25%;
+  }
+  footer {
+    font-size: 14px;
+    grid-template-columns: 101fr 86fr 96fr 202fr 99fr 84fr 80fr;
+    grid-template-rows: 38px 73px 120px 66px;
+  }
+  .logo_lg,
+  .logo_oled {
+    display: none;
+  }
+  .f_link_list {
+    grid-column: 2 / span 5;
+    grid-row: 2 / span 1;
+    min-width: auto;
+  }
+  .f_copyright {
+    grid-column: 2 / span 5;
+    grid-row: 4 / span 1;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .f_partners {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+    text-align: center;
+    justify-content: flex-end;
+    height: 40px;
+  }
+  .snslist {
+    grid-column: 4 / span 1;
+    grid-row: 3 / span 1;
+    display: flex;
+    align-items: end;
+    height: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 750px) {
@@ -587,7 +606,6 @@ footer {
   #header .bar.active span:last-child {
     transform: rotate(45deg);
   }
-
   #header .gnb_box {
     flex-direction: column;
     gap: 43px;
@@ -638,51 +656,26 @@ footer {
     font-size: 45px;
     line-height: 45px;
   }
-
   #header .gnb_box.open .lnb_box {
     height: fit-content;
   }
-}
-@media screen and (max-width: 880px) {
-  footer {
-    font-size: 14px;
-    grid-template-columns: 101fr 86fr 96fr 202fr 99fr 84fr 80fr;
-    grid-template-rows: 38px 73px 120px 66px;
+  header.toggle {
+    /* height: 60px; */
+    height: 10px;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.8) 10px, rgba(0, 0, 0, 0) 10px); */
   }
-  .logo_lg,
-  .logo_oled {
+  header.toggle > div {
     display: none;
   }
-  .f_link_list {
-    grid-column: 2 / span 5;
-    grid-row: 2 / span 1;
-    min-width: auto;
-  }
-  .f_copyright {
-    grid-column: 2 / span 5;
-    grid-row: 4 / span 1;
-    white-space: nowrap;
-    text-align: center;
-  }
-  .f_partners {
-    grid-column: 4 / span 1;
-    grid-row: 3 / span 1;
-    text-align: center;
-    justify-content: flex-end;
-    height: 40px;
-  }
-  .snslist {
-    grid-column: 4 / span 1;
-    grid-row: 3 / span 1;
-    display: flex;
-    align-items: end;
-    height: 20px;
-    margin-top: 80px;
-    margin-bottom: 20px;
-  }
 }
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   footer {
     font-size: 10px;
+  }
+  #header.toggle {
+    height: 54px !important;
+  }
+  #header.toggle > div.M30 {
+    display: flex !important;
   }
 }

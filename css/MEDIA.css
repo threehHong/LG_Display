@@ -100,7 +100,8 @@ header {
 .media_count_num {
   display: flex;
 }
-.change_num {
+.change_num,
+.slash {
   font-size: 3.43rem;
   font-weight: 800;
 }

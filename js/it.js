@@ -192,10 +192,7 @@ $(window).trigger("resize");
 
 event_Zoom();
 event_Black();
-
-setTimeout(function () {
-  event_Sketch();
-}, 1000);
+event_Sketch();
 
 $(window).scroll(function () {
   windowScroll = $(window).scrollTop();

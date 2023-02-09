@@ -73,13 +73,9 @@ function btnTopPosition() {
   } else {
     btnTop.removeClass("on");
   }
-  console.log("nowScrollTop", nowScrollTop),
-    console.log("winHeight", winHeight);
-  console.log("footerHeight", footerHeight);
   scrPercent =
     ((nowScrollTop + $(window).innerHeight()) / (winHeight - footerHeight)) *
     100;
-  console.log("func % : ", scrPercent);
   percentage.css({ height: `${scrPercent * 1.3}%` });
 }
 $(window).scroll(function () {
