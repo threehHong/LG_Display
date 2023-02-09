@@ -43,6 +43,9 @@ h3 {
   font-size: 1.125em;
   font-weight: 600;
 }
+header.toggle {
+  height: 10px;
+}
 #header.toggle > div.M30 {
   display: none !important;
 }
@@ -659,16 +662,6 @@ footer {
   #header .gnb_box.open .lnb_box {
     height: fit-content;
   }
-  header.toggle {
-    /* height: 60px; */
-    height: 10px;
-    /* background: linear-gradient(rgba(0, 0, 0, 0.8) 10px, rgba(0, 0, 0, 0) 10px); */
-  }
-  header.toggle > div {
-    display: none;
-  }
-}
-@media (max-width: 480px) {
   footer {
     font-size: 10px;
   }
