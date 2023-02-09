@@ -66,6 +66,9 @@ header {
   position: fixed;
   z-index: 100;
 }
+header .header_logo{
+  width: 166px;
+}
 
 @media (min-width: 600px){
   header.toggle{

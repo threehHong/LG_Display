@@ -1,5 +1,4 @@
 /* -- common js  --- */
-
 let $disLink = $(".__dis_link");
 
 $disLink.click(function(e){
@@ -51,6 +50,7 @@ function checkCookie(name){
 checkCookie('portfolio_LGDisplay');
 
 modalBtnClose.click(function(){
+    console.log("modal clik")
     modal.addClass('__hidden');
     if(modalInput.is(":checked")){
         console.log("button click");
