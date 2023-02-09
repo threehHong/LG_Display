@@ -406,11 +406,76 @@ p {
     /* margin-top: 28%;
     margin-right: 20px; */
 }
+
+/* OLED MOBILE BANNER */
+.oled_banner {
+    display: none;
+    position: relative;
+    height: 140px;
+}
+.oled_banner_BG {
+    width: 100%;
+}
+.oled_banner_BG img {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+}
+.oled_banner h2::before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 54px;
+    margin-right: 10px;
+    top: 10px;
+    background: var(--point_R);
+}
+.oled_banner h2 {
+    position: absolute;
+    left: 6%;
+    bottom: 29%;
+    width: 336px;
+    height: 69px;
+    color: var(--font_G);
+    font-weight: 700;
+    font-size: 3.4rem;
+    line-height: 69px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: -1;
+}
+/* OLED MOBILE BANNER */
+@media (max-width: 600px) {
+    .oled_main {
+        display: none;
+    }
+    .oled_banner {
+        display: block;
+    }
+    .EX_algorism img {
+        margin-top: 55px;
+    }
+
+    /* main .natural .title h2 {
+        margin-top: 49px;
+    } */
+
+   /*  main .natural .title {
+        height: 185px;
+    } */
+
+}
+
 /********** OLED EX(SECTION1) **********/
+
 
 /********** OLED ACE (SECTION2) **********/
 /* JA_230201_작업시작 */
 /* OLED Common */
+.OLED_sec02 {
+    overflow: hidden;
+}
+
 .OLED_sec2_h3 {
     font-size: 3.4rem;
     font-weight: 600;
@@ -878,6 +943,17 @@ p {
 }  */
 
 
+@media (max-width: 1050px) {
+    .banner h2 {
+        font-size: 2.4em;
+    }
+    .banner h2:before {
+        height: 36px;
+        transform: translateY(-6px);
+    }
+}
+
+
 @media (max-width: 885px) {
     /* EX DEUTERIUM(중수소 소자) */
     .EX_deuterium h2 {
@@ -888,14 +964,6 @@ p {
         line-height: 27px;
         margin-top: 30px;
     }
-
-    .EX_deuterium {
-         width: 424px;
-         height: 600px;
-         background: #EAEAEC;
-         /* background-image: url(../img/EX_deuterium.jpg); */
-    }
-
 }
 
 /* OLED EX 768px */
@@ -976,6 +1044,9 @@ p {
 
 
 @media (max-width: 595px) {
+    .banner img {
+        margin-top: 60px;
+    }
     .EX_deuterium h2 {
         font-size: 22px;
         font-weight: 900;
@@ -988,20 +1059,11 @@ p {
 }
 
 
-@media (max-width: 595px) {
-    .EX_deuterium h2 {
-        font-size: 22px;
-    }
-    .EX_deuterium p {
-        font-size: 12px;
-        line-height: 27px;
-
-    }
-}
-
-
 /* OLED EX 425px */
 @media (max-width: 595px) {
+    .banner h2 {
+        bottom: 0%;
+    }
     .EX_deuterium h2 {
         font-size: 16px;
     }

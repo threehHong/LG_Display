@@ -1,0 +1,1938 @@
+/* ESG MAIN */
+.esg_main {
+    position: relative;
+}
+
+.esg_main {
+    background-image: url(../img/main_img.jpg);
+    width: 100%;
+    height: 759px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+.esg_main:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 756px;
+    /* left: 0; right: 0; top: 0; bottom: 0; */
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.esg_main h2 {
+    position: absolute;
+    /* top: 514px;  
+    right: 183px; */
+    top: 67.72%; 
+    right: 9.6%;
+    font-size: 55px;
+    color: var(--font_W);
+    font-weight: 700;
+    z-index: 1;
+}
+.esg_main h2:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 42px;
+    margin-right: 4px;
+    background: var(--point_R); 
+}
+
+/******* SECTION NATURAL*******/
+.natural h2, .natural h2, .natural p {
+    text-align: center;
+    color: #1D1D1B;
+    opacity: .8;
+}
+
+main .natural h2 {
+    font-weight: 400;
+    font-size: 44px;
+}
+
+main .natural .title {
+    text-align: center;
+}
+
+main .natural .title h2 {
+    display: inline-block;
+    font-size: 45px;
+    font-weight: 600;
+    width: 603px;
+    height: 112px;
+    margin: 165px auto 155px;
+}
+main .natural .svg_effect_circle h2 {
+    margin-bottom: 53px;
+}
+
+main .natural .gas h2, .energy h2 {
+    margin: 54px auto 23px;
+}
+
+main .natural .gas p:nth-child(2), .energy p:nth-child(2) {
+    font-size: 28px;
+}
+main .natural .gas p:nth-child(3), .energy p:nth-child(3) {
+    font-size: 14px;
+    margin: 22px auto 54px;
+}
+
+main .natural .desc {
+    width: 100%;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+main .natural .desc p {
+    opacity: 1;
+}
+
+main .natural .desc p:nth-child(1) {
+    margin: 60px auto 17px;
+    width: 738px;
+    height: 89px;
+}
+main .natural .desc p:nth-child(2) {
+    margin: 17px auto;
+    width: 699px;
+    height: 89px;
+}
+main .natural .desc p:nth-child(3) {
+    margin: 0 auto 158px;
+    width: 454px;
+    height: 58px;
+}
+
+/* SECTION NATURAL - SVG EFFECT */
+.natural .svg_effect_circle,
+.natural .svg_effect_line {
+    text-align: center;
+   /*  overflow: hidden; */
+}
+.natural .svg_effect_line svg {
+    /* overflow: hidden; */
+}
+
+.svg_effect_circle h2 {
+    opacity: 0;
+} 
+@keyframes para {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+.svg_effect_circle h2.active_para {
+    animation: para 1s 0.1s forwards; /* active */
+}
+
+.resources_e svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.line_circle line:nth-child(1) {
+    opacity: 0;
+}
+.line_circle line:nth-child(1).active_lf {
+    animation: line_f 1s 1s linear forwards; /* active */
+}
+
+.circle_right { /* .line_circle */
+    transform-origin: 243px 378px;
+    transform: rotate(-90deg);
+    opacity: 0;
+}
+.circle_right.active_cr { /* .line_circle */
+    animation: circleR 1.5s 2s ease-out forwards; /* active */
+}
+
+.circle_left { /* .line_circle */
+    transform-origin: 243px 378px;
+    transform: rotate(-90deg);
+    opacity: 0;
+}
+.circle_left.active_cl { /* .line_circle */
+    animation: circleL 1.5s 2s ease-out forwards; /* active */
+}
+
+.line_circle line:nth-child(5) {
+    opacity: 0;
+}
+.line_circle line:nth-child(5).active_ls {
+    animation: line_s 1s 5.5s forwards; /* active */
+}
+
+@keyframes line_f {
+    0% {
+        stroke-dashoffset: 243;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: .8;
+    }
+}
+
+@keyframes circleR {
+    0% {
+        stroke-dashoffset: 1550;
+    }
+    100% {
+        stroke-dashoffset: 759.88;
+        opacity: .8;
+    }
+
+}
+@keyframes circleL {
+    0% {
+        stroke-dashoffset: -1550;
+    }
+    100% {
+        stroke-dashoffset: -759.88;
+        opacity: .8;
+    }
+}
+
+@keyframes line_s {
+    0% {
+        stroke-dashoffset: 756;
+    }
+    100% {
+        stroke-dashoffset: 621;
+        opacity: .8;
+    }
+}
+
+.water_path {
+    transform: translateX(-65%) translateY(882%);
+}
+.water_path.active_w {
+    animation: circle_water 1.5s 3.5s forwards;
+}
+@keyframes circle_water {
+    0% {
+        color:red;
+        
+        transform: translateX(-65px) translateY(82%);
+    }
+    100% {
+        transform: translateX(-65px) translateY(5%);
+    }
+}
+
+/* .water_path {
+     opacity: 0;
+} */
+
+
+.water_path_font {
+    opacity: 0;
+}
+.water_path_font.active_wf {
+    animation: textColor 2s 4.5s forwards; /* active */
+}
+
+@keyframes textColor {
+    0% {
+        fill: #6B6B6B;
+        opacity: 0;
+    }
+    100% {
+        fill: #ffffff;
+        opacity: 1;
+    }
+}
+
+.natural .gas {
+    animation: gas 1s 6.5s forwards;
+    opacity: 0;
+}
+@keyframes gas {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+.svg_effect_line:nth-child(4) line {
+    animation: line_tf 1s 7s forwards;
+    opacity: 0;
+}
+.svg_effect_line:nth-child(6) line {
+    animation: line_tf 1s 8.5s forwards;
+    opacity: 0;
+}
+
+@keyframes line_tf {
+    0% {
+        stroke-dashoffset: 135;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: .8;
+    }
+}
+
+.natural .energy {
+    animation: energy 1s 8s forwards;
+    opacity: 0;
+}
+@keyframes energy {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+.natural .desc {
+    animation: desc .7s 10s linear forwards;
+    opacity: 0;
+}
+@keyframes desc {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .8;
+    }
+}
+
+/* SUB IMG */
+.sub_img .img {  
+    background-image: url(../img/child_img.jpg);
+    width: 100%;
+    height: 759px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    opacity: 0.3;
+    transition: opacity 2s;
+}
+.sub_img .img.active_sbimg {
+    opacity: 1;
+}
+
+/* .sub_img img {
+    opacity: 0.3;
+    transition: opacity 2s;
+}
+.sub_img img.active_sbimg {
+    opacity: 1;
+} */
+
+/******* SECTION ECO *******/
+/* .eco_index_value {
+    height: 300px;
+}
+
+.resources_e {
+    height: 300px;
+}
+
+.follow {
+    height: 300px;
+} */
+
+
+
+/*** ECO INDEX ***/
+/* eco_index_op */
+.eco_index_op h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+.eco_index_op h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 157px
+}
+
+.eco_index_op h2:before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 33px;
+    margin-right: 12px;
+    background: #810606;
+}
+.eco_index_op p {
+    line-height: 30px;
+    margin: 47px auto;
+    text-align: center;
+}
+
+/* eco_index_left_right */
+.eco_index_left_right {
+    display: flex;
+    justify-content: center;
+    gap: 105px;
+    margin-top: 210px;
+}
+
+/* eco_index_left */
+.eco_index_val h2 {
+    font-size: 24px;
+    margin: 104px 0px 85px;
+}
+
+/* eco_index_indi, eco_index_com */
+.eco_index_indi h2,
+.eco_index_com h2 {
+    font-size: 24px;
+}
+.eco_index_val h2:before,
+.eco_index_indi h2:before,
+.eco_index_com h2:before {
+    content: ""; 
+    display: inline-block;
+    width: 3px;
+    height: 24px;
+    margin-right: 10px;
+    background: #A50034;
+    transform: translateY(4px);
+}
+.eco_index_indi p,
+.eco_index_com p {
+    line-height: 30px;
+}
+
+.eco_index_indi p,
+.eco_index_com p {
+    margin: 75px 0 81px;
+}
+
+/* eco_index_left */
+.eco_index_left {
+    display: inline-block;
+}
+
+
+/* eco_index_com */
+
+.cartegory {
+    display: grid; /* 30 343 30 267 30   700 */
+    grid-template-columns: 4.28fr 48fr 4.28fr 38.14fr 4.28fr; /* 27 98 31 167 28   351 */
+    /* grid-template-rows: 7.69fr 27.92fr 8.83fr 47.57fr 7.97fr; */
+    grid-template-rows: 7.69fr 84.33fr 7.97fr;
+    width: 700px;
+    height: 351px;
+    border-radius: 25px;
+    border: 1px solid rgba(29,29,27,.8);
+}
+
+.cartegory span {
+    display: inline-block;
+    background: #A50034;
+    width: 2px;
+    text-indent: -999em;
+}
+.cartegory li {
+    color: #1D1D1B;
+    font-size: 14px;
+}
+
+.cartegory_s {
+    display: flex;
+    align-items: center;
+    width: 343px;
+    height: 296px;
+    border-radius: 6px;
+    border: 1px solid rgba(29,29,27,.4);
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.cartegory_s h3 {
+    width: 78px;
+    height: 38px; 
+    font-size: 15px;
+    color: rgba(29,29,27,.8);
+    line-height: 18px;
+    text-align: center;
+}
+.cartegory_s span {
+    height: 217.2px;
+    left: 20px;
+}
+.cartegory_s ul {
+    margin-left: 20px;
+    padding-top: 32px;
+}
+.cartegory_s ul li {
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.cartegory_e, .cartegory_h {
+    display: inline-block; 
+    width: 267px;
+    border-radius: 6px;
+    border: 1px solid rgba(29,29,27,.4);
+}
+.cartegory_e {
+    display: flex;
+    align-items: center;
+    height: 87px;
+    grid-column: 4/5;
+    grid-row: 2/3;
+    
+}
+.cartegory_e h3 {
+    display: inline-block;
+    width: 95px;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(29,29,27,.8);
+    text-align: center;
+}
+.cartegory_e span {
+    height: 35.93px;
+    left: 20px;
+    margin-right: 19px;
+}
+.cartegory_e p {
+    display: inline-block;
+    width: 100px;
+    color: #1D1D1B;
+    font-size: 14px;
+}
+
+.cartegory_h {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    height: 167px;
+    margin-top: 129px;
+    display: flex;
+    align-items: center;
+}
+
+.cartegory_h h3 {
+    display: inline-block;
+    width: 103px;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(29,29,27,.8);
+    text-align: center;
+}
+.cartegory_h span {
+    height: 66px;
+    margin-right: 19px;
+}
+
+.cartegory_h ul {
+    padding-top: 35px;
+}
+.cartegory_h li{
+    line-height: 15px;
+    margin-bottom: 28px;
+}
+
+
+/*** GRAPH TREND ***/
+.graph_trend {
+    width: 700px;
+    height: 460px;
+    border-radius: 25px;
+    border: 1px solid rgba(29,29,27,.8);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+.graph_trend h3, .graph_trend span {
+    color: #000000;
+    font-size: 11px;
+    margin: 0 auto;
+}
+
+.graph_trend h3 {
+    margin: 54px 0px 0px 94px; 
+    display: flex;
+    align-items: center;
+}
+
+.graph_trend p {
+    text-align: right;
+    margin: 17px 78px 63px 0;
+}
+
+.graph_trend .graph {
+    text-align: center;
+}
+
+.graph_trend ul {
+    text-align: center;
+    margin: 0 auto;
+}
+.graph_trend ul li {
+    display: inline-block;
+    font-size: 12px;
+    color: #1D1D1B;
+    margin-right: 86px;
+}
+.graph_trend ul li:nth-child(5) {
+    margin-right: 0;
+}
+.graph_trend h3:after {
+    display: inline-block; 
+    content: "";
+    background: rgba(165,0,52,.6);
+    border-radius: 50%;
+    width: 8px; 
+    height: 8px;
+    margin-left: 17px;
+}
+
+.graph_trend svg path:nth-child(2) {
+    /* animation: line 4s 1s ease forwards; */
+    opacity: 0;
+}
+.graph_trend svg path:nth-child(2).active_trend {
+    animation: line 4s .5s ease forwards;
+}
+@keyframes line {
+    0% {
+        stroke-dashoffset: 510;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+.graph_trend svg ellipse, .graph_trend svg path:nth-child(5) {
+    /* animation: ellipse 2s ease forwards; */
+    opacity: 0;
+}
+
+.graph_trend svg ellipse.active_trend , .graph_trend svg path:nth-child(5).active_trend {
+    animation: ellipse 2s ease forwards;
+}
+.graph_trend svg text {
+    opacity: 0;
+}
+.graph_trend svg text.active_trend {
+    animation: ellipse 2s ease forwards;
+}
+@keyframes ellipse {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*** 자원효율 ***/
+/* .resources_e {
+    display: flex;
+    justify-content: center;
+} */
+
+
+.resources_waste {
+    margin-top: 130px;
+}
+
+.resources_water, .resources_waste {
+    display: flex;
+    justify-content: center;
+}
+.resources_water {
+    gap: 75px;
+}
+.water_maintain {
+    width: 667px;
+}
+.resources_waste {
+    gap: 70px;
+}
+
+
+.resources_e > h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 300px 0 130px;
+
+}
+.resources_e > h2:before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 33px;
+    margin-right: 12px;
+    background: #810606;
+    transform: translateY(4px);
+}
+
+.water_maintain h2,
+.waste_recycle_desc h2 {
+    font-size: 24px;
+}
+
+
+.water_maintain h2:before,
+.waste_recycle_desc h2:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 24px;
+    margin-right: 10px;
+    background: #A50034;
+    transform: translateY(4px);
+}
+
+.water_maintain p,
+.waste_recycle_desc p {
+    font-size: 16px;
+    line-height: 30px;
+}
+.resources_water .water_maintain p:nth-child(2),
+.resources_waste .waste_recycle_desc p:nth-child(2) {
+    margin-top: 50px;
+}
+
+.resources_water .water_maintain p:nth-child(2) {
+    margin-bottom: 15px;
+} 
+.resources_waste .waste_recycle_desc p:nth-child(2) {
+    margin-bottom: 45px;
+}
+
+/* 자원효율(수자원 관리) 그래프 애니메이션 */
+.resources_water .graph path:nth-child(10),
+.resources_water .graph text:nth-child(11) {
+    transform: translateY(81%);
+}
+.resources_water .graph path:nth-child(10).active_water_r,
+.resources_water .graph text:nth-child(11).active_water_r {
+    animation: graph_water_r 2s forwards;
+}
+@keyframes graph_water_r {
+    0% {
+        transform: translateY(81%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+.resources_water .graph path:nth-child(12),
+.resources_water .graph text:nth-child(13) {
+    transform: translateY(46%);
+}
+.resources_water .graph path:nth-child(12).active_water_y,
+.resources_water .graph text:nth-child(13).active_water_y {
+    animation: graph_water_y 2s forwards;
+}
+@keyframes graph_water_y {
+    0% {
+        transform: translateY(46%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+/* 자원효율(폐기물 재활용) 그래프 애니메이션 */
+.waste_recycle .graph path:nth-child(9),
+.waste_recycle .graph text:nth-child(10) {
+    transform: translateY(90%);
+}
+.waste_recycle .graph path:nth-child(9).active_waste_r,
+.waste_recycle .graph text:nth-child(10).active_waste_r {
+    animation: graph_waste_r 2s forwards;
+}
+@keyframes graph_waste_r {
+    0% {
+        transform: translateY(90%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.waste_recycle .graph path:nth-child(12),
+.waste_recycle .graph text:nth-child(13) {
+    transform: translateY(131%);
+}
+.waste_recycle .graph path:nth-child(12).active_waste_y,
+.waste_recycle .graph text:nth-child(13).active_waste_y {
+    animation: graph_waste_y 2s forwards;
+}
+@keyframes graph_waste_y {
+    0% {
+        transform: translateY(131%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+/* WATER RE
+   WASTE RE */
+.water_re, 
+.waste_re {
+    width: 759px;
+    height: 459px;
+    border-radius: 25px;
+    border: 1px solid rgba(29,29,27,.8);
+    position: relative;;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+.water_re h3, 
+.waste_re h3 {
+    font-size: 16px;
+    margin: 56px 2px 15px 162px;
+}
+
+
+.water_re .line, 
+.waste_re .line{
+    text-indent: -999em;
+    display: inline-block;
+    width: 605px;
+    height: 1px;
+    margin: 15px 20px 11px 20px;
+    background:rgba(29,29,27);;
+}
+
+.water_re .container span:before, 
+.waste_re .container span:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    margin-right: 10px;
+}
+
+.water_re .container span:nth-child(1):before, 
+.waste_re .container span:nth-child(1):before {
+    background: #810606;
+    margin-left: 164px;
+} 
+.water_re .container span:nth-child(2):before, 
+.waste_re .container span:nth-child(2):before {
+    background: #EAB413;
+    margin-left: 10px;
+}
+.water_re .container span:nth-child(3), 
+.waste_re .container span:nth-child(3) {
+    position: absolute;
+    right: 142px;
+}
+
+.water_re .graph, 
+.waste_re .graph {
+    text-align: center;
+}
+
+.water_re ul li, 
+.waste_re ul li {
+    display: inline-block;
+    margin-right: 120px;
+}
+.water_re ul, 
+.waste_re ul {
+    margin-left: 120px;
+}
+
+
+
+
+/*** 환경법 준수 ***/
+.eco_follow_titl {
+    text-align: center;
+}
+.eco_follow_title h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 300px 0 51px;
+}
+.eco_follow_title h2:before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 33px;
+    margin-right: 12px;
+    background: #810606;
+    transform: translateY(4px);
+}
+.eco_follow_title p {
+    line-height: 30px;
+    text-align: center;
+}
+.eco_follow_title p:nth-child(3) {
+    margin: 40px 0 132px;
+}
+
+.eco_follow_desc {
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+}
+
+
+
+.pollution_substance ,
+.pollution_chemical { 
+    width: 730px;
+}
+
+.pollution_substance h3,
+.pollution_chemical h3 {
+    font-size: 24px;
+    margin: 153px 0 43px;
+}
+
+.pollution_substance h3:before,
+.pollution_chemical h3:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 24px;
+    margin-right: 10px;
+    background: #A50034;
+    transform: translateY(4px);
+}
+
+.pollution_substance span {
+    color: #A50034;
+}
+
+.pollution_substance, .pollution_chemical p {
+    line-height: 30px;
+}
+
+.pollution_substance p:nth-child(3),
+.pollution_chemical p:nth-child(3) {
+    margin: 35px 0;
+}
+
+.substance_chemical {
+    display: flex;
+    gap: 46px;
+    justify-content: center;
+}
+
+
+.eco_follow .eco_follow_graph {
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+}
+
+/* AIR POLLUTION
+   WATER POLLUTION */
+.air_pollution, 
+.water_pollution {
+    width: 730px;
+    height: 550px;
+    border-radius: 25px;
+    border: 1px solid rgba(29,29,27,.8);
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+.air_pollution h3,
+.water_pollution h3 {
+    font-size: 16px;
+    margin: 25px 2px 15px 106px;
+}
+
+
+.air_pollution .line,
+.water_pollution .line {
+    position: absolute;
+    left: 135px;
+    top: 136px;
+    text-indent: -999em;
+    display: inline-block;
+    width: 1px;
+    height: 400px;
+    /* margin: 15px 20px 11px 20px; */
+    background:rgba(29,29,27);;
+}
+
+.air_pollution .container,
+.water_pollution .container {
+    margin-top: 31px;
+}
+
+.air_pollution .container span:before,
+.water_pollution .container span:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    margin-right: 10px;
+}
+
+.air_pollution .container span, 
+.water_pollution .container span {
+    font-size: 12px;
+}
+
+.air_pollution .container span:nth-child(1):before,
+.water_pollution .container span:nth-child(1):before {
+    background: #810606;
+    margin-left: 106px;
+} 
+.air_pollution .container span:nth-child(2):before {
+    background: #EAB413;
+    margin-left: 40px;
+}
+.water_pollution .container span:nth-child(2):before {
+    background: #EAB413;
+    margin-left: 20px;
+}
+
+.air_pollution .container span:nth-child(3):before {
+    background: #D9DADB;
+    margin-left: 40px;
+}
+.water_pollution .container span:nth-child(3):before {
+    background: #D9DADB;
+    margin-left: 20px;
+}
+.air_pollution .container span:nth-child(4),
+.water_pollution .container span:nth-child(4) {
+    position: absolute;
+    right: 36px;
+}
+
+.air_pollution .graph, 
+.water_pollution .graph {
+    margin: 108px 0px 0px 135px;
+}
+
+.air_pollution ul,
+.water_pollution ul {
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    top: 242px;
+}
+.air_pollution ul li,
+.water_pollution ul li {
+    font-size: 12px;
+    margin-bottom: 152px;
+}
+
+/* 환경법규 준수 그래프 애니메이션 */
+.air_pollution_container .graph path:nth-child(3),
+.air_pollution_container .graph text:nth-child(9),
+.water_pollution_container .graph path:nth-child(3),
+.water_pollution_container .graph text:nth-child(9) {
+    transform: translateX(-97%);
+}
+.air_pollution_container .graph path:nth-child(3).active_follow_r,
+.air_pollution_container .graph text:nth-child(9).active_follow_r,
+.water_pollution_container .graph path:nth-child(3).active_follow_r,
+.water_pollution_container .graph text:nth-child(9).active_follow_r {
+    animation: graph_follow_r 2s forwards;
+}
+@keyframes graph_follow_r {
+    0% {
+        transform: translateX(-97%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.air_pollution_container .graph path:nth-child(1),
+.air_pollution_container .graph text:nth-child(11),
+.water_pollution_container .graph path:nth-child(1),
+.water_pollution_container .graph text:nth-child(11) {
+    transform: translateX(-97%);
+}
+.air_pollution_container .graph path:nth-child(1).active_follow_y,
+.air_pollution_container .graph text:nth-child(11).active_follow_y,
+.water_pollution_container .graph path:nth-child(1).active_follow_y,
+.water_pollution_container .graph text:nth-child(11).active_follow_y {
+    animation: graph_follow_y 2s forwards;
+}
+@keyframes graph_follow_y {
+    0% {
+        transform: translateX(-97%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.air_pollution_container .graph path:nth-child(8),
+.air_pollution_container .graph text:nth-child(13),
+.water_pollution_container .graph path:nth-child(8),
+.water_pollution_container .graph text:nth-child(13) {
+    transform: translateX(-66%);
+}
+
+.air_pollution_container .graph path:nth-child(8).active_follow_g,
+.air_pollution_container .graph text:nth-child(13).active_follow_g,
+.water_pollution_container .graph path:nth-child(8).active_follow_g,
+.water_pollution_container .graph text:nth-child(13).active_follow_g {
+    animation: graph_follow_g 2s forwards;
+}
+@keyframes graph_follow_g {
+    0% {
+        transform: translateX(-66%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+} 
+
+
+/* svg_effect_line(반응형, html 태그 속성 지우고 추가) */
+.svg_effect_line svg {
+    display: inline-block;
+    width: 300px; 
+    height: 135px;
+}
+
+main {
+    margin-bottom: 582px;
+}
+
+
+
+
+/********** 반응형 **********/
+/* max-width 1580px */
+@media (max-width: 1580px) {
+    .eco_index_left_right, .resources_water, .resources_waste, .eco_follow_desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .eco_follow_desc {
+        gap: 130px;
+    }
+
+    .waste_recycle {
+        order: 1;
+    }
+    .waste_recycle_desc {
+        order: 2;
+    }
+
+    .pollution_substance h3, 
+    .pollution_chemical h3 {
+        margin-top: 70px;
+    }
+
+    .eco_index_indi, .eco_index_val h2, .eco_index_com, .water_maintain, .waste_recycle_desc,
+    .pollution_substance, .pollution_chemical {
+        text-align: center;
+    }
+}
+
+
+
+/* max-width 960px */
+@media (max-width: 960px) {
+    /* SECTION ECO */
+    .eco_index_op .pagraph {
+        width: 650px;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* max-width 820px */
+@media (max-width: 820px) {
+/********** 텍스트, SVG 크기 조절 **********/
+/* SECTION NATURAL */
+main .natural .title h2  {
+    font-size: 38px;
+    width: 530px;
+}
+main .natural h2 {
+    font-size: 37px;
+}
+
+main .natural .desc p:nth-child(1) {
+    width: 638px;
+}
+main .natural .desc p:nth-child(2) {
+    width: 599px;
+    height: 114px;
+    margin: 17px auto 17px;
+}
+main .natural .desc p:nth-child(3) {
+    width: 354px;
+}
+
+
+/* 수자원 관리 */
+.water_re {
+width: 699px;
+}
+.water_re h3, .waste_re h3 {
+font-size: 16px;
+margin: 56px 2px 15px 132px;
+}
+
+.water_re .container span:nth-child(1):before {
+margin-left: 135px;
+}
+
+.water_re .container span:nth-child(3) {
+right: 114px;
+}
+
+.water_re .line {
+width: 520px;
+}
+
+.waste_re {
+width: 699px;
+}
+
+
+/* 폐기물 재활용 */
+.waste_re h3, .waste_re h3 {
+font-size: 16px;
+margin: 56px 2px 15px 132px;
+}
+
+.waste_re .container span:nth-child(1):before {
+margin-left: 135px;
+}
+
+.waste_re .container span:nth-child(3) {
+right: 114px;
+}
+
+.waste_re .line {
+    width: 520px;
+}
+
+}
+
+@media (max-width: 756px) {
+    .esg_main h2 {
+        font-size: 30px;
+    }
+    
+    .esg_main h2:before {
+        width: 14px;
+        height: 28px;
+        transform: translateY(2px);
+    }
+
+    .esg_main,
+    .esg_main:before {
+        height: 324px;
+    }        
+}
+
+/* max-width 745px */
+@media (max-width: 745px) {
+/* ECO INDEX 평가 지수 */
+.cartegory  {
+    width: 665px;
+}
+
+/* GRAPH TREND */
+.graph_trend  {
+    width: 650px;
+    margin: 0 auto;
+}
+.graph_trend h3 {
+margin: 54px 0px 0px 85px;
+}
+
+
+/* 수자원 관리 */
+.water_re {
+    width: 650px;
+}
+
+.water_re h3, .waste_re h3 {
+    font-size: 16px;
+    margin: 56px 2px 15px 106px;
+}
+
+.water_re .container span:nth-child(1):before {
+    margin-left: 112px;
+}
+
+.water_re .container span:nth-child(3),
+.waste_re .container span:nth-child(3) {
+    right: 88px;
+}
+
+
+/* 폐기물 재활용 */
+.waste_re {
+    width: 650px;
+}
+
+.waste_re h3, .waste_re h3 {
+    font-size: 16px;
+    margin: 56px 2px 15px 106px;
+}
+
+.waste_re .container span:nth-child(1):before {
+    margin-left: 112px;
+}
+
+
+/* 대기오염 */
+.air_pollution, .water_pollution {
+    width: 650px;
+    margin: 0 auto;
+}
+/* 수질오염 */
+.water_pollution .container span:nth-child(4) {
+    top: 50px;
+}
+}
+
+
+/* max-width 710px */
+@media (max-width: 710px) {
+/* NATURE (TEXT, SVG) */
+main .natural .title h2 {
+    font-size: 30px;
+    width: 420px;
+}
+
+main .natural h2 {
+    font-size: 30px;
+} 
+
+.natural .svg_effect_circle svg {
+    width: 475px;
+    height: 475px;
+}
+
+main .natural h2 {
+    font-size: 32px;
+}
+
+main .natural .gas p:nth-child(2), .energy p:nth-child(2) {
+    font-size: 22px;
+}
+
+main .natural .desc p {
+    font-size: 15px;
+}
+
+main .natural .desc p:nth-child(1) {
+    width: 452px;
+}
+main .natural .desc p:nth-child(2) {
+    width: 482px;
+    margin: 35px auto 17px;
+}
+
+
+/* EXO INDEX TEXT */
+.eco_index_op h2:before {
+    font-size: 24px;
+    width: 6px;
+}
+
+.eco_index_op p {
+    font-size: 14px;
+}
+
+.eco_index_op .pagraph {
+    width: 500px;
+}
+
+.eco_index_indi h2, .eco_index_com h2 {
+    font-size: 20px;
+}
+
+.eco_index_indi p, .eco_index_com p {
+    font-size: 14px;
+}
+
+.eco_index_val h2 {
+    font-size: 20px;
+}
+
+
+/* 자원효율, 수자원 관리 (TEXT) */
+.resources_e > h2 {
+    font-size: 24px;
+    margin: 300px 0 80px;
+}
+.resources_e > h2:before {
+    height: 23px;
+}
+
+.water_maintain h2, .waste_recycle_desc h2 {
+    font-size: 20px;
+}
+
+.water_maintain h2:before, .waste_recycle_desc h2:before {
+    height: 20px;
+}
+
+.water_maintain p, .waste_recycle_desc p {
+    font-size: 14px;
+}
+
+.resources_waste .waste_recycle_desc p:nth-child(2) {
+    margin-bottom: 25px;
+}
+
+
+/*환경법규 준수(TEXT) */
+.eco_follow_title h2 {
+    font-size: 24px;
+}
+
+.eco_follow_title h2:before {
+    height: 24px;
+}
+
+.eco_follow_title p {
+    font-size: 14px;
+}
+
+.eco_follow_title p:nth-child(3) {
+    margin: 25px 0 132px;
+}
+
+.pollution_substance h3:before, .pollution_chemical h3:before {
+    height: 20px;
+}
+
+.pollution_substance h3, .pollution_chemical h3 {
+    font-size: 20px;
+    margin: 153px 0 43px;
+}
+.pollution_substance p, .pollution_chemical p {
+    font-size: 14px;
+}
+
+
+
+/********** 표 크기 조절 **********/
+/* ECO INDEX */
+.eco_index_op h2 {
+    font-size: 24px;
+}
+
+/* cartegory */
+.cartegory {
+    width: 375px;
+    height: 185px;
+
+    margin: 0 auto;
+}
+
+.cartegory li {
+    font-size: 7px;
+}
+
+.cartegory_s {
+    width: 200px;
+    height: 162px;
+}
+
+.cartegory_s h3 {
+    width: 40px;
+    height: 38px; 
+    font-size: 7px;
+}
+.cartegory_s span {
+    height: 100px;
+    left: 20px;
+}
+.cartegory_s ul {
+    margin-left: 10px;
+    padding-top: 6px;
+}
+.cartegory_s ul li {
+    line-height: 20px;
+    margin-bottom: 2px;
+}
+
+.cartegory_e, .cartegory_h {
+    width: 134px;
+    height: 45px;
+}
+.cartegory_e {
+    height: 65px;
+}
+.cartegory_e h3 {
+    width: 72px;
+    font-size: 7px;
+    line-height: 18px;
+}
+.cartegory_e span {
+    height: 35.93px;
+    left: 20px;
+    margin-right: 8px;
+}
+.cartegory_e p {
+    width: 100px;
+    font-size: 7px;
+}
+
+.cartegory_h {
+    width: 134px;
+    height: 83px;
+    margin-top: 76px;
+}
+
+.cartegory_h h3 {
+    width: 49px;
+    font-size: 7px;
+    line-height: 18px;
+}
+.cartegory_h span {
+    height: 66px;
+    margin-right: 6px;
+}
+
+.cartegory_h ul {
+    padding-top: 35px;
+}
+.cartegory_h li{
+    line-height: 18px;
+    margin-bottom: 28px;
+}
+.cartegory_h li:nth-of-type(1) {
+    margin-bottom: 18px;
+}
+.cartegory_h li:nth-of-type(2) {
+    line-height: 15px;
+    margin-bottom: 35px;
+}
+
+/* GRAPH TREND */
+.graph_trend {
+    width: 375px; 
+    height: 216px; 
+}
+
+.graph_trend h3 {
+    margin: 22px 0px 0px 35px;
+}
+
+.graph_trend p {
+    text-align: right;
+    margin: -2px 45px -20px 0;
+    font-size: 7px;
+}
+
+
+.graph_trend ul {
+    transform: translate(7px, -38px);
+}
+.graph_trend ul li {
+    margin-right: 35px;
+}
+
+
+/* WATER RE, WASTE RE */
+.water_re, 
+.waste_re {
+    width: 375px;
+    height: 220px; 
+}
+.water_re h3, 
+.waste_re h3 {
+    font-size: 7px;
+    margin: 20px 2px 4px 30px;
+}
+
+
+.water_re .line, 
+.waste_re .line{
+    width: 300px;
+    height: 1px;
+    margin: 8px 20px 11px 20px; 
+}
+
+.water_re .container span:before, 
+.waste_re .container span:before {
+    width: 8px;
+}
+
+.water_re .container span,
+.waste_re .container span {
+    font-size: 7px; 
+}
+.water_re .container span:nth-child(1):before, 
+.waste_re .container span:nth-child(1):before {
+    background: #810606;
+    margin-left: 32px;
+}
+
+.water_re .container span:nth-child(3),
+.waste_re .container span:nth-child(3) {
+    right: 42px;
+}
+
+
+.water_re .graph svg, 
+.waste_re .graph svg {
+    height: 120px; 
+}
+
+.water_re ul li, 
+.waste_re ul li {
+    margin-right: 57px;
+    font-size: 7px; 
+}
+.water_re ul, 
+.waste_re ul {
+    margin-left: 60px;
+    transform: translateY(-13px); 
+}
+
+
+/* AIR POLLUTION, WATER POLLUTION */
+.air_pollution, 
+.water_pollution {
+    width: 375px; 
+    height: 303px; 
+    border-radius: 25px;
+}
+
+.air_pollution .graph svg, 
+.water_pollution .graph svg { 
+    width: 287px; 
+    height: 163px; 
+}
+
+.air_pollution h3,
+.water_pollution h3 {
+    font-size: 7px;
+    margin: 20px 2px 5px 44px;
+}
+
+
+.air_pollution .line,
+.water_pollution .line  {
+    left: 71px;
+    top: 68px;
+    height: 205px
+}
+.water_pollution .line {
+    top: 69px;
+}
+
+.air_pollution .container,
+.water_pollution .container {
+    margin-top: 0px; /*  */
+}
+
+.air_pollution .container span:before,
+.water_pollution .container span:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    margin-right: 10px;
+}
+
+.air_pollution .container span, 
+.water_pollution .container span {
+    font-size: 7px;
+}
+
+
+.air_pollution .container span:nth-child(1):before,
+.water_pollution .container span:nth-child(1):before {
+    background: #810606;
+    margin-left: 45px;
+} 
+.air_pollution .container span:nth-child(2):before,
+.water_pollution .container span:nth-child(2):before {
+    background: #EAB413;
+    margin-left: 10px; 
+}
+
+.air_pollution .container span:nth-child(3):before {
+    background: #D9DADB;
+    margin-left: 12px;
+}
+.water_pollution .container span:nth-child(3):before {
+    background: #D9DADB;
+    margin-left: 196px;
+}
+
+.air_pollution .container span:nth-child(4) {
+    position: absolute;
+    right: 5px;
+    top: 36px; 
+}
+.water_pollution .container span:nth-child(4) {
+    top: 53px;
+    right: 10px;
+}
+
+.air_pollution .graph {
+    margin: 40px 0px 0px 70.5px; 
+}
+.water_pollution .graph {
+    margin: 25px 0px 0px 70.5px; 
+}
+
+.air_pollution ul,
+.water_pollution ul {
+    left: 20px;
+    top: 116px;
+}
+.air_pollution ul li {
+    font-size: 7px; 
+    margin-bottom: 89px; 
+}
+.water_pollution ul li {
+    font-size: 7px; 
+    margin-bottom: 84px; 
+}
+}
+
+/* max-width 625x */
+@media (max-width: 625px) {
+/* NATURE (TEXT, SVG) */
+main .natural .title h2 {
+    font-size: 16px;
+    width: 220px;
+}
+
+main .natural h2 {
+    font-size: 15px;
+} 
+
+.natural .svg_effect_circle svg {
+    width: 307px;
+    height: 307px;
+}
+
+
+main .natural .gas p:nth-child(2), .energy p:nth-child(2) {
+    font-size: 12px;
+}
+
+main .natural .desc p {
+    font-size: 11px;
+    width: 310px;
+}
+main .natural .desc p:nth-child(1) {
+    width: 320px;
+}
+main .natural .desc p:nth-child(2) {
+    margin: 20px auto 0px;
+    width: 320px;
+}
+main .natural .desc p:nth-child(3) {
+    width: 215px;
+    margin-top: 18px
+}
+
+
+.svg_effect_line line{
+    stroke-width: 1px;
+}
+
+.main .natural .desc p {
+    font-size: 10px;
+}
+
+.main .natural .desc p {
+    font-size: 10px;
+}
+
+
+
+/* EXO INDEX TEXT */
+.eco_index_op h2 { 
+    font-size: 16px;
+}
+
+.eco_index_op h2:before {
+    font-size: 24px;
+    height: 17px;
+}
+
+.eco_index_op p {
+    font-size: 11px;
+}
+
+.eco_index_op .pagraph {
+    width: 354px;
+}
+
+.eco_index_indi h2, .eco_index_com h2 {
+    font-size: 14px;
+}
+
+.eco_index_indi p, .eco_index_com p {
+    font-size: 11px;
+}
+
+.eco_index_val h2 {
+    font-size: 14px;
+}
+
+.eco_index_val h2:before, .eco_index_indi h2:before, .eco_index_com h2:before {
+    height: 17px;
+}
+
+
+/* 자원효율, 수자원 관리 (TEXT) */
+.resources_water,
+.resources_waste {
+    gap: 40px;
+}
+
+.resources_e > h2 {
+    font-size: 16px;
+    margin: 300px 0 50px;
+}
+.resources_e > h2:before {
+    width: 6px;
+    height: 17px;
+    margin-right: 7px;
+}
+
+.water_maintain {
+    width: 100%; 
+}
+
+.water_maintain h2, .waste_recycle_desc h2 {
+    font-size: 14px;
+}
+
+.water_maintain h2:before, .waste_recycle_desc h2:before {
+    height: 16px;
+    margin-right: 7px;
+}
+
+.water_maintain p, .waste_recycle_desc p {
+    font-size: 11px;
+}
+
+.resources_waste .waste_recycle_desc p:nth-child(2) {
+    margin-bottom: 25px;
+}
+
+.resources_water .water_maintain p:nth-child(2), .resources_waste .waste_recycle_desc p:nth-child(2) {
+    margin-top: 31px;
+}
+
+
+/*환경법규 준수(TEXT) */
+.eco_follow_title h2 {
+    font-size: 16px;
+}
+
+.eco_follow_title h2:before {
+    height: 24px;
+    width: 6px;
+    height: 17px;
+    margin-right: 7px;
+}
+
+.eco_follow_title p {
+    font-size: 11px;
+}
+
+.eco_follow_title p:nth-child(3) {
+    margin: 25px 0 132px;
+}
+
+.pollution_substance, .pollution_chemical {
+    width: 100%; 
+}
+
+.pollution_substance h3:before, .pollution_chemical h3:before {
+    height: 16px;
+    margin-right: 7px;
+}
+
+.pollution_substance h3, .pollution_chemical h3 {
+    font-size: 14px;
+    margin: 40px 0 43px;
+}
+.pollution_substance p, .pollution_chemical p {
+    font-size: 11px;
+}
+
+}
+
+/* ESG banner */
+.esg_banner {
+    display: none;
+    position: relative;
+    height: 125px;
+}
+.esg_banner_BG {
+    width: 100%;
+}
+.esg_banner_BG img {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+}
+.esg_banner h2::before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 54px;
+    margin-right: 10px;
+    top: 10px;
+    background: var(--point_R);
+}
+.esg_banner h2 {
+    position: absolute;
+    left: 6%;
+    bottom: 22%;
+    width: 336px;
+    height: 69px;
+    color: var(--font_G);
+    font-weight: 700;
+    font-size: 3.4rem;
+    line-height: 69px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: -1;
+}
+
+@media (max-width: 600px) {
+    .esg_main {
+        display: none;
+    }
+    .esg_banner {
+        display: block;
+    }
+
+    main .natural .title h2 {
+        margin-top: 49px;
+    }
+
+    main .natural .title {
+        height: 185px;
+    }
+
+}
