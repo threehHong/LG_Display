@@ -470,7 +470,7 @@ main * {
     width: 92.3%;
   }
   .it .sectionTitle {
-    height: auto;
+    height: 323px;
   }
   .it .sec_black .notice {
     width: 100%;
@@ -551,6 +551,7 @@ main * {
   }
   #section3 .sectionTitle {
     height: 328px;
+    background-position-y: 60px;
   }
   #section2 .stickyWrap {
     height: 300vh;
@@ -569,9 +570,9 @@ main * {
     top: 30vh;
     height: auto;
   }
-  #section3 div.sectionTitle {
-    background-position-y: 60px;
-  }
+  /* #section3 div.sectionTitle {
+    
+  } */
   .it .sec_gaming {
     height: 150vh;
   }
