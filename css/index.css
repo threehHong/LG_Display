@@ -25,6 +25,8 @@ body {font-family: 'Gothic A1';}
     position: fixed;
     width: 600px;
     height: 700px;
+    display: flex;
+    flex-direction: column;
     top: 10px;
     left: 30px;
     border: 7px solid var(--point_R);
@@ -32,7 +34,10 @@ body {font-family: 'Gothic A1';}
     color: var(--font_B);
     line-height: 24px;
     background-color: var(--font_W);
-    z-index: 200;
+    z-index: 1000;
+}
+.notice_portfolio.__hidden{
+    display: none;
 }
 .notice_portfolio .border{
     border: 2px solid;
@@ -58,6 +63,7 @@ body {font-family: 'Gothic A1';}
 }
 .notice_portfolio p{
     margin: 20px 0;
+    
 }
 .notice_portfolio ul{
     list-style-type: square;
@@ -67,10 +73,11 @@ body {font-family: 'Gothic A1';}
     margin-left: 10px;
 }
 .notice_portfolio > p:last-of-type{
-    position: absolute;
-    right: 30px;
-    bottom: 20px;
-    
+    /* position: absolute; */
+    /* right: 30px; */
+    /* bottom: 20px; */
+    order: 10;
+    text-align: right;
 }
 .notice_portfolio input{
     vertical-align: middle;
@@ -753,6 +760,25 @@ h2.pcContents{display: none;}
 /* ----------------------------------------------------------------------------------- */
 @media (max-width: 800px){
 
+    .notice_portfolio{
+        width: auto;
+        height: auto;
+        top: 30px;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+        padding: 20px;
+        line-height: 24px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .notice_portfolio h2{
+        font-size: 18px;
+    }
+    .notice_portfolio p{
+        margin: 10px 0;
+    }
+
     nav{
         grid-template-columns: 19fr 350px 379fr;
         grid-template-rows: 159fr 672px 193fr;
@@ -884,6 +910,34 @@ h2.pcContents{display: none;}
 }
 /* ----------------------------------------------------------------------------------- */
 @media (max-width: 480px){
+
+
+    .notice_portfolio{
+
+        top: 30px;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+        padding: 15px;
+        padding-bottom: 60px;
+        font-size: 14px;
+    }
+    .notice_portfolio .flex{
+        height: 40vh;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    .notice_portfolio .flex > div{
+        width: 100%;
+    }
+    .notice_portfolio h2{
+        font-size: 16px;
+        padding-right: 30px;
+    }
+    .notice_portfolio p{
+        margin: 5px 0;
+        padding-right: 10px;
+    }
 
     header.active .logo svg{
         display: none;
