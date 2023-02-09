@@ -1,0 +1,224 @@
+/* OLED EX (SECTOIN1) */
+
+/* OLED EX 1490px */
+@media (max-width: 1490px) {
+    /* EX BEZEL */
+    .EX_bezel {
+        width: 1000px;
+    }
+    .EX_bezel_img_h {
+        gap: 12px
+    }
+    .EX_bezel img {
+        width: 800px;
+    }
+    .EX_bezel h2 {
+        font-size: 30px;
+    }
+    .EX_bezel p {
+        font-size: 16px;
+        margin: 30px 0px 0px 34.9%;
+    }
+    .EX_bezel span:nth-of-type(1) {
+        font-size: 60px;
+    }
+    .EX_bezel span:nth-of-type(2) {
+        font-size: 20px;
+    }
+}
+
+/* OLED EX 1040px */
+@media (max-width: 1040px) {
+    /* EX BEZEL */
+    .EX_bezel {
+        width: 600px;
+    }
+    .EX_bezel img {
+        width: 450px;
+        height: 550px;
+    }
+    .EX_bezel h2 {
+        font-size: 22px;
+    }
+    
+    .EX_bezel p {
+        font-size: 14px;
+        margin: 25px 0px 0px 5%;
+    }
+    .EX_bezel span:nth-of-type(1) {
+        font-size: 45px;
+    }
+    .EX_bezel span:nth-of-type(2) {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .EX_thinner {
+        width: 105px;
+        height: 105px;
+    }
+}
+
+
+
+
+@media (max-width: 1600px) {
+    .EX_algorism .img {
+        background-size: contain;
+    }
+}
+
+/* @media (max-width: 1650px) {
+    .EX_bezel {
+        position: relative;
+        display: block;
+    }
+
+    .EX_bezel img {
+        position: relative;
+        left: 0%;
+        left: 2%
+    }
+
+    .EX_bezel h2, .EX_bezel p {
+        position: absolute;
+    }
+
+    .EX_bezel h2 {
+        position: absolute;
+        left: 62%;
+        top: 59%;
+    }
+
+    .EX_bezel p {
+        position: relative;
+        margin-top: 30px;
+        right: 23.5%;
+    }
+}  */
+
+
+@media (max-width: 885px) {
+    /* EX DEUTERIUM(중수소 소자) */
+    .EX_deuterium h2 {
+        font-size: 26px;
+    }
+    .EX_deuterium p {
+        font-size: 16px;
+        line-height: 27px;
+        margin-top: 30px;
+    }
+}
+
+/* OLED EX 768px */
+@media (max-width: 768px) {
+    /* OLED EX INTRO */
+    .banner h2 {
+        font-size: 20px;
+    }
+
+    .EX_intro h1 {
+        font-size: 50px;
+        line-height: 90px;
+    }
+
+    .banner h2:before {
+        width: 8px;
+        height: 20px;
+        transform: translateY(-8px);
+        margin-right: 3px;
+    }
+
+    .EX_intro h1:nth-child(1):after {
+        width: 30px;
+        height: 13px;
+    }
+
+    .EX_intro p:nth-child(3) {
+        font-size: 15px;
+        margin: 28px 0 28px 0;
+    }
+    
+    .EX_intro p {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    
+}
+
+
+/* OLED EX 650px */
+@media (max-width: 650px) {
+    /* EX BEZEL */
+    .EX_bezel {
+        width: 300px;
+        text-align: center;
+    }
+    .EX_bezel_img_h {
+        display: inline-block;
+    }
+    .EX_bezel img {
+        width: 250px;
+        height: 350px;
+    }
+    .EX_bezel h2 {
+        font-size: 20px;
+        justify-content: flex-end;
+        margin-top: 16px;
+    }
+    
+    .EX_bezel p {
+        font-size: 13px;
+        margin: 10px 23px 0px 0px;
+    }
+    .EX_bezel span:nth-of-type(1) {
+        font-size: 35px;
+    }
+    .EX_bezel span:nth-of-type(2) {
+        font-size: 16px;
+        margin-left: 0px;
+    }
+    .EX_thinner {
+        width: 105px;
+        height: 105px;
+        left: 31%;
+        top: 13%;
+    }
+}
+
+
+@media (max-width: 595px) {
+    .EX_deuterium h2 {
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .EX_deuterium p {
+        font-size: 12px;
+        line-height: 27px;
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 595px) {
+    .EX_deuterium h2 {
+        font-size: 22px;
+    }
+    .EX_deuterium p {
+        font-size: 12px;
+        line-height: 27px;
+
+    }
+}
+
+
+/* OLED EX 425px */
+@media (max-width: 595px) {
+    .EX_deuterium h2 {
+        font-size: 16px;
+    }
+    .EX_deuterium p {
+        font-size: 10px;
+        line-height: 25px;
+        margin-top: 15px;
+    }
+}
