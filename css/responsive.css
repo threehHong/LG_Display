@@ -1,0 +1,341 @@
+/* pc 1170
+tablet 768
+mobile 480 */
+
+@media screen and (max-width: 1170px) {
+  .innerT {
+    padding: 5%;
+    box-sizing: border-box;
+  }
+  .CM_banner {
+    height: 600px;
+  }
+  .CM_banner h2 {
+    position: absolute;
+    right: 70px;
+    bottom: 50px;
+  }
+  .CM_banner h2::before {
+    width: 10px;
+    height: 35px;
+    margin-right: 15px;
+    top: 8px;
+  }
+  .CM_banner > h2 {
+    font-size: 2rem;
+  }
+  .imgF {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+  }
+  .contentTK {
+    top: 100px;
+  }
+  .contentTK h4 {
+    font-size: 45px;
+    line-height: 65px;
+  }
+
+  /* section2 -------- */
+  .section2Tk {
+    padding-top: 180px;
+  }
+  .descTK {
+    width: 100%;
+    gap: 90px;
+  }
+  .descTK img {
+    width: 55%;
+  }
+  .wrapTK {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .moredescTK h5 {
+    font-size: 22px;
+    padding-bottom: 20px;
+    line-height: 22px;
+  }
+  .moredescTK p {
+    font-size: 15px;
+  }
+  .moredescTK p br {
+    display: none;
+  }
+}
+
+/* 768px-------------------------------- */
+@media screen and (max-width: 768px) {
+  .innerT {
+    padding: 5%;
+    box-sizing: border-box;
+  }
+  .CM_banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+
+  .CM_banner > h2 {
+    font-size: 1.6rem;
+    right: 30px;
+    bottom: 12px;
+  }
+
+  .CM_banner h2::before {
+    width: 7px;
+    height: 32px;
+    margin-right: 10px;
+    top: 8px;
+  }
+
+  img {
+    width: 96%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .titleTk {
+    height: 750px;
+  }
+  .contentsTK {
+    height: 750px;
+  }
+
+  .titleTk > h2,
+  .titleTk > h3 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  .titleTk .oled {
+    left: -10%;
+  }
+  .titleTk .video {
+    left: -11.5%;
+  }
+  .titleTk .videoD {
+    left: 19.4%;
+  }
+  .titleTk .Tp {
+    left: -4%;
+  }
+  .titleTk .Tpd {
+    left: 26.8%;
+  }
+  .titleTk .Touch {
+    left: -10.8%;
+  }
+  .titleTk .Touchd {
+    left: 12%;
+  }
+  .titleTk .Tiling {
+    left: -9.6%;
+    top: -5px;
+  }
+  .titleTk .Tilingd {
+    left: 12%;
+  }
+  .contentTK h4 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .pTK {
+    font-size: 22px;
+    line-height: 38px;
+    text-shadow: 2px 1px #282825;
+  }
+
+  /* section2 -------- */
+  .innerD {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .section2Tk {
+    padding-top: 180px;
+  }
+  .descTK {
+    width: 100%;
+    gap: 60px;
+    padding-bottom: 130px;
+  }
+
+  .descTK img {
+    width: 50%;
+    box-shadow: 2px 4px 8px #d29e9e;
+  }
+  .wrapTK {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .moredescTK .lineTK:before {
+    width: 3px;
+    height: 19px;
+  }
+  .moredescTK h5 {
+    font-size: 16px;
+    padding-bottom: 20px;
+    line-height: 18px;
+  }
+  .moredescTK p {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .moredescTK p br {
+    display: none;
+  }
+
+  /* 480-------------------------------- */
+  @media screen and (max-width: 480px) {
+    .innerT {
+      padding: 5%;
+      box-sizing: border-box;
+    }
+    .CM_banner {
+      width: 100%;
+      /* height: 250px; */
+      border-bottom: 43px solid #fff;
+    }
+
+    .CM_banner > h2 {
+      font-size: 1.4rem;
+      line-height: 1rem;
+      right: 30px;
+      bottom: 30px;
+    }
+
+    .CM_banner h2::before {
+      width: 5px;
+      height: 25px;
+      margin-right: 7px;
+      top: 4px;
+    }
+
+    img {
+      width: 96%;
+      height: 100%;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+    }
+
+    .titleTk {
+      height: 450px;
+    }
+    .contentsTK {
+      height: 450px;
+    }
+    .contentTK {
+      top: 50px;
+      margin-top: 54px;
+    }
+
+    .titleTk > h2,
+    .titleTk > h3 {
+      font-size: 45px;
+      line-height: 45px;
+    }
+    .titleTk .oled {
+      left: -8%;
+    }
+    .titleTk .oledd {
+      left: 10.5%;
+    }
+    .titleTk .video {
+      left: -11.3%;
+    }
+    .titleTk .videoD {
+      left: 20%;
+    }
+    .titleTk .Tp {
+      left: -4%;
+    }
+    .titleTk .Tpd {
+      left: 26.8%;
+    }
+    .titleTk .Touch {
+      left: -10.8%;
+    }
+    .titleTk .Touchd {
+      left: 12%;
+    }
+    .titleTk .Tiling {
+      left: -9.6%;
+      top: -5px;
+    }
+    .titleTk .Tilingd {
+      left: 12%;
+    }
+
+    .contentTK h4 {
+      font-size: 22px;
+      line-height: 32px;
+      margin-bottom: 30px;
+    }
+    .pTK {
+      font-size: 14px;
+      line-height: 24px;
+      text-shadow: 1px 1px #282825;
+    }
+
+    /* section2 -------- */
+    .innerD {
+      width: 78%;
+      margin: 0 auto;
+    }
+    .section2Tk {
+      padding-top: 180px;
+    }
+    .descTK {
+      flex-direction: column;
+      width: 100%;
+      gap: 80px;
+      padding-bottom: 140px;
+      gap: 35px;
+    }
+    .descTK img {
+      width: 100%;
+      box-shadow: 2px 4px 8px #d29e9e;
+    }
+
+    .wrapTK {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .moredescTK {
+      animation-delay: -0.3s;
+    }
+
+    .moredescTK .lineTK:before {
+      width: 3px;
+      height: 19px;
+    }
+    .moredescTK h5 {
+      font-size: 16px;
+      padding-bottom: 20px;
+      line-height: 18px;
+      display: flex;
+      justify-content: center;
+    }
+    .moredescTK p {
+      font-size: 12px;
+      line-height: 19px;
+    }
+    .moredescTK p br {
+      display: none;
+    }
+  }
+}

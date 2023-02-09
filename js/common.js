@@ -1,4 +1,5 @@
 /* header JA */
+
 let gnb = $(".gnb_box"),
   gnbList = $(".gnb_box > li"),
   lnbBG = $(".wrapper"),
