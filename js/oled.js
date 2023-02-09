@@ -134,12 +134,12 @@ $(window).scroll(function(){
 })
 
 /* SKROLLR */
-// var s = skrollr.init({
-//     /* 모바일 문제 해결 코드 */
-//     mobileCheck: function () {
-//         return false;
-//     },
-// });
+var s = skrollr.init({
+    /* 모바일 문제 해결 코드 */
+    mobileCheck: function () {
+        return false;
+    },
+});
 /* 모바일 문제 */
 /* $(window).resize(function() {
     if($(window).innerWidth() < 480) {
