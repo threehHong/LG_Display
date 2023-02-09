@@ -57,7 +57,7 @@ $(window).scroll(function() {
         $('.resources_water .graph text:nth-child(13)').addClass('active_water_y');
 
         /* 숫자 증가 애니메이션 */
-        let graph_water = $('.resources_water .graph'),
+        /* let graph_water = $('.resources_water .graph'),
             graph_water_text = graph_water.find('text:nth-child(11)');
 
         let num_left = 100,
@@ -82,7 +82,7 @@ $(window).scroll(function() {
 
                 verify = false;
             }, 10);
-        }
+        } */
     }
 
 

@@ -131,6 +131,36 @@ $(window).scroll(function(){
         $(".EX_bezel img").attr({"src":`img/bezel/bezel${count_bezel}.jpg`})
     }
 
+
+    /* 숫자 증가 애니메이션 */
+    /* let ex_bezel = $('.EX_bezel'),
+        ex_thinner = ex_bezel.find('.EX_thinner');
+        ex_data_name = ex.bezel.attr('data-name');
+        console.log(ex_data_name);
+
+    let num_left = 0,
+        // excuted = false,
+        target_num_left = 30;
+        // verify = null;
+
+        console.log(verify);
+    
+    if(excuted == false || verify == false ) {
+        let num_animation = setInterval(()=>{
+
+            if(num_left == target_num_left) {
+                clearInterval(num_animation);
+            }
+
+            graph_water_text.text(num_left);
+
+            num_left++;
+            
+            excuted = true;
+
+            verify = false;
+        }, 10);
+    } */
 })
 
 /* SKROLLR */
