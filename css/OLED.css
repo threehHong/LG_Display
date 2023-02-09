@@ -595,14 +595,14 @@ p {
     text-align: right;
 }
 .ACE_a1_scrollImg .a1_tt {
-    margin: 81px 0 27px 146px;
+    margin: 81px 0 27px 0;
 }
 
 .ACE_a1_scrollImg .a1_tt h4 {
     text-align: right;
     margin-top: 54px;
     line-height: 60px;
-    margin-right: 11%;
+    /* margin-right: 11%; */
 }
 .ACE_a1_scrollImg > p {
     margin-left: 146px;
@@ -681,6 +681,7 @@ p {
     display: flex;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 .c2_tt {
     margin-left: 157px;
