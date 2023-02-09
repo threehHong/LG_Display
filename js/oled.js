@@ -8,9 +8,18 @@
     })
 }) */
 
+/* $(window).resize(function(){
+    let h2_bottom_val = ( ($(window).height() / $(window).width()) * 45 );
+    console.log(h2_bottom_val);
+
+    $('.banner h2').css({ 
+        bottom: `${h2_bottom_val}%`,
+    })
+}) */
+
 let ex_intro = $('.EX_intro'),
-    oled = ex_intro.find('h1:nth-child(1)'),
-    ex = ex_intro.find('h1:nth-child(2)');
+    oled = ex_intro.find('h2:nth-child(1)'),
+    ex = ex_intro.find('h2:nth-child(2)');
     
 
 let count = 0,
@@ -26,7 +35,7 @@ $(window).scroll(function(){
     count = Math.floor(((scroll_AMT) / banner_height) * 24)
     if(count > 24) { count = 24 }
     // $(".banner").css({"background-image":`url(../img/flower/flower${count}.jpg)`,})
-    $(".banner img").attr({"src":`/img/flower/flower${count}.jpg`})
+    $(".banner img").attr({"src":`img/flower/flower${count}.jpg`})
     /* 꽃 피는 이미지 이벤트 */
 
     // OLED EX 문구(좌우 등장)
@@ -98,7 +107,7 @@ $(window).scroll(function(){
         if(count_al > 96) { count_al = 96 } /* 98 */
         console.log(count_al);
 
-        $(".EX_algorism img").attr({"src":`../img/algorism/dotted${count_al}.jpg`})
+        $(".EX_algorism img").attr({"src":`img/algorism/dotted${count_al}.jpg`})
     } 
     // 알고리즘 이미지 스크롤 이벤트
     if(scroll_AMT >= 31000) {
@@ -119,14 +128,18 @@ $(window).scroll(function(){
         console.log(count_bezel);
         if(count_bezel > 9) { count_bezel = 9 }
        
-        $(".EX_bezel img").attr({"src":`../img/bezel/bezel${count_bezel}.jpg`})
+        $(".EX_bezel img").attr({"src":`img/bezel/bezel${count_bezel}.jpg`})
     }
 
 })
 
 /* SKROLLR */
-var s = skrollr.init();
-
+// var s = skrollr.init({
+//     /* 모바일 문제 해결 코드 */
+//     mobileCheck: function () {
+//         return false;
+//     },
+// });
 /* 모바일 문제 */
 /* $(window).resize(function() {
     if($(window).innerWidth() < 480) {
@@ -136,11 +149,10 @@ var s = skrollr.init();
 
 /********** OLED EX(SECTION1) **********/
 
-
-
 /********** OLED ACE(SECTION2) **********/
 AOS.init();
 
+//a1_sticky
 let se02_$window = $(window),
     se02_$ACE = $(".ACE_tt_box"),
     se02_$ACE_clone = se02_$ACE.contents().clone(),
@@ -159,15 +171,21 @@ se02_$window.scroll(function () {
         se02_$ACE_clone_inner.removeClass("visible");
     }
 });
-$('header').mouseover(function(){
-    $('.ace_clone.visible').addClass('headerHeight');
-});
-se02_$window.scroll(function(){
-    $('.ace_clone.visible').removeClass('headerHeight');
-});
-//NAV_toggleclass 추가 시 sticky_ace 높이 수정
 
-//ACE_A1_img
+//반응형
+se02_$window.resize(() => {
+    se02_$ACE_hold = se02_$ACE.offset().top + se02_$ACE.outerHeight();
+});
+
+//NAV_toggleclass 추가 시 sticky_ace 높이 수정
+$("header").mouseover(function () {
+    $(".ace_clone.visible").addClass("headerHeight");
+});
+se02_$window.scroll(function () {
+    $(".ace_clone.visible").removeClass("headerHeight");
+});
+
+//a1_wheel
 let aceA1Position = $(".ACE_A").offset().top,
     wheelNum = 0,
     fileNum;
@@ -196,18 +214,4 @@ $(window).scroll(function () {
     } else {
     }
 });
-//반응형
-// se02_$window.resize(function(){ 
-//     if (se02_$window.innerWidth > 480) {  // 다바이스 크기가 480이상일때 
-    
-//     /* 스크립트내용*/ 
-    
-//     } else {
-    
-//     /* 스크립트내용*/ 
-    
-//     }
-    
-//     }).resize(); 
-
 /********** OLED ACE(SECTION2) **********/

@@ -1,521 +1,793 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta property="og:title" content="LG DISPLAY" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://threehhong.github.io/LG_Display/"/>
-      <meta property="og:image" content="https://threehhong.github.io/LG_Display/img"/>
-      <meta property="og:description" content="기획, 디자인, 구현 _ 차*아, 홍*헌"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-      <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
-      <title>LG디스플레이</title>
-      <link rel="apple-touch-icon" sizes="57x57" href="img/fav_icon/apple-icon-57x57.png">
-      <link rel="apple-touch-icon" sizes="60x60" href="img/fav_icon/apple-icon-60x60.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="img/fav_icon/apple-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="img/fav_icon/apple-icon-76x76.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="img/fav_icon/apple-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="img/fav_icon/apple-icon-120x120.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="img/fav_icon/apple-icon-144x144.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="img/fav_icon/apple-icon-152x152.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="img/fav_icon/apple-icon-180x180.png">
-      <link rel="icon" type="image/png" sizes="192x192"  href="img/fav_icon/android-icon-192x192.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="img/fav_icon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="96x96" href="img/fav_icon/favicon-96x96.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="img/fav_icon/favicon-16x16.png">
-      <link rel="manifest" href="img/fav_icon/manifest.json">
-      <meta name="msapplication-TileColor" content="#ffffff">
-      <meta name="msapplication-TileImage" content="img/fav_icon/ms-icon-144x144.png">
-      <meta name="theme-color" content="#ffffff">
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="css/common.css">
-      <!-- <link rel="stylesheet" href="css/header.css">
-      <link rel="stylesheet" href="css/footer.css"> -->
-      <link rel="stylesheet" href="css/oled.css">
-      <link rel="stylesheet" href="css/resposive.css">
-
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta property="og:title" content="LG DISPLAY" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://threehhong.github.io/LG_Display/"
+        />
+        <meta
+            property="og:image"
+            content="https://threehhong.github.io/LG_Display/img/main_img_slide02_main_pc.jpg"
+        />
+        <meta
+            property="og:description"
+            content="기획 : 메인&사업장위치_팀전체/commercial_이태경,홍효헌/it_박윤정,이순욱/oled_차진아, 홍효헌/미디어센터_박윤정,차진아,디자인 : 메인_이순욱/commercial_이태경/it_박윤정,이순욱/oled_차진아, 홍효헌/미디어센터_박윤정,차진아/사업장위치_차진아 , 구현 : 메인&사업장위치_이순욱/commercial_이태경/it_박윤정,이순욱/oled_차진아, 홍효헌/미디어센터_박윤정,차진아 "
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+        <title>LG디스플레이</title>
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="img/fav_icon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="img/fav_icon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="img/fav_icon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="img/fav_icon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="img/fav_icon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="img/fav_icon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="img/fav_icon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="img/fav_icon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="img/fav_icon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="img/fav_icon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/fav_icon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="img/fav_icon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/fav_icon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="img/fav_icon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="img/fav_icon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/oled.css" />
     </head>
     <body>
         <!-- HEADER (공통) -->
         <header id="header">
-          <div class="M30 d-flex">
-            <h1>
-              <a href="index.html" class="header_logo">
-                <img src="./img/logo_display.svg" alt="LG디스플레이 로고" />
-              </a>
-            </h1>
-            <div class="wrapper">
-              <nav>
-                <ul class="gnb_box d-flex">
-                  <li>
-                    <h3>
-                      <a href="#" class="__dis_link">product</a>
-                    </h3>
-                    <ul class="lnb_box">
-                      <li>
-                        <a href="#" class="__dis_link">automotive</a>
-                      </li>
-                      <li><a href="it.html" class="__link">it</a></li>
-                      <li>
-                        <a href="#" class="__dis_link">tv</a>
-                      </li>
-                      <li>
-                        <a href="#" class="__dis_link">mobile</a>
-                      </li>
-                      <li>
-                        <a href="cmindex.html" class="__link">commercial</a>
-                      </li>
-                      <li>
-                        <a href="#" class="__dis_link">experience</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <h3>
-                      <a href="#" class="__dis_link">technology</a>
-                    </h3>
-                    <ul class="lnb_box">
-                      <li><a href="OLED.html" class="__link current">oled</a></li>
-                      <li>
-                        <a href="#" class="__dis_link">lcd</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <h3>
-                      <a href="#" class="__dis_link __link">esg</a>
-                    </h3>
-                    <ul class="lnb_box">
-                      <li>
-                        <a href="#" class="__dis_link">지속가능경영</a>
-                      </li>
-                      <li>
-                        <a href="esg.html" class=" __link">환경</a>
-                      </li>
-                      <li>
-                        <a href="#" class="__dis_link">사회</a>
-                      </li>
-                      <li>
-                        <a href="#" class="__dis_link">지배구조</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <h3>
-                      <a href="#" class="__dis_link">company</a>
-                    </h3>
-                    <ul class="lnb_box">
-                      <li>
-                        <a href="#" class="__dis_link">기업개요</a>
-                      </li>
-                      <li>
-                        <a href="#" class="__dis_link">채용</a>
-                      </li>
-                      <li>
-                        <a href="#" class="__dis_link">투자정보</a>
-                      </li>
-                      <li>
-                        <a href="media.html" class="__link">미디어센터</a>
-                      </li>
-                      <li>
-                        <a href="place.html" class="__link">사업장위치</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
+            <div class="M30 d-flex">
+                <h1>
+                    <a href="index.html" class="header_logo">
+                        <img
+                            src="./img/logo_display.svg"
+                            alt="LG디스플레이 로고"
+                        />
+                    </a>
+                </h1>
+                <div class="wrapper">
+                    <nav>
+                        <ul class="gnb_box d-flex">
+                            <li>
+                                <h3>
+                                    <a href="#" class="__dis_link">product</a>
+                                </h3>
+                                <ul class="lnb_box">
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >automotive</a
+                                        >
+                                    </li>
+                                    <li><a href="it.html" class="__link">it</a></li>
+                                    <li>
+                                        <a href="#" class="__dis_link">tv</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >mobile</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="cmindex.html" class="__link">commercial</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >experience</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>
+                                    <a href="#" class="__dis_link"
+                                        >technology</a
+                                    >
+                                </h3>
+                                <ul class="lnb_box">
+                                    <li><a href="" class="__link current">oled</a></li>
+                                    <li>
+                                        <a href="#" class="__dis_link">lcd</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>
+                                    <a href="#" class="__dis_link __link"
+                                        >esg</a
+                                    >
+                                </h3>
+                                <ul class="lnb_box">
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >지속가능경영</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="esg.html" class="_link">환경</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="__dis_link">사회</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >지배구조</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h3>
+                                    <a href="#" class="__dis_link">company</a>
+                                </h3>
+                                <ul class="lnb_box">
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >기업개요</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#" class="__dis_link">채용</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="__dis_link"
+                                            >투자정보</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="media.html"
+                                            class="__link"
+                                            >미디어센터</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="place.html" class="__link">사업장위치</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="Header_icon d-flex">
+                    <div class="header_search">
+                        <a href="#" class="__dis_link icon">
+                            <span class="__blind">검색아이콘</span>
+                        </a>
+                    </div>
+                    <div class="header_lang">
+                        <a href="#" class="__dis_link icon_lang icon"
+                            ><span class="__blind">언어변경아이콘</span></a
+                        >
+                        <ul class="lang_list">
+                            <li><a href="#" class="__dis_link">kor</a></li>
+                            <li><a href="#" class="__dis_link">Eng</a></li>
+                            <li><a href="#" class="__dis_link">chn</a></li>
+                            <li><a href="#" class="__dis_link">vtn</a></li>
+                        </ul>
+                        <div class="bar"><span></span><span></span></div>
+                        <!-- 햄버거 메뉴_ 모바일 -->
+                    </div>
+                </div>
             </div>
-            <div class="Header_icon d-flex">
-              <div class="header_search">
-                <a href="#" class="__dis_link icon">
-                  <span class="__blind">검색아이콘</span>
-                </a>
-              </div>
-              <div class="header_lang">
-                <a href="#" class="__dis_link icon_lang icon"
-                  ><span class="__blind">언어변경아이콘</span></a
-                >
-                <ul class="lang_list">
-                  <li><a href="#" class="__dis_link">kor</a></li>
-                  <li><a href="#" class="__dis_link">Eng</a></li>
-                  <li><a href="#" class="__dis_link">chn</a></li>
-                  <li><a href="#" class="__dis_link">vtn</a></li>
-                </ul>
-                <div class="bar"><span></span><span></span></div>
-                <!-- 햄버거 메뉴_ 모바일 -->
-              </div>
-    
-            </div>
-          </div>
         </header>
+
+        <a href="" id="btn_top">
+            <div class="percentage"></div>
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
         <!-- HEADER (공통) -->
 
         <main>
             <!-- OLED BANNER -->
             <div class="banner_container">
                 <div class="banner">
-                  <div class="banner_a">
-                    <img src="./img/flower/flower0.jpg" alt="">
-                    <h2> OLED </h2>
-                  </div>
+                    <div class="banner_a">
+                        <img src="img/flower/flower0.jpg" alt="" />
+                        <h2>OLED</h2>
+                    </div>
                 </div>
             </div>
-      
+
             <!-- ********** OLED EX(SECTION1) ********** -->
             <section class="OLED_EX">
+                <div class="EX_empty_BG_F"></div>
 
-                <div class="EX_empty_BG_F"> </div>
-
-                <div class="EX_intro active_EX_sticky" data-4500-start="background-color: rgb(255,255,255);" data-5500="background-color: rgb(0,0,0)"> 
-                    <h1 data-4500-start="color: rgb(0,0,0);" data-5500="color: rgb(255,255,255)" > OLED </h1>
-                    <h1 data-4500-start="color: rgb(0,0,0);" data-5500="color: rgb(255,255,255)" > EX </h1>
-                    <p data-4500-start="color: rgb(0,0,0);" data-5500="color: rgb(255,255,255)" > Evolution through Great Detail </p>
-                    <p data-4500-start="color: rgb(0,0,0);" data-5500="color: rgb(255,255,255)" > OLED 패널 개발 10년의 기술력을 결집한 ‘EX 테크 <br> 놀로지’로 TV화질의 한계를 또 한 번 뛰어넘었습니 <br> 다. </p>
-                    <p data-4500-start="color: rgb(0,0,0);" data-5500="color: rgb(255,255,255)" > 기술과 경험의 진화를 이끄는 최첨단 디테일의 결정 <br> 체 OLED.EX를 만나보세요. </p>
+                <div
+                    class="EX_intro active_EX_sticky"
+                    data-4500-start="background-color: rgb(255,255,255);"
+                    data-5500="background-color: rgb(0,0,0)"
+                >
+                    <h2
+                        data-4500-start="color: rgb(0,0,0);"
+                        data-5500="color: rgb(255,255,255)"
+                    >
+                        OLED
+                    </h2>
+                    <h2
+                        data-4500-start="color: rgb(0,0,0);"
+                        data-5500="color: rgb(255,255,255)"
+                    >
+                        EX
+                    </h2>
+                    <p
+                        data-4500-start="color: rgb(0,0,0);"
+                        data-5500="color: rgb(255,255,255)"
+                    >
+                        Evolution through Great Detail
+                    </p>
+                    <p
+                        data-4500-start="color: rgb(0,0,0);"
+                        data-5500="color: rgb(255,255,255)"
+                    >
+                        OLED 패널 개발 10년의 기술력을 결집한 ‘EX 테크 <br />
+                        놀로지’로 TV화질의 한계를 또 한 번 뛰어넘었습니 <br />
+                        다.
+                    </p>
+                    <p
+                        data-4500-start="color: rgb(0,0,0);"
+                        data-5500="color: rgb(255,255,255)"
+                    >
+                        기술과 경험의 진화를 이끄는 최첨단 디테일의 결정 <br />
+                        체 OLED.EX를 만나보세요.
+                    </p>
                 </div>
 
-                <div class="EX_empty_BG_S"> </div>
+                <div class="EX_empty_BG_S"></div>
 
                 <div class="EX_intro_img_box">
                     <ul class="EX_intro_img">
-                        <li class="img_deuterium"> </li>
-                        <li class="img_algorism"> </li>
-                        <li class="img_bezel"> </li>
+                        <li class="img_deuterium"></li>
+                        <li class="img_algorism"></li>
+                        <li class="img_bezel"></li>
                     </ul>
                 </div>
 
                 <div class="EX_deuterium_container">
                     <div class="EX_deuterium">
-                        <h2> 더 강인한, 더 안정된 중수소 소자 </h2>
-                        <p> 
-                            중수소는 수소에 중성자가 하나 더 있는 구조로 약 6,000개의 수소 중 1개만이 <br>
-                            중수소일 정도로 자연계에 극소량만 존재합니다. <br>
-                            OLED.EX는 이 중수소를 기존 소자 속 수소와 치환함으로써 전기 자극과 내열에 <br>
-                            더 강한 소자를 완성하였습니다. <br>
-                            이로써 OLED.EX는 30% 더 밝아진 빛을 오랫동안 안정적으로 구현함과 동시에 <br>
-                            눈으로 보는 것과 가장 유사한 디테일을 그려냅니다. 
+                        <h2>더 강인한, 더 안정된 중수소 소자</h2>
+                        <p>
+                            중수소는 수소에 중성자가 하나 더 있는 구조로 약
+                            6,000개의 수소 중 1개만이 <br />
+                            중수소일 정도로 자연계에 극소량만 존재합니다. <br />
+                            OLED.EX는 이 중수소를 기존 소자 속 수소와
+                            치환함으로써 전기 자극과 내열에 <br />
+                            더 강한 소자를 완성하였습니다. <br />
+                            이로써 OLED.EX는 30% 더 밝아진 빛을 오랫동안
+                            안정적으로 구현함과 동시에 <br />
+                            눈으로 보는 것과 가장 유사한 디테일을 그려냅니다.
                         </p>
                     </div>
                 </div>
-                
-                <div class="EX_algorism_container"> 
-                    <div class="EX_algorism"> 
-                        <div class="img"> </div>
-                        <img src="../img/algorism/dotted0.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="EX_bezel_container">
-                    <div class="EX_bezel">
-                      <!-- <div class="EX_bezel_img_h"> -->
-                        <img src="../img/bezel/bezel0.jpg" alt="">
-                        <h2> 더 얇아진 베젤 </h2>
-                      <!-- </div> -->
-                        <p> OLED.EX의 진화는 디자인도 예외가 아닙니다. OLED.EX는 기존 대비 30% 얇아진 베젤을 선보 <br>
-                            입니다. 이것은 현존하는 OLED 중 가장 심미적으로 뛰어난 디자인이 됨과 동시에 더욱 몰입감 있 <br>
-                            는 화면을 제공합니다. </p>
-                        <span> 30% </span>
-                        <span> Thinner </span>
+
+                <div class="EX_algorism_container">
+                    <div class="EX_algorism">
+                        <div class="img"></div>
+                        <img src="img/algorism/dotted0.jpg" alt="" />
                     </div>
                 </div>
 
+                <div class="EX_bezel_container">
+                    <div class="EX_bezel">
+                      <div class="EX_bezel_img_h">
+                        <img src="img/bezel/bezel0.jpg" alt="">
+                        <h2> 더 얇아진 베젤 </h2>
+                      </div>
+                        <p> OLED.EX의 진화는 디자인도 예외가 아닙니다. OLED.EX는 기존 대비 30% 얇아진 베젤을 선보 <br>
+                            입니다. 이것은 현존하는 OLED 중 가장 심미적으로 뛰어난 디자인이 됨과 동시에 더욱 몰입감 있 <br>
+                            는 화면을 제공합니다. 
+                        </p>
+                        <div class="EX_thinner">
+                          <span> 30% </span>
+                          <span> Thinner </span>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!-- ********** OLED EX(SECTION1) ********** -->
 
-
             <!-- ********** OLED ACE(SECTION2) ********** -->
             <section class="OLED_sec02">
-              <div class="OLED_ace contain_margin">
-                      <div class="OLEd_img">  <img src="./img/OLED/OLED_ACE_main.svg" alt="">
-                      <p class="warning_txt">
-                              ※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수 있습니다
-                      </p>
-                  </div>
-                  <div class="img_txt"  data-aos="flip-right" data-aos-duration="1000"  data-aos-easing="ease-in-sine"  >
-                      <div class="OLED_sec02_title">
-                          <h3 class="OLED_sec2_h3">OLED</h3>
-                          <h3 class="OLED_sec2_h3 ACE_R ">Natural Reality</h3>
-                      </div>
-                      <p>
-                          지금까지의 디스플레이는 모든 이들의 이목을 사로잡기 위해 더 밝고 화려하며 자극적인 화질을 추구해 왔습니다.
-이런 경쟁에서도 꼭 지켜야 할 가치는 무엇일까? OLED는 생각합니다.
-세상이 디스플레이로 가득 찰수록, 왜곡 없는 진실된 정보를 전달하고, 건강과 환경 파괴 없이, 우리의 소통과 꿈을 펼칠 수 있도록 도와야 한다고 말입니다.
-LG OLED의 기술이 자연 그대로의 시각적, 청각적 경험을 있는 그대로 전달하며, 수많은 디스플레이가 공해와 유해 물질 없이 "나" 다운 삶에 자연스럽게 녹아드는 Natural Reality를 추구하는 이유입니다.
-                      </p>
-                  </div>
-              </div>
-              <section class="ace_box">
-                  <div class="container">
-                      <p class="sub_tt">Natural Reality의 핵심 가치</p>
-                      <h2>ACE</h2>
-                  </div>
-                  <article class="ACE_title container">
-                      <ul class="ACE_tt_box">
-                          <li><a href="#ACE_A">
-                              <img src="./img/OLED/OLED_A.svg" alt="">
-                              <p class="ace_tt"><b>A</b>ccurate</p>
-                              <div class="A_txt_box">
-                                  <p>픽셀 단위의 빛 제어</p>
-                                  <p>색 충실도</p>
-                                  <p>완벽한 블랙</p>
-                                  <p>넓은 시야각</p>
-                                  <p>빠른 응답 속도</p>
-                              </div>
-                          </a></li>
-                          <li><a href="#ACE_C">
-                              <img src="./img/OLED/OLED_C.svg" alt="">
-                              <p class="ace_tt"><b>C</b>omfortable
-                              </p>
-                              <div class="A_txt_box">
-                                  <p>적은 블루라이트</p>
-                                  <p>깜박임이 없는</p>
-                                  <p>눈에 편안한 밝기</p>
-                              </div>
-                          </a></li>
-                          <li><a href="#ACE_E">
-                              <img src="./img/OLED/OLED_E.svg" alt="">
-                              <p class="ace_tt"><b>E</b>co-friendly
-                              </p>
-                              <div class="A_txt_box">
-                                  <p>유해물질이 적은</p>
-                                  <p>재활용률이 높은</p>
-                                  <p>새집 증후군이 적은</p>
-                              </div>
-                          </a></li>
-                      </ul>
-                  </article>
-                  <article>
-                      <div class="ACE_A" id="ACE_A">
-                          <div class="ACE_a1_scrollImg">
-                              <div class="a1_scroll">
-                                  <div>
-                                      <img src="./img/OLED_A1/ACE_A00.jpg" alt="">
-                                  </div>
-                                  <h3 class="OLED_sec2_h3">
-                                      <span>100% 라이브 픽셀</span>
-                                  </h3>
-                                  <div class="a1_tt">
-                                      <h4 class="OLED_sec2_h4 ACE_R"><span>픽셀 하나하나가 스스로 빛을 내, </span>있는 그대로의 컬러를 완벽히 전달하는 <strong>'라이브 픽셀'</strong>
-                                      </h4> 
-                                  </div>
-                                  <p>수천만 개의 픽셀이 스스로 빛을 내며, 색과 명암을 컨트롤하기에
-                                      화질의 왜곡이 없는 OLED.
-                                      과정과 소실 없는 정교함으로 진실만을 전달하는 TV는 오직 OLED뿐입니다.</p>
-                              </div>
-                              
-                              
-                          </div>
-                          <div class="ACE_a2  contain_margin">
-                              
-                              <img src="./img/OLED/ACE_a02_01.jpg"  data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom" alt="LG OLED 각도 이미지">
-                              <div class="a2_tt ace_tt"  data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-                                  <h3 class="OLED_sec2_h3">넓은 시야각</h3>
-                                  <h4 class="OLED_sec2_h4 ACE_Y">정면, 측면 어느 위치에서나 
-                                      왜곡 없는 정확한 화질을 구현하는
-                                  <strong>'넓은 시야각'</strong></h4>
-                              </div>
-                              <p class="a2_sub_txt">단지 조금 넓은 시야각의 TV인지,
-                                  어느 각도에서나 최고의 화질을
-                                  전달하는 TV인지 확인해 보세요. 
-                                  TV가 있는 공간 속 누구에게나
-                                  진실된 화질을 전달하는 OLED TV.
-                                  시청의 동선에 완전한 자유를 주는 
-                                  TV는 LG OLED뿐입니다.</p>
-                              <img src="./img/OLED/ACE_a02_02.svg" data-aos="zoom-in-right" data-aos-anchor-placement="center-bottom" alt="삼성 OLED 각도 이미지">
-                              <p class="warning_txt">
-                                  ※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수 있습니다
-                              </p>
-                          </div>
-                      </div>
-                      <div class="ACE_C" id="ACE_C">
-                          <div class="ACE_c1 contain_margin">
-                              <div class="c1_imgs">
-                                  <div class="img_box">
-                                      <img src="./img/OLED/ACE_c01_01.png"  data-aos-duration="500" data-aos="fade-right"
-                                      data-aos-offset="300"
-                                      data-aos-easing="ease-in-sine" alt="플리커프리 전">
-                                  </div>
-                                  <div class="img_box">
-                                      <img src="./img/OLED/ACE_c01_02.png"  data-aos-duration="500" data-aos="fade-left"
-                                      data-aos-offset="300"
-                                      data-aos-easing="ease-in-sine" alt="플리커프리 후">
-                                  </div>
-                              </div>
-                              <p class="warning_txt">
-                                  ※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수 있습니다
-                              </p>
-                              <div class="c1_tt ace_tt">
-                                  <h3 class="OLED_sec2_h3">플리커 프리</h3>
-                                  <h4 class="OLED_sec2_h4 ACE_R">보이지 않는 깜빡임 조차 없어 눈에 부담을 주지 않는 
-                                      <strong>
-                                          '플리커 프리'
-                                      </strong>
-                                  </h4>
-                                  <p>
-                                      육안으로 감지할 수 없는 깜빡임 현상까지 제거하여 눈의 피로를 최소화한 디스플레이.
-당신과 가족의 눈 건강을 생각한다면, 'UL'과 'TUV'가 인증한 OLED를 선택하세요.
-                                  </p>
-                              </div>
-                          </div>
-                          <div class="ACE_c2 contain_margin">
-                              <div class="c2_img">
-                                  <img src="./img/OLED/ACE_c02_01.jpg" alt="아이세이프">
-                              </div>
-                              <div class="c2_tt ace_tt" data-aos="fade-left"
-                              data-aos-offset="300"
-                              data-aos-easing="ease-in-sine">
-                                  <h3 class="OLED_sec2_h3">아이 세이프</h3>
-                                  <h4 class="OLED_sec2_h4 ACE_Y"><span>눈의 건강과 화질,</span>어느 것 하나도 놓치지 않는<strong>'아이 세이프'</strong></h4>
-                                  <p>여가와 정보뿐 아니라 교육, 업무까지 점점 더 다양한 역할을 하는 TV.
-                                  가족들의 눈 건강을 지키고 최고의 화질도 원하는 당신에겐 
-                                  'Eyesafe'가 인증한 OLED TV가 답입니다.</p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="ACE_E" id="ACE_E"> 
-                          <div class="ACE_E1">
-                              <div class="E1_img" data-aos="fade-right"
-                              data-aos-offset="300"
-                              data-aos-duration="500"
-                              data-aos-easing="ease-in-sine">
-                                  <img src="./img/OLED/ACE_e01.png" alt="tv에서 나오는 사슴이미지">
-                              </div>
-                              <p class="warning_txt">
-                                  ※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수 있습니다
-                              </p>
-                              <div class="E1_tt ace_tt">
-                                  <h3 class="OLED_sec2_h3">높은 재활용률</h3>
-                                  <h4 class="OLED_sec2_h4 ACE_R"><span>재활용률이 높은</span> </strong>'친환경 에코 디스플레이'</strong></h4>
-                                  <p>
-                                      지구에 쓰레기를 남기는 부품을 사용한 TV와 최고의 성능을 구현하면서도
-  필요 없는 부품까지 줄인 TV, 어떤 TV를 선택하시겠습니까? 
-  최고의 성능에 플라스틱과 쓰레기까지 최소화한 OLED입니다.
-                                  </p>
-                              </div>  
-                          </div>
-                          <div class="ACE_E2  contain_margin">
-                                  <div class="e2_imgs" >
-                                      <img src="./img/OLED/ACE_e02_01.png" data-aos="fade-right"
-                                      data-aos-offset="300"
-                                      data-aos-easing="ease-in-sine"  alt="LCD 이미지">
-                                      <div class="e2_02"  data-aos="fade-left"
-                                      data-aos-offset="300"
-                                      data-aos-easing="ease-in-sine" >
-                                          <img src="./img/OLED/ACE_e02_02.png" alt="OLED 이미지">
-                                      </div>
-                                  </div>
-                                  <p class="warning_txt">
-                                      ※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수 있습니다
-                                  </p>
-                                 <div class="e2_tt ace_tt">
-                                      <h3 class="OLED_sec2_h3">적은 유해 물질</h3>
-                                      <h4 class="OLED_sec2_h4 ACE_R">유해 물질이 적은 
-                                          <strong>
-                                              '친환경 에코 디스플레이'
-                                          </strong>
-                                      </h4>
-                                      <p>
-                                          디스플레이를 만들 때, 인체와 환경에 좋지 않은 카드뮴과
-인화 인듐 등이 쓰이곤 합니다. 
-유해 물질 저감은 가족의 건강은 물론, 다음 세대에 물려줄 환경을 위해서도
-꼭 필요한 노력입니다. 
-&#39;SGS&#39;가 인증한 OLED의 친환경 디스플레이인지 꼭 확인해 보세요.
-                                      </p>
-                                  </div>
-                          </div>
-                      </div>
-                  </article> 
-              </section>
-          </section>
+                <div class="OLED_ace contain_margin">
+                    <div class="OLEd_img">
+                        <img src="./img/OLED/OLED_ACE_main.svg" alt="" />
+                        <p class="warning_txt">
+                            ※ 이해를 돕기 위해 제작된 이미지로 실제와 다를 수
+                            있습니다
+                        </p>
+                    </div>
+                    <div
+                        class="img_txt"
+                        data-aos="flip-right"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-sine"
+                    >
+                        <div class="OLED_sec02_title">
+                            <h3 class="OLED_sec2_h3">OLED</h3>
+                            <h3 class="OLED_sec2_h3 ACE_R">Natural Reality</h3>
+                        </div>
+                        <p>
+                            지금까지의 디스플레이는 모든 이들의 이목을 사로잡기
+                            위해 더 밝고 화려하며 자극적인 화질을 추구해
+                            왔습니다. 이런 경쟁에서도 꼭 지켜야 할 가치는
+                            무엇일까? OLED는 생각합니다. 세상이 디스플레이로
+                            가득 찰수록, 왜곡 없는 진실된 정보를 전달하고,
+                            건강과 환경 파괴 없이, 우리의 소통과 꿈을 펼칠 수
+                            있도록 도와야 한다고 말입니다. LG OLED의 기술이 자연
+                            그대로의 시각적, 청각적 경험을 있는 그대로 전달하며,
+                            수많은 디스플레이가 공해와 유해 물질 없이 "나" 다운
+                            삶에 자연스럽게 녹아드는 Natural Reality를 추구하는
+                            이유입니다.
+                        </p>
+                    </div>
+                </div>
+                <section class="ace_box">
+                    <div class="container">
+                        <p class="sub_tt">Natural Reality의 핵심 가치</p>
+                        <h2>ACE</h2>
+                    </div>
+
+                    <article class="ACE_title container">
+                        <h2 class="__hidden">ace</h2>
+                        <ul class="ACE_tt_box">
+                            <li>
+                                <a href="#ACE_A">
+                                    <div>
+                                        <img src="img/OLED/OLED_A.svg" alt="" />
+                                        <p class="ace_tt"><b>A</b>ccurate</p>
+                                    </div>
+                                    <div class="A_txt_box">
+                                        <p>픽셀 단위의 빛 제어</p>
+                                        <p>색 충실도</p>
+                                        <p>완벽한 블랙</p>
+                                        <p>넓은 시야각</p>
+                                        <p>빠른 응답 속도</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#ACE_C">
+                                    <div>
+                                        <img src="img/OLED/OLED_C.svg" alt="" />
+                                        <p class="ace_tt"><b>C</b>omfortable</p>
+                                    </div>
+
+                                    <div class="A_txt_box">
+                                        <p>적은 블루라이트</p>
+                                        <p>깜박임이 없는</p>
+                                        <p>눈에 편안한 밝기</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#ACE_E">
+                                    <div>
+                                        <img src="img/OLED/OLED_E.svg" alt="" />
+                                        <p class="ace_tt">
+                                            <b>E</b>co-friendly
+                                        </p>
+                                    </div>
+
+                                    <div class="A_txt_box">
+                                        <p>유해물질이 적은</p>
+                                        <p>재활용률이 높은</p>
+                                        <p>새집 증후군이 적은</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h2 class="__hidden">ace</h2>
+                        <div class="ACE_A" id="ACE_A">
+                            <div class="ACE_a1_scrollImg">
+                                <div class="a1_scroll">
+                                    <div>
+                                        <img
+                                            src="./img/OLED_A1/ACE_A00.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <h3 class="OLED_sec2_h3">
+                                        <span>100% 라이브 픽셀</span>
+                                    </h3>
+                                    <div class="a1_tt">
+                                        <h4 class="OLED_sec2_h4 ACE_R">
+                                            <span
+                                                >픽셀 하나하나가 스스로 빛을 내, </span
+                                            >있는 그대로의 컬러를 완벽히
+                                            전달하는
+                                            <strong>'라이브 픽셀'</strong>
+                                        </h4>
+                                    </div>
+                                    <p>
+                                        수천만 개의 픽셀이 스스로 빛을 내며,
+                                        색과 명암을 컨트롤하기에 화질의 왜곡이
+                                        없는 OLED. 과정과 소실 없는 정교함으로
+                                        진실만을 전달하는 TV는 오직
+                                        OLED뿐입니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ACE_a2 contain_margin">
+                                <img
+                                    src="./img/OLED/ACE_a02_01.jpg"
+                                    data-aos="zoom-in-left"
+                                    data-aos-anchor-placement="top-bottom"
+                                    alt="LG OLED 각도 이미지"
+                                />
+                                <div
+                                    class="a2_tt ace_tt"
+                                    data-aos="fade-up"
+                                    data-aos-anchor-placement="bottom-bottom"
+                                >
+                                    <h3 class="OLED_sec2_h3">넓은 시야각</h3>
+                                    <h4 class="OLED_sec2_h4 ACE_Y">
+                                        정면, 측면 어느 위치에서나 왜곡 없는
+                                        정확한 화질을 구현하는
+                                        <strong>'넓은 시야각'</strong>
+                                    </h4>
+                                </div>
+                                <p class="a2_sub_txt">
+                                    단지 조금 넓은 시야각의 TV인지, 어느
+                                    각도에서나 최고의 화질을 전달하는 TV인지
+                                    확인해 보세요. TV가 있는 공간 속 누구에게나
+                                    진실된 화질을 전달하는 OLED TV. 시청의
+                                    동선에 완전한 자유를 주는 TV는 LG
+                                    OLED뿐입니다.
+                                </p>
+                                <img
+                                    src="./img/OLED/ACE_a02_02.svg"
+                                    data-aos="zoom-in-right"
+                                    data-aos-anchor-placement="center-bottom"
+                                    alt="삼성 OLED 각도 이미지"
+                                />
+                                <p class="warning_txt">
+                                    ※ 이해를 돕기 위해 제작된 이미지로 실제와
+                                    다를 수 있습니다
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ACE_C" id="ACE_C">
+                            <div class="ACE_c1 contain_margin">
+                                <div class="c1_imgs">
+                                    <div class="img_box">
+                                        <img
+                                            src="./img/OLED/ACE_c01_01.png"
+                                            data-aos-duration="500"
+                                            data-aos="fade-right"
+                                            data-aos-offset="300"
+                                            data-aos-easing="ease-in-sine"
+                                            alt="플리커프리 전"
+                                        />
+                                    </div>
+                                    <div class="img_box">
+                                        <img
+                                            src="./img/OLED/ACE_c01_02.png"
+                                            data-aos-duration="500"
+                                            data-aos="fade-left"
+                                            data-aos-offset="300"
+                                            data-aos-easing="ease-in-sine"
+                                            alt="플리커프리 후"
+                                        />
+                                    </div>
+                                </div>
+                                <p class="warning_txt">
+                                    ※ 이해를 돕기 위해 제작된 이미지로 실제와
+                                    다를 수 있습니다
+                                </p>
+                                <div class="c1_tt ace_tt">
+                                    <h3 class="OLED_sec2_h3">플리커 프리</h3>
+                                    <h4 class="OLED_sec2_h4 ACE_R">
+                                        보이지 않는 깜빡임 조차 없어 눈에 부담을
+                                        주지 않는
+                                        <strong> '플리커 프리' </strong>
+                                    </h4>
+                                    <p>
+                                        육안으로 감지할 수 없는 깜빡임 현상까지
+                                        제거하여 눈의 피로를 최소화한
+                                        디스플레이. 당신과 가족의 눈 건강을
+                                        생각한다면, 'UL'과 'TUV'가 인증한 OLED를
+                                        선택하세요.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ACE_c2 contain_margin">
+                                <div class="c2_img">
+                                    <img
+                                        src="./img/OLED/ACE_c02_01.jpg"
+                                        alt="아이세이프"
+                                    />
+                                </div>
+                                <div
+                                    class="c2_tt ace_tt"
+                                    data-aos="fade-left"
+                                    data-aos-offset="300"
+                                    data-aos-easing="ease-in-sine"
+                                >
+                                    <h3 class="OLED_sec2_h3">아이 세이프</h3>
+                                    <h4 class="OLED_sec2_h4 ACE_Y">
+                                        <span>눈의 건강과 화질,</span>어느 것
+                                        하나도 놓치지 않는<strong
+                                            >'아이 세이프'</strong
+                                        >
+                                    </h4>
+                                    <p>
+                                        여가와 정보뿐 아니라 교육, 업무까지 점점
+                                        더 다양한 역할을 하는 TV. 가족들의 눈
+                                        건강을 지키고 최고의 화질도 원하는
+                                        당신에겐 'Eyesafe'가 인증한 OLED TV가
+                                        답입니다.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ACE_E" id="ACE_E">
+                            <div class="ACE_E1">
+                                <div
+                                    class="E1_img"
+                                    data-aos="fade-right"
+                                    data-aos-offset="300"
+                                    data-aos-duration="500"
+                                    data-aos-easing="ease-in-sine"
+                                >
+                                    <img
+                                        src="./img/OLED/ACE_e01.png"
+                                        alt="tv에서 나오는 사슴이미지"
+                                    />
+                                </div>
+                                <p class="warning_txt">
+                                    ※ 이해를 돕기 위해 제작된 이미지로 실제와
+                                    다를 수 있습니다
+                                </p>
+                                <div class="E1_tt ace_tt">
+                                    <h3 class="OLED_sec2_h3">높은 재활용률</h3>
+                                    <h4 class="OLED_sec2_h4 ACE_R">
+                                        <span>재활용률이 높은</span>
+                                        <strong
+                                            >'친환경 에코 디스플레이'</strong
+                                        >
+                                    </h4>
+                                    <p>
+                                        지구에 쓰레기를 남기는 부품을 사용한
+                                        TV와 최고의 성능을 구현하면서도 필요
+                                        없는 부품까지 줄인 TV, 어떤 TV를
+                                        선택하시겠습니까? 최고의 성능에
+                                        플라스틱과 쓰레기까지 최소화한
+                                        OLED입니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ACE_E2 contain_margin">
+                                <div class="e2_imgs">
+                                    <img
+                                        src="./img/OLED/ACE_e02_01.png"
+                                        data-aos="fade-right"
+                                        data-aos-offset="300"
+                                        data-aos-easing="ease-in-sine"
+                                        alt="LCD 이미지"
+                                    />
+                                    <div
+                                        class="e2_02"
+                                        data-aos="fade-left"
+                                        data-aos-offset="300"
+                                        data-aos-easing="ease-in-sine"
+                                    >
+                                        <img
+                                            src="./img/OLED/ACE_e02_02.png"
+                                            alt="OLED 이미지"
+                                        />
+                                    </div>
+                                </div>
+                                <p class="warning_txt">
+                                    ※ 이해를 돕기 위해 제작된 이미지로 실제와
+                                    다를 수 있습니다
+                                </p>
+                                <div class="e2_tt ace_tt">
+                                    <h3 class="OLED_sec2_h3">적은 유해 물질</h3>
+                                    <h4 class="OLED_sec2_h4 ACE_R">
+                                        유해 물질이 적은
+                                        <strong>
+                                            '친환경 에코 디스플레이'
+                                        </strong>
+                                    </h4>
+                                    <p>
+                                        디스플레이를 만들 때, 인체와 환경에 좋지
+                                        않은 카드뮴과 인화 인듐 등이 쓰이곤
+                                        합니다. 유해 물질 저감은 가족의 건강은
+                                        물론, 다음 세대에 물려줄 환경을 위해서도
+                                        꼭 필요한 노력입니다. &#39;SGS&#39;가
+                                        인증한 OLED의 친환경 디스플레이인지 꼭
+                                        확인해 보세요.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </section>
             <!-- ********** OLED ACE(SECTION2) ********** -->
         </main>
 
         <!-- FOOTER (공통) -->
         <footer>
-          <img src="./img/logo_display.png" alt="LG DISPLAY" class="logo_lg" />
-          <img src="./img/logo_oled.png" alt="OLED" class="logo_oled" />
-          <ul class="f_link_list">
-            <li>
-              <a href="#">e-VOS / 협력사 등록</a>
-            </li>
-            <li>
-              <a href="#">개인정보처리방침</a>
-            </li>
-            <li>
-              <a href="#">문의 / 제안</a>
-            </li>
-            <li>
-              <a href="#">sitemap</a>
-            </li>
-          </ul>
-          <div class="f_copyright">
-            <p>대표전화 02-3773-1114</p>
-            <p>COPYRIGHT ⓒ LG DISPLAY CO., LTD. ALL RIGHTS RESERVED.</p>
-          </div>
-          <div class="f_partners">
-            <a href="#" class="btn_partners __dis_link"
-              >파트너사이트<i class="fa-solid fa-caret-up"></i
-            ></a>
-            <ul class="partners_lists">
-              <li><a href="#" class="__dis_link">동반성장포털</a></li>
-              <li><a href="#" class="__dis_link">산업보건 지원보상 신청</a></li>
-              <li><a href="#" class="__dis_link">LGD 출입예약시스템</a></li>
-              <li><a href="#" class="__dis_link">LGD 안전환경 Portal</a></li>
+            <img
+                src="./img/logo_display.png"
+                alt="LG DISPLAY"
+                class="logo_lg"
+            />
+            <img src="./img/logo_oled.png" alt="OLED" class="logo_oled" />
+            <ul class="f_link_list">
+                <li>
+                    <a href="#">e-VOS / 협력사 등록</a>
+                </li>
+                <li>
+                    <a href="#">개인정보처리방침</a>
+                </li>
+                <li>
+                    <a href="#">문의 / 제안</a>
+                </li>
+                <li>
+                    <a href="#">sitemap</a>
+                </li>
             </ul>
-          </div>
-          <ul class="snslist">
-            <li class="youtube">
-              <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            </li>
-            <li class="newsroom">
-              <a href=""><i class="fa-solid fa-radio"></i></a>
-            </li>
-            <li class="blog">
-              <a href="">
-                <!-- <span class="blog">blog</span> -->
-                <!-- <img src="img/blog.svg" alt="" /> -->
-                <!-- id="Layer_1" -->
-                <svg
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 400 400"
-                  style="enable-background: new 0 0 400 400"
-                  xml:space="preserve"
-                >
-                  <path
-                    class="st0"
-                    d="M206.6,317.2c-8,0-15.6-1.1-22.8-3.2c-6.1-1.9-12-4.7-17.6-8.4l-3.2,7.6h-35.6V62.8l48-6.4V150
+            <div class="f_copyright">
+                <p>대표전화 02-3773-1114</p>
+                <p>COPYRIGHT ⓒ LG DISPLAY CO., LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="f_partners">
+                <a href="#" class="btn_partners __dis_link"
+                    >파트너사이트<i class="fa-solid fa-caret-up"></i
+                ></a>
+                <ul class="partners_lists">
+                    <li><a href="#" class="__dis_link">동반성장포털</a></li>
+                    <li>
+                        <a href="#" class="__dis_link"
+                            >산업보건 지원보상 신청</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#" class="__dis_link">LGD 출입예약시스템</a>
+                    </li>
+                    <li>
+                        <a href="#" class="__dis_link">LGD 안전환경 Portal</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="snslist">
+                <li class="youtube">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </li>
+                <li class="newsroom">
+                    <a href=""><i class="fa-solid fa-radio"></i></a>
+                </li>
+                <li class="blog">
+                    <a href="">
+                        <!-- <span class="blog">blog</span> -->
+                        <!-- <img src="img/blog.svg" alt="" /> -->
+                        <!-- id="Layer_1" -->
+                        <svg
+                            version="1.1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 400 400"
+                            style="enable-background: new 0 0 400 400"
+                            xml:space="preserve"
+                        >
+                            <path
+                                class="st0"
+                                d="M206.6,317.2c-8,0-15.6-1.1-22.8-3.2c-6.1-1.9-12-4.7-17.6-8.4l-3.2,7.6h-35.6V62.8l48-6.4V150
                   c3.5-1.9,6.9-3.5,10.4-4.8c9.9-3.5,20.4-5.2,31.6-5.2c24.3,0,42.1,7.5,53.6,22.6c11.5,15.1,17.2,35.4,17.2,61
                   c0,13.6-1.5,26.1-4.4,37.6c-2.9,11.5-7.7,21.3-14.2,29.6c-6.5,8.3-15,14.7-25.4,19.4C233.8,314.9,221.3,317.2,206.6,317.2z
                   M181.4,281.2c5.9,1.9,11.3,2.8,16.4,2.8c5.9,0,11.3-0.9,16.2-2.8c4.9-1.9,9.2-5,12.8-9.4c3.6-4.4,6.5-10.2,8.6-17.4
                   c2.1-7.2,3.2-16.3,3.2-27.2c0-35.7-12.4-53.6-37.2-53.6c-7.7,0-14.7,1.9-20.8,5.6c-1.9,1.1-3.6,2.4-5.2,4v95.2
                   C177.5,279.5,179.5,280.4,181.4,281.2z M200,2.5C90.9,2.5,2.5,90.9,2.5,200S90.9,397.5,200,397.5S397.5,309.1,397.5,200
                   S309.1,2.5,200,2.5z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li class="report">
-              <a href=""><i class="fa-solid fa-drum"></i></a>
-            </li>
-          </ul>
+                            />
+                        </svg>
+                    </a>
+                </li>
+                <li class="report">
+                    <a href=""><i class="fa-solid fa-drum"></i></a>
+                </li>
+            </ul>
         </footer>
         <!-- FOOTER (공통) -->
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> </script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.min.js"
+            integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="js/skrollr.js"></script>
         <script src="./js/common.js"></script>
-        <!-- <script src="js/header.js"></script>
-        <script src="js/footer.js"></script> -->
-        <script src="js/oled.js"> </script>
-
+        <script src="js/oled.js"></script>
     </body>
 </html>

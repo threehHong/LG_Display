@@ -1,3 +1,4 @@
+/********** OLED EX(공통) **********/
 html {
     font-size: 16px;
 }
@@ -16,44 +17,398 @@ p {
     display: block;
 }
 
-/* OLED */
+/********** OLED EX(SECTION1) **********/
+.OLED_EX {
+    background: #F6F6F6;
+}
+
+.OLED_EX img {
+    width: 100%;
+}
+
+/* OLED BANNER */
+.banner img { 
+    width: 100%;
+    position: absolute;
+}
+
+.banner_container {
+    position: relative;
+    height: 4000px;
+}
+
 .banner {
+    top: 0;
+    position: sticky;
+
+    width: 100%;
+    /* height: 756px; */
+    height: 920px;
+    background: #000000;
+    
+}
+
+.banner_a {
     position: relative;
     width: 100%;
-    height: 756px;
+    /* padding-top: 53.33%; */
+    height: 53.33vw;
 }
-.banner_BG {
-    position: absolute;
-    top: -54px;
-    left: 0;
-    right: 0;
-    z-index: -10;
-}
-.banner_BG img {
-    width: 100%;
-}
-.banner h2::before {
+
+.banner h2:before {
     content: "";
     display: inline-block;
     position: relative;
     width: 18px;
     height: 54px;
-    margin-right: 30px;
+    margin-right: 10px;
     top: 10px;
     background: var(--point_R);
 }
+
+/* vw, vh로 맞춰보기. or 그리드로 해보기 */
 .banner h2 {
-    position: absolute;
-    left: 343px;
-    top: 527px;
-    width: 336px;
-    height: 69px;
     color: var(--font_W);
     font-weight: 700;
     font-size: 3.4rem;
     line-height: 69px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ 
+    position: absolute;
+    right: 4%;
+    bottom: 25%;
 }
+
+/* OLED EX INTRO */
+.EX_empty_BG_F {
+    background: #000000;
+    height: 1000px;
+}
+.EX_empty_BG_S {
+    background: #000000;
+    width: 100%;
+    height: 4500px;
+}
+
+
+.EX_intro {
+    background: #000000;
+    height: 1107px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+
+    overflow: hidden;
+}
+
+.active_EX_sticky {
+    position: sticky;
+    top: 0;
+}
+
+.EX_intro h2 {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 150px;
+    line-height: 195px;
+    color: var(--font_W);
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: transform .1s;
+}
+
+
+.EX_intro h2:nth-child(1):after {
+    content: '';
+    display: inline-block;
+    width: 68px;
+    height: 31px;
+    background: #B60037;
+}
+
+.EX_intro p {
+    font-family: 'Noto Sans KR';
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: var(--font_W);
+    opacity: 0;
+    transition: opacity 2s 1s;
+}
+
+.EX_intro p.active_EX_intro {
+    opacity: 1;
+    transition: opacity 2s 1s;
+}
+
+.EX_intro p:nth-child(3) {
+    margin: 45px 0 80px 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+.EX_intro p:nth-child(5) {
+    margin-bottom: 60px;
+}
+
+/* EX_intro 애니메이션 */
+.EX_intro h2.active_intro_stop {
+    animation: trans 1s forwards;
+}
+@keyframes trans {
+    0% {
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.EX_intro_img_box {
+    background: rgb(0, 0, 0);
+    height: 5000px;
+}
+
+.EX_intro_img {
+    width: 80.1%;
+    height: 1594px;
+    margin: 0 auto;
+    position: relative;
+}
+.EX_intro_img li[class^='img_'] {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 40.9%;
+    height: 400px;
+    border-radius: 20px;
+}
+.img_deuterium {
+    background-image: url(../img/img_deuterium.jpg);
+}
+.img_algorism {
+    background-image: url(../img/img_algorism.jpg);
+    transform: translateX(145%);
+}
+.img_bezel {
+    background-image: url(../img/img_bezel.jpg);
+}
+
+
+/* EX DEUTERIUM(중수소 소자) */
+.EX_deuterium_container {
+    height: 6000px;
+}
+.EX_deuterium {
+    position: sticky;
+    top: 0;
+
+    background-image: url(../img/EX_deuterium.jpg);
+    width: 100%;
+    height: 1107px;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    
+    /* 구간 바뀔 떄 contain으로 바꾸기 */
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    opacity: 1;
+
+}
+
+.EX_deuterium h2 {
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.EX_deuterium h2.active_deuterium_h2 {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.EX_deuterium p {
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 80px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.EX_deuterium p.active_deuterium_p {
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+
+/* EX ALGORISM(알고리즘) */
+.EX_algorism_container {
+    height: 13000px;
+}
+
+.EX_algorism {
+    top: 0;
+    position: sticky;
+}
+
+.EX_algorism .img {
+    position: absolute;
+    background-image: url(../img/dotted2.jpg);
+    width: 100%;
+    height: 756px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 2s;
+}
+.EX_algorism .img.active_algorism_opacity {
+    transition: opacity 2s;
+    opacity: 1;
+}
+
+.EX_algorism img {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 2s;
+}
+.EX_algorism img.active_algorism_opacityS {
+    transition: opacity 2s;
+    opacity: 0;
+}
+
+
+/* EX Bezel(베젤) */
+.EX_bezel_container {
+    height: 6000px;
+    /* width: 1920px; */
+    width: 100%;
+    /* background: #F6F6F6; */
+}
+
+.EX_bezel {
+    position: sticky;
+    top: 0;
+
+    background: #F6F6F6;
+    width: 1470px;
+    height: 1107px;
+    margin: 0 auto;
+
+    /* display: grid;
+    grid-template-columns: 4.81fr 22.13fr 28.85fr 15.39fr 3.02fr 6.94fr 2.8fr;
+    grid-template-rows: 1.26fr 14.18fr 15.01fr 29.35fr 20fr 40.12fr */
+}
+
+
+.EX_bezel_img_h {
+    display: flex;
+    gap: 40px;
+    /* margin-left: 100px; */
+}
+
+.EX_bezel img {
+
+
+    width: 1140px;
+    height: 600px;
+
+
+    /* grid-column: 2/4;
+    grid-row: 2/5; */
+
+}
+
+.EX_bezel h2 {
+    font-size: 45px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: flex-end;
+
+    /* align-items: flex-end; */
+
+    /* grid-column: 4/5;
+    grid-row: 4/5; */
+
+
+
+    /* display: flex;
+    align-items: flex-end;
+    justify-content: right; */
+
+
+}
+
+.EX_bezel p {
+    font-size: 24px;
+    line-height: 30px;
+    
+    display: inline-block;
+    margin: 30px 0px 0px 33%;
+    text-align: right;
+
+    /* grid-row: 5/6;
+    grid-column: 3/5;
+
+    text-align: right;
+
+    margin-top: 30px; */
+
+}
+
+.EX_thinner {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 24%;
+    top: 19%;
+}
+
+.EX_bezel span {
+    color: var(--font_W);
+
+    /* position: absolute; */
+
+    /* grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: right; */
+}
+
+.EX_bezel span:nth-of-type(1) {
+    font-size: 75px;
+    /* margin-top: 12%; */
+    /* left: 19%;
+    top: 22%; */
+}
+
+.EX_bezel span:nth-of-type(2) {
+    font-size: 35px;
+
+    margin-left: 14px
+
+    /* margin-left: 14px; */
+    /* left:19%;
+    top: 29%; */
+    
+    /* margin-top: 28%;
+    margin-right: 20px; */
+}
+/********** OLED EX(SECTION1) **********/
+
+/********** OLED ACE (SECTION2) **********/
 /* JA_230201_작업시작 */
 /* OLED Common */
 .OLED_sec2_h3 {
@@ -177,7 +532,12 @@ p {
     transition: top 0.3s;
 }
 .ace_clone.visible {
-    top: 0;
+    top: 10px;
+    z-index: 5;
+    transition: top 0.2s;
+}
+.ace_clone.visible.headerHeight {
+    top: 54px;
 }
 .ace_clone li a img {
     width: 35%;
@@ -191,6 +551,9 @@ p {
 }
 .ace_clone .A_txt_box {
     display: none;
+}
+.ace_clone li:hover .ace_tt {
+    color: var(--point_R);
 }
 
 /* A */
@@ -228,11 +591,26 @@ p {
     text-align: center;
     line-height: 112px;
 }
+.ACE_a1_scrollImg .OLED_sec2_h4 {
+    text-align: right;
+}
 .ACE_a1_scrollImg .a1_tt {
     margin: 81px 0 27px 146px;
 }
+
+.ACE_a1_scrollImg .a1_tt h4 {
+    text-align: right;
+    margin-top: 54px;
+    line-height: 60px;
+    margin-right: 11%;
+}
 .ACE_a1_scrollImg > p {
     margin-left: 146px;
+}
+.a1_scroll > p {
+    text-align: right;
+    width: 47%;
+    margin-left: 49%;
 }
 
 .ACE_a2 {
@@ -257,12 +635,22 @@ p {
     bottom: 30%;
     left: 50%;
     transform: translate(-50%, 100%);
+    text-align: center;
 }
 .ACE_a2 p.warning_txt {
     color: var(--fnt_B);
     position: absolute;
     right: 0;
     bottom: -27px;
+}
+.ACE_a2 .a2_tt h3 {
+    text-align: center;
+    margin-bottom: 54px;
+}
+
+.ACE_a2 .a2_tt h4 {
+    text-align: center;
+    line-height: 54px;
 }
 /* C */
 .c1_imgs {
@@ -362,8 +750,8 @@ p {
     display: inline-block;
     font-size: 2.8rem;
     font-weight: 600;
-    right: 25%;
-    bottom: 15%;
+    left: 20%;
+    bottom: -15%;
 }
 .e2_imgs .e2_02:after {
     content: "";
@@ -372,8 +760,8 @@ p {
     background-size: cover;
     width: 142px;
     height: 132px;
-    right: 6%;
-    bottom: 15%;
+    right: -10%;
+    bottom: -15%;
 }
 .ACE_E2 .warning_txt {
     text-align: end;
@@ -383,9 +771,384 @@ p {
     margin: var(--Rows6);
 }
 
+.ACE_E2 .e2_tt p {
+    width: 27%;
+}
+
 /* // OLED */
 /* 반응형 */
-@media (max-width: 1280px) {
+
+
+/********** OLED EX - SECTION1 **********/
+/* OLED EX 1490px */
+@media (max-width: 1490px) {
+    /* EX BEZEL */
+    .EX_bezel {
+        width: 1000px;
+    }
+    .EX_bezel_img_h {
+        gap: 12px
+    }
+    .EX_bezel img {
+        width: 800px;
+    }
+    .EX_bezel h2 {
+        font-size: 30px;
+    }
+    .EX_bezel p {
+        font-size: 16px;
+        margin: 30px 0px 0px 34.9%;
+    }
+    .EX_bezel span:nth-of-type(1) {
+        font-size: 60px;
+    }
+    .EX_bezel span:nth-of-type(2) {
+        font-size: 20px;
+    }
+}
+
+/* OLED EX 1040px */
+@media (max-width: 1040px) {
+    /* EX BEZEL */
+    .EX_bezel {
+        width: 600px;
+    }
+    .EX_bezel img {
+        width: 450px;
+        height: 550px;
+    }
+    .EX_bezel h2 {
+        font-size: 22px;
+    }
+    
+    .EX_bezel p {
+        font-size: 14px;
+        margin: 25px 0px 0px 5%;
+    }
+    .EX_bezel span:nth-of-type(1) {
+        font-size: 45px;
+    }
+    .EX_bezel span:nth-of-type(2) {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .EX_thinner {
+        width: 105px;
+        height: 105px;
+    }
+}
+
+
+
+
+@media (max-width: 1600px) {
+    .EX_algorism .img {
+        background-size: contain;
+    }
+}
+
+/* @media (max-width: 1650px) {
+    .EX_bezel {
+        position: relative;
+        display: block;
+    }
+
+    .EX_bezel img {
+        position: relative;
+        left: 0%;
+        left: 2%
+    }
+
+    .EX_bezel h2, .EX_bezel p {
+        position: absolute;
+    }
+
+    .EX_bezel h2 {
+        position: absolute;
+        left: 62%;
+        top: 59%;
+    }
+
+    .EX_bezel p {
+        position: relative;
+        margin-top: 30px;
+        right: 23.5%;
+    }
+}  */
+
+
+@media (max-width: 885px) {
+    /* EX DEUTERIUM(중수소 소자) */
+    .EX_deuterium h2 {
+        font-size: 26px;
+    }
+    .EX_deuterium p {
+        font-size: 16px;
+        line-height: 27px;
+        margin-top: 30px;
+    }
+
+    .EX_deuterium {
+         width: 424px;
+         height: 600px;
+         background: #EAEAEC;
+         /* background-image: url(../img/EX_deuterium.jpg); */
+    }
+
+}
+
+/* OLED EX 768px */
+@media (max-width: 768px) {
+    /* OLED EX INTRO */
+    .banner h2 {
+        font-size: 20px;
+    }
+
+    .EX_intro h2 {
+        font-size: 50px;
+        line-height: 90px;
+    }
+
+    .banner h2:before {
+        width: 8px;
+        height: 20px;
+        transform: translateY(-8px);
+        margin-right: 3px;
+    }
+
+    .EX_intro h2:nth-child(1):after {
+        width: 30px;
+        height: 13px;
+    }
+
+    .EX_intro p:nth-child(3) {
+        font-size: 15px;
+        margin: 28px 0 28px 0;
+    }
+    
+    .EX_intro p {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    
+}
+
+
+/* OLED EX 650px */
+@media (max-width: 650px) {
+    /* EX BEZEL */
+    .EX_bezel {
+        width: 300px;
+        text-align: center;
+    }
+    .EX_bezel_img_h {
+        display: inline-block;
+    }
+    .EX_bezel img {
+        width: 250px;
+        height: 350px;
+    }
+    .EX_bezel h2 {
+        font-size: 20px;
+        justify-content: flex-end;
+        margin-top: 16px;
+    }
+    
+    .EX_bezel p {
+        font-size: 13px;
+        margin: 10px 23px 0px 0px;
+    }
+    .EX_bezel span:nth-of-type(1) {
+        font-size: 35px;
+    }
+    .EX_bezel span:nth-of-type(2) {
+        font-size: 16px;
+        margin-left: 0px;
+    }
+    .EX_thinner {
+        width: 105px;
+        height: 105px;
+        left: 31%;
+        top: 13%;
+    }
+}
+
+
+@media (max-width: 595px) {
+    .EX_deuterium h2 {
+        font-size: 22px;
+        font-weight: 900;
+    }
+    .EX_deuterium p {
+        font-size: 12px;
+        line-height: 27px;
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 595px) {
+    .EX_deuterium h2 {
+        font-size: 22px;
+    }
+    .EX_deuterium p {
+        font-size: 12px;
+        line-height: 27px;
+
+    }
+}
+
+
+/* OLED EX 425px */
+@media (max-width: 595px) {
+    .EX_deuterium h2 {
+        font-size: 16px;
+    }
+    .EX_deuterium p {
+        font-size: 10px;
+        line-height: 25px;
+        margin-top: 15px;
+    }
+}
+/********** OLED EX - SECTION1 **********/
+
+/********** OLED ACE - SECTION2 **********/
+@media (max-width: 860px) {
+    .contain_margin {
+        margin: 54px 0;
+    }
+    .OLED_ace {
+        flex-wrap: wrap;
+    }
+    .OLEd_img {
+        width: 100%;
+    }
+    .OLEd_img .warning_txt {
+        margin-left: 30px;
+    }
+    .img_txt {
+        width: 100%;
+        margin: 54px 30px;
+    }
+    .img_txt > p {
+        width: 85%;
+    }
+    .ace_clone.visible {
+        width: 100vw;
+    }
+
+    .ace_box .sub_tt {
+        margin-bottom: 27px;
+    }
+    .ACE_tt_box li {
+        width: 187px;
+        height: 378px;
+    }
+    .ACE_tt_box .ace_tt {
+        font-size: 1.625rem;
+        margin: 27px 0;
+    }
+    .ACE_tt_box .A_txt_box p {
+        font-size: 1rem;
+    }
+    /* ace_a1 */
+    .ACE_A {
+        margin-top: 108px;
+    }
+    .a1_scroll img {
+        width: 100%;
+    }
+    .ACE_a1_scrollImg .OLED_sec2_h3 {
+        font-size: 1.6rem;
+        width: 384px;
+        height: 54px;
+    }
+    .ACE_a1_scrollImg .OLED_sec2_h3 span {
+        line-height: 54px;
+    }
+    .a1_scroll div {
+        justify-content: center;
+    }
+    .OLED_sec2_h4 {
+        font-size: 1.25rem;
+        text-align: right;
+        line-height: 30px;
+    }
+    .ACE_a1_scrollImg .a1_tt {
+        margin: 162px 0 27px 146px;
+    }
+    .a1_scroll p {
+        text-align: right;
+        width: 70%;
+        margin-left: 25%;
+    }
+    .a1_scroll {
+        top: 20%;
+    }
+
+    /* ace_a2 */
+
+    .c2_img {
+        width: 100%;
+    }
+    .c2_img img {
+        width: 100%;
+    }
+    /* c1 */
+    .ace_tt h4 {
+        text-align: center;
+    }
+    /* c2 */
+    .ACE_c2 {
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 54px 0;
+    }
+    .ACE_c2 .c2_tt {
+        margin-left: 0;
+        margin-top: 54px;
+    }
+    .OLED_sec2_h3 {
+        font-size: 1.8rem;
+    }
+    .ace_tt p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .ACE_E {
+        margin-top: 108px;
+    }
+    .ACE_E1 {
+        display: inline-block;
+    }
+    .E1_img {
+        width: 100%;
+    }
+    .E1_tt h3 {
+        color: var(--font_B);
+    }
+    .e2_imgs {
+        gap: 30px;
+        height: 459px;
+        box-sizing: border-box;
+        padding: 0 30px;
+    }
+    .e2_imgs > img {
+        width: 50%;
+    }
+    .e2_imgs .e2_02 img {
+        width: 80%;
+    }
+    .e2_imgs .e2_02:before {
+        font-size: 1.875rem;
+    }
+    .e2_imgs .e2_02:after {
+        width: 86px;
+        height: 80px;
+        background-image: url(../img/OLED/ACE_e02_04.png);
+        right: 20%;
+        bottom: -15%;
+    }
 }
 @media (max-width: 768px) {
     .OLED_ace {
@@ -451,19 +1214,19 @@ p {
         font-size: 1.6rem;
     }
     .ACE_a1_scrollImg .a1_tt {
-        margin: 54px 30px 27px 0;
+        margin: 0px 30px 27px 0;
     }
     .OLED_sec2_h4 {
         font-size: 1.25rem;
         text-align: right;
-        margin-left: 30px;
+        margin-left: 23%;
         line-height: 27px;
     }
     .ACE_a1_scrollImg p {
         width: 62%;
         text-align: right;
         margin-left: auto;
-        margin-right: 30px;
+        margin-right: 8%;
     }
     .ACE_a2 {
         margin: 81px 0;
@@ -487,8 +1250,8 @@ p {
     }
     .ACE_a2 .a2_tt {
         position: absolute;
-        top: 0;
-        right: 50%;
+        top: 3%;
+        left: 62%;
         transform: translateX(123%);
     }
     .ACE_a2 .a2_tt h3 {
@@ -502,7 +1265,7 @@ p {
         line-height: 33px;
     }
     .ACE_a2 p.a2_sub_txt {
-        bottom: 35%;
+        bottom: 26%;
         left: 26%;
         width: 44%;
         text-align: center;
@@ -527,50 +1290,12 @@ p {
     .c1_tt {
         margin-left: 0;
     }
-    .ACE_c2 {
-        align-items: flex-start;
-        margin: 54px 0;
-    }
-    .ACE_c2 .c2_img {
-        width: 100%;
-        padding: 30px;
-        box-sizing: border-box;
-    }
-    .c2_img img {
-        width: 100%;
-    }
-    .ACE_c2 {
-        display: inline-block;
-    }
-    .c2_tt {
-        margin-left: 0;
-    }
-    .ace_tt h3 {
-        margin-top: 54px;
-        color: var(--font_w);
-    }
-    .ace_tt h4 {
-        text-align: center;
-        width: 87%;
-        margin: 0 30px;
-    }
-    .ace_tt p {
-        margin-bottom: 81px;
-    }
 
     /* E */
     .ACE_E {
         margin-top: 54px;
     }
-    .ACE_E1 {
-        display: inline-block;
-    }
-    .E1_img {
-        width: 100%;
-    }
-    .E1_tt h3 {
-        color: var(--font_B);
-    }
+
     .ACE_E2 {
         margin-top: 0;
         height: 900px;
@@ -629,9 +1354,154 @@ p {
         width: 86px;
         height: 80px;
     }
+    .e2_imgs .e2_02:before {
+        right: 35%;
+        bottom: 29%;
+        font-size: 1.5rem;
+    }
+    .ACE_c2 {
+        display: block;
+    }
+    .ACE_c2 .c2_img {
+        width: 100%;
+    }
+    .ACE_c2 .c2_tt {
+        display: block;
+    }
+    .ace_tt p {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .ACE_E1 {
+        margin: 54px 0;
+    }
+    .ACE_E2 .e2_tt p {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .ACE_E2 {
+        height: 780px;
+    }
 }
-.e2_imgs .e2_02:before {
-    right: 35%;
-    bottom: 29%;
-    font-size: 1.5rem;
+@media (max-width: 360px) {
+    .warning_txt {
+        font-size: 0.625rem;
+        position: relative;
+    }
+    .OLED_sec2_h4 {
+        font-size: 1.125rem;
+    }
+    .OLED_sec2_h3 {
+        font-size: 1.5rem;
+    }
+    .OLED_sec2_p {
+        font-size: 0.75rem;
+    }
+    .OLEd_img .warning_txt {
+        position: static;
+    }
+    .OLED_ace {
+        margin: 54px 0;
+    }
+
+    /* ACE */
+    .ace_box .sub_tt {
+        font-size: 1.125rem;
+    }
+    .ace_box h2 {
+        font-size: 2.5rem;
+        line-height: 30px;
+        margin-bottom: 27px;
+    }
+    .ace_box h2::before {
+        margin-bottom: 0;
+        padding-right: 10px;
+    }
+    .ACE_tt_box {
+        flex-direction: column;
+    }
+    .ACE_tt_box li {
+        width: 100%;
+        height: 185px;
+    }
+    .ACE_tt_box li a {
+        display: inline-flex;
+        width: 100%;
+        height: 185px;
+    }
+    .ACE_tt_box li a img {
+        width: 50%;
+    }
+    .ACE_tt_box li a .ace_tt {
+        margin-top: 10%;
+    }
+    /* ace_a1 */
+    .ACE_a1_scrollImg .OLED_sec2_h3 {
+        height: 41px;
+        width: 293px;
+    }
+    .ACE_a1_scrollImg .OLED_sec2_h3 span {
+        line-height: 41px;
+    }
+    .ACE_a1_scrollImg .OLED_sec2_h4 {
+        margin-left: 0%;
+        margin-right: 0;
+    }
+    .ACE_a1_scrollImg p {
+        width: 80%;
+        text-align: left;
+        margin-left: 5%;
+    }
+    .ACE_a2 img {
+        width: 50%;
+    }
+    .ACE_a2 img:last-of-type {
+        position: absolute;
+        top: 0;
+    }
+    .ACE_a2 .a2_tt {
+        position: relative;
+        bottom: 0;
+        width: 90%;
+        left: 0;
+        margin: 0 auto;
+    }
+    .ACE_a2 .a2_tt h3 {
+        margin-top: 27px;
+    }
+    .ACE_a2 .a2_tt h4 {
+        width: 100%;
+    }
+    .ACE_a2 p.a2_sub_txt {
+        text-align: center;
+        width: 81%;
+        margin-left: 23%;
+        font-size: 0.75rem;
+    }
+    .ACE_a2 p.warning_txt {
+        position: absolute;
+        color: var(--font_W);
+        bottom: 56%;
+        margin-right: 15px;
+    }
+
+    /* c */
+    .c1_imgs {
+        gap: 5px;
+    }
+    .c1_imgs .img_box:last-child img {
+        transform: translateY(10px);
+    }
+    .ace_tt h4 {
+        width: 80%;
+        margin: 27px auto;
+    }
+    .ACE_c1 .warning_txt {
+        margin-right: 15px;
+    }
+    .c1_tt p {
+        width: 70%;
+    }
 }
+
+/********** OLED ACE (SECTION2) **********/
