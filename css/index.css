@@ -160,7 +160,6 @@ header.active .Header_icon .icon_lang {
   margin-top: 20px;
   position: absolute;
   text-transform: uppercase;
-  /* display: flex; */
   display: none;
   flex-direction: column;
   gap: 20px;
@@ -189,7 +188,6 @@ nav {
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  /* gap: 101px; */
   position: relative;
 }
 .gnb_box > li > h3 > a {
@@ -290,10 +288,6 @@ header .sns_icon .blog:hover span {
   position: fixed;
   left: 0;
   right: 0;
-  /* display: flex; */
-  /* padding: 12px 77px 0 30px ; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
   z-index: 10;
 }
 
@@ -381,7 +375,7 @@ header .sns_icon .blog:hover span {
   font-weight: bold;
 }
 
-/* 기본 ----------------------------------------------------------------------------------- */
+/* 기본 -------------------------------- */
 .section_main .grid_wrap {
   display: grid;
   position: absolute;
@@ -414,7 +408,6 @@ header .sns_icon .blog:hover span {
   transform-origin: 0 0;
   position: relative;
 }
-
 .pager {
   padding: 10px;
   position: fixed;
@@ -453,7 +446,7 @@ header .sns_icon .blog:hover span {
   }
 }
 
-/* ---- 폰트 ------------------------------------------------------------------------------- */
+/* ---- 폰트 --------------- */
 .section_main .pc h2 {
   display: none;
   font-size: 120px;
@@ -491,7 +484,7 @@ header .sns_icon .blog:hover span {
   opacity: 0;
 }
 
-/* ---- 이미지 ------------------------------------------------------------------------------- */
+/* ---- 이미지 ----------------------- */
 .section_main .pcimgFrame {
   background-size: cover;
 }
@@ -585,7 +578,7 @@ h2.pcContents {
     cover;
 }
 
-/* PC ----------------------------------------------------------------------------------- */
+/* PC ------------------------------------ */
 
 .section_main .imgArea {
   transform: scale(1);

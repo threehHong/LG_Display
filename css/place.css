@@ -21,8 +21,6 @@ main *{
 .pointerEvent{
     pointer-events: none;
 }
-
-
 .place .titleBg{
     height: 756px;
     background: url("../img/place_img_title.jpg") no-repeat center / cover;
@@ -107,8 +105,6 @@ main *{
     background-color: var(--point_R);
 }
 
-
-
 .place .section_map{
     position: absolute;
     width: 100%;
@@ -134,7 +130,6 @@ main *{
     left: 50%;
     top: 100%;
 }
-
 
 .place .mapOverlay *{
     font-size: 12px;
@@ -189,14 +184,6 @@ main *{
     color: #FF5D5D;
 }
 
-
-
-
-
-
-
-
-
 .place .mapOverlay p:first-of-type .count{letter-spacing: -1px; margin-left: 5px;}
 
 .verticalBar{
@@ -215,15 +202,6 @@ main *{
 .place .mapOverlay address p:nth-of-type(4) a{color: #3D75CC; margin-right: 10px;}
 .place .mapOverlay address p:nth-of-type(4) a:hover{text-decoration: underline;}
 
-/* .place .mapOverlay .btn_close{
-    position: absolute;
-    
-    background: none;
-    border: none;
-    padding: 0;
-    top: 12px;
-    right: 20px;
-} */
 .place .mapOverlay .btn_close{
     position: absolute;
     display: block;
@@ -245,24 +223,10 @@ main *{
     position: absolute;
     top: 0;
     right: 0;
-    /* -webkit-font-smoothing: antialiased;
-    display: var(--fa-display,inline-block);
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-    text-rendering: auto; */
-    
     font-size: 20px;
     color: var(--font_G2);
     cursor: pointer;
-
 }
-
-/* .place .mapOverlay .btn_close i{
-    font-size: 20px;
-    color: var(--font_G2);
-    cursor: pointer;
-} */
 
 .place .mapOverlay .ui{
     display: flex;
@@ -316,16 +280,6 @@ main *{
     margin-left: 13px;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
 .place .section_list ul{
     justify-content: space-between;
     gap: 54px 0;
@@ -473,8 +427,6 @@ main *{
     .place main{
         margin: 42px auto;
     }
-    /* .place .section_map{height: 315px;} */
-
     .place .section_map .mapOverlay{width: 250px;}
     .place .mapOverlay *{font-size: 14px;}
     .place .section_map .mapOverlay .mobile_hidden{display: none;}
