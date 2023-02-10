@@ -76,6 +76,9 @@ mobile 480 */
 
 /* 768px-------------------------------- */
 @media screen and (max-width: 768px) {
+  section {
+    overflow-x: hidden;
+  }
   .innerT {
     padding: 5%;
     box-sizing: border-box;
@@ -200,6 +203,9 @@ mobile 480 */
 
   /* 480-------------------------------- */
   @media screen and (max-width: 480px) {
+    section {
+      overflow-x: hidden;
+    }
     .innerT {
       padding: 5%;
       box-sizing: border-box;
