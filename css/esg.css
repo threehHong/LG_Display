@@ -1246,6 +1246,9 @@ right: 114px;
     .esg_main:before {
         height: 324px;
     }        
+    .sub_img .img {
+        height: 304px;
+    }
 }
 
 /* max-width 745px */
@@ -1948,3 +1951,9 @@ main .natural .desc p:nth-child(3) {
         height: 185px;
     }
 }
+
+/* @media (max-width: 500px) {
+    .sub_img .img {
+        height: 154px;
+    }
+} */
