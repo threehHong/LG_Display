@@ -1402,6 +1402,9 @@ main .natural .desc p:nth-child(2) {
     margin-bottom: 25px;
 }
 
+.water_re .container span:before, .waste_re .container span:before {
+    margin-bottom: -0.5px;
+}
 
 /*환경법규 준수(TEXT) */
 .eco_follow_title h2 {
@@ -1442,7 +1445,7 @@ main .natural .desc p:nth-child(2) {
 
 /* cartegory */
 .cartegory {
-    width: 375px;
+    width: 350px;
     height: 185px;
 
     margin: 0 auto;
@@ -1453,12 +1456,12 @@ main .natural .desc p:nth-child(2) {
 }
 
 .cartegory_s {
-    width: 200px;
+    width: 185px;
     height: 162px;
 }
 
 .cartegory_s h3 {
-    width: 40px;
+    width: 34px;
     height: 38px; 
     font-size: 7px;
 }
@@ -1467,7 +1470,7 @@ main .natural .desc p:nth-child(2) {
     left: 20px;
 }
 .cartegory_s ul {
-    margin-left: 10px;
+    margin-left: 7px;
     padding-top: 6px;
 }
 .cartegory_s ul li {
@@ -1483,14 +1486,14 @@ main .natural .desc p:nth-child(2) {
     height: 65px;
 }
 .cartegory_e h3 {
-    width: 72px;
+    width: 69px;
     font-size: 7px;
     line-height: 18px;
 }
 .cartegory_e span {
     height: 35.93px;
     left: 20px;
-    margin-right: 8px;
+    margin-right: 7px;
 }
 .cartegory_e p {
     width: 100px;
@@ -1530,7 +1533,7 @@ main .natural .desc p:nth-child(2) {
 
 /* GRAPH TREND */
 .graph_trend {
-    width: 375px; 
+    width: 350px; 
     height: 216px; 
 }
 
@@ -1549,14 +1552,14 @@ main .natural .desc p:nth-child(2) {
     transform: translate(7px, -38px);
 }
 .graph_trend ul li {
-    margin-right: 35px;
+    margin-right: 29px;
 }
 
 
 /* WATER RE, WASTE RE */
 .water_re, 
 .waste_re {
-    width: 375px;
+    width: 350px;
     height: 220px; 
 }
 .water_re h3, 
@@ -1569,7 +1572,7 @@ main .natural .desc p:nth-child(2) {
 .water_re .line, 
 .waste_re .line{
     width: 300px;
-    height: 1px;
+    height: 0.5px;
     margin: 8px 20px 11px 20px; 
 }
 
@@ -1597,6 +1600,7 @@ main .natural .desc p:nth-child(2) {
 .water_re .graph svg, 
 .waste_re .graph svg {
     height: 120px; 
+    transform: translateX(-10px);
 }
 
 .water_re ul li, 
@@ -1614,7 +1618,7 @@ main .natural .desc p:nth-child(2) {
 /* AIR POLLUTION, WATER POLLUTION */
 .air_pollution, 
 .water_pollution {
-    width: 375px; 
+    width: 350px; 
     height: 303px; 
     border-radius: 25px;
 }
@@ -1628,15 +1632,16 @@ main .natural .desc p:nth-child(2) {
 .air_pollution h3,
 .water_pollution h3 {
     font-size: 7px;
-    margin: 20px 2px 5px 44px;
+    margin: 20px 2px 5px 24px;
 }
 
 
 .air_pollution .line,
 .water_pollution .line  {
-    left: 71px;
+    left: 59px;
     top: 68px;
-    height: 205px
+    height: 205px;
+    width: 0.5;
 }
 .water_pollution .line {
     top: 69px;
@@ -1644,7 +1649,8 @@ main .natural .desc p:nth-child(2) {
 
 .air_pollution .container,
 .water_pollution .container {
-    margin-top: 0px; /*  */
+    margin-top: 0px;
+    margin-left: -20px;
 }
 
 .air_pollution .container span:before,
@@ -1654,7 +1660,7 @@ main .natural .desc p:nth-child(2) {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    margin-bottom: 2px;
+    margin-bottom: -0.5px;
     margin-right: 10px;
 }
 
@@ -1681,13 +1687,13 @@ main .natural .desc p:nth-child(2) {
 }
 .water_pollution .container span:nth-child(3):before {
     background: #D9DADB;
-    margin-left: 196px;
+    margin-left: 196.5px;
 }
 
 .air_pollution .container span:nth-child(4) {
     position: absolute;
     right: 5px;
-    top: 36px; 
+    top: 39px; 
 }
 .water_pollution .container span:nth-child(4) {
     top: 53px;
@@ -1695,10 +1701,10 @@ main .natural .desc p:nth-child(2) {
 }
 
 .air_pollution .graph {
-    margin: 40px 0px 0px 70.5px; 
+    margin: 40px 0px 0px 58.5px; 
 }
 .water_pollution .graph {
-    margin: 25px 0px 0px 70.5px; 
+    margin: 25px 0px 0px 58.5px; 
 }
 
 .air_pollution ul,
@@ -1924,6 +1930,9 @@ main .natural .desc p:nth-child(3) {
 }
 
 @media (max-width: 600px) {
+    #header {
+        background: var(--font_W);
+    }
     .esg_main {
         display: none;
     }
@@ -1938,5 +1947,4 @@ main .natural .desc p:nth-child(3) {
     main .natural .title {
         height: 185px;
     }
-
 }
