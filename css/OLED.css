@@ -445,6 +445,7 @@ p {
     z-index: -1;
 }
 /* OLED MOBILE BANNER */
+
 @media (max-width: 600px) {
     .oled_main {
         display: none;
@@ -472,10 +473,6 @@ p {
 /********** OLED ACE (SECTION2) **********/
 /* JA_230201_작업시작 */
 /* OLED Common */
-.OLED_sec02 {
-    overflow: hidden;
-}
-
 .OLED_sec2_h3 {
     font-size: 3.4rem;
     font-weight: 600;
