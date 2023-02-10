@@ -307,6 +307,7 @@ header {
   .media_sec01_txt li a h4 {
     font-size: 0.875rem;
     width: 60%;
+    line-height: 24px;
   }
   .media_sec01_slide ul {
     margin-left: 40%;
