@@ -1,4 +1,8 @@
 /* ESG MAIN */
+#header {
+    background: rgba(0, 0, 0, 0.3);
+}
+
 .esg_main {
     position: relative;
 }
