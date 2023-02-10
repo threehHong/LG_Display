@@ -67,6 +67,12 @@ body {
 .notice_portfolio p {
   margin: 20px 0;
 }
+.notice_portfolio a{
+  color: #2883f3;
+}
+.notice_portfolio a:hover{
+  text-decoration: underline;
+}
 .notice_portfolio ul {
   list-style-type: square;
 }
@@ -75,9 +81,6 @@ body {
   margin-left: 10px;
 }
 .notice_portfolio > p:last-of-type {
-  /* position: absolute; */
-  /* right: 30px; */
-  /* bottom: 20px; */
   order: 10;
   text-align: right;
 }
